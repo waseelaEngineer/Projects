@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Waseela</title>
+	<link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="header">
+        <a href="">
+            <div class="logo-area">
+                <img src="images/logo.png" alt=""/>
+                <div>
+                    <h2>الأسرة السعيدة</h2>
+                    <h3>للتوفيق بين الأزواج</h3>
+                </div>
+            </div>
+        </a>
+        <div class="header-content">
+            <a href="#">لوحة تحكم</a>
+            <a href="#">عن المنصة</a>
+            <a href="#">الاشتراك</a>
+            <a href="#">الأسئلة الشائعة</a>
+            <a href="#">اتصل بنا</a>
+            <div class="icons">
+                <img src="images/search.png" alt=""/>
+                <img src="images/settings.png" alt=""/>
+                <img id="icon" onclick="notification('messages')" src="images/messages.png" alt=""/>
+                <img id="icon" onclick="notification('alert')" src="images/bell.png" alt=""/>
+            </div>
+            <div class="account" onclick="notification('logout')">
+                <div class="img-border">
+                    <img id="icon" src="images/man.png" alt=""/>
+                </div>
+                <h2 id="icon">طلال بندر المداح</h2>
+                <img id="icon" src="images/arrow-down.png" alt=""/>
+            </div>
+            <i onclick="mobileMenu()" class="fa-solid fa-bars"></i>
+            
+            <div id="logout" class="notification">
+                <div>
+                    <a href="">
+                        <h2>عرض الملف الشخصي</h2>
+                    </a>
+                </div>
+                <div class="notification-content">
+                    <div>
+                        <a href="">
+                            <div class="d-flex justify-content-between">
+                                <h2>تسجيل الخروج</h2>
+                                <img style="width: 20px; height: 20px;" src="images/exit.png" alt=""/>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="messages" class="notification">
+                <div>
+                    <h2>الرسائل</h2>
+                    <a href="">
+                        <h3>عرض الكل</h3>
+                    </a>
+                </div>
+                <div class="notification-content">
+                    <div>
+                        <a href="">
+                            <div class="d-flex justify-content-between">
+                                <h2></h2>
+                                <h4>قبل 5 ثوان</h4>
+                            </div>
+                            <div class="d-flex gap-3 align-items-center">
+                                <div class="img-border">
+                                    <img style="width: 50px; height: 50x; border-radius: 50%;" src="images/man.png" alt=""/>
+                                </div>
+                                <h2>أرسل لك رسالة</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="alert" class="notification">
+                <div>
+                    <h2>الإشعارات</h2>
+                    <a href="">
+                        <h3>عرض الكل</h3>
+                    </a>
+                </div>
+                <a href="">
+                    <div class="notification-content">
+                        <img style="width: 20px; height: 20px;" src="images/bell.png" alt=""/>
+                        <div>
+                            <div class="d-flex justify-content-between">
+                                <h2>عنوان الإشعار</h2>
+                                <h4>قبل 5 ثوان</h4>
+                            </div>
+                            <h2>هنا نص نص نص الاشعار...</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="notification-content">
+                        <img style="width: 20px; height: 20px;" src="images/bell.png" alt=""/>
+                        <div>
+                            <div class="d-flex justify-content-between">
+                                <h2>عنوان الإشعار</h2>
+                                <h4>قبل 5 ثوان</h4>
+                            </div>
+                            <h2>هنا نص نص نص الاشعار...</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="notification-content">
+                        <img style="width: 20px; height: 20px;" src="images/bell.png" alt=""/>
+                        <div>
+                            <div class="d-flex justify-content-between">
+                                <h2>عنوان الإشعار</h2>
+                                <h4>قبل 5 ثوان</h4>
+                            </div>
+                            <h2>هنا نص نص نص الاشعار...</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="notification-content">
+                        <img style="width: 20px; height: 20px;" src="images/bell.png" alt=""/>
+                        <div>
+                            <div class="d-flex justify-content-between">
+                                <h2>عنوان الإشعار</h2>
+                                <h4>قبل 5 ثوان</h4>
+                            </div>
+                            <h2>هنا نص نص نص الاشعار...</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="notification-content">
+                        <img style="width: 20px; height: 20px;" src="images/bell.png" alt=""/>
+                        <div>
+                            <div class="d-flex justify-content-between">
+                                <h2>عنوان الإشعار</h2>
+                                <h4>قبل 5 ثوان</h4>
+                            </div>
+                            <h2>هنا نص نص نص الاشعار...</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <a href="">
+                <div class="account">
+                    <div class="img-border">
+                        <img src="images/man.png" alt=""/>
+                    </div>
+                    <h2>طلال بندر المداح</h2>
+                </div>
+            </a>
+            <a href="">لوحة تحكم</a>
+            <a href="">عن المنصة</a>
+            <a href="">الاشتراك</a>
+            <a href="">الأسئلة الشائعة</a>
+            <a href="">اتصل بنا</a>
+            <a href="">
+                تسجيل الخروج
+                <img style="width: 20px; height: 20px; margin-right: 30px;" src="images/exit.png" alt=""/>
+            </a>
+        </div>
+    </div><!-- start body -->
+    <div class="body">
+        <div class="section profile-container">
+            <div class="profile-top">
+                <div>
+                    <div class="img-border">
+                        <a href="">
+                            <img src="images/man.png" alt=""/>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <h2>طلال بندر المداح</h2>
+                            <h3>سعودي</h3>
+                        </a>
+                    </div>
+                </div>
+                <a href="">
+                    <button>لوحة التحكم</button>
+                </a>
+            </div>
+            <a href="">
+                <div class="profile-bottom">
+                    <h2>انتقل الى الإرشادات<br/> والنصائح</h2>
+                    <div>
+                        <img src="images/arrow-left.png" alt=""/>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="d-flex flex-column gap-5 main">
+            <div class="section date-container">
+                <div>
+                    <h2>الجمعة 25 فبراير</h2>
+                    <h1>مساء الخير محمد</h1>
+                </div>
+                <img src="images/plane.png" alt=""/>
+            </div>
+            <div class="section users-container">
+                <div class="search-container">
+                    <form>
+                        <div class="search-area">
+                            <div>
+                                <select name="sex">
+                                    <option value="null" hidden>الجنس</option>
+                                    <option value="male">ذكر</option>
+                                    <option value="female">أنثى</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select name="nationality">
+                                    <option value="null" hidden>الجنسية</option>
+                                    <option value="a">a</option>
+                                    <option value="b">b</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select name="city">
+                                    <option value="null" hidden>المدينة</option>
+                                    <option value="a">a</option>
+                                    <option value="b">b</option>
+                                </select>
+                            </div>
+                            <div class="time-container">
+                                <h2>من</h2>
+                                <input type="number" value="18"/>
+                                <h2>الى</h2>
+                                <input type="number" value="26"/>
+                            </div>
+                            <button type="submit">بحث</button>
+                        </div>
+                    </form>
+                    <a href="">بحث متقدم</a>
+                </div><!--start users -->
+                <div class="users-area">
+                    <div>
+                        <a href="" class="user">
+                            <div class="user-profile">
+                                <div class="img-border">
+                                    <img class="blur" src="images/man.png" alt=""/>
+                                </div>
+                                <div>
+                                    <h1>سعيدة احمد</h1>
+                                    <h2>سعاد حميد</h2>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <img src="images/global.png" alt=""/>
+                                <h2>السعودية</h2>
+                                <img src="images/calendar.png" alt=""/>
+                                <h2>25 عام</h2>
+                                <img src="images/location.png" alt=""/>
+                                <h2>جدة</h2>
+                            </div>
+                            <button>عرض الملف الشخصي</button>
+                        </a>
+                        <a href="" class="user">
+                            <div class="user-profile">
+                                <div class="img-border">
+                                    <img class="blur" src="images/man.png" alt=""/>
+                                </div>
+                                <div>
+                                    <h1>سعيدة احمد</h1>
+                                    <h2>سعاد حميد</h2>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <img src="images/global.png" alt=""/>
+                                <h2>السعودية</h2>
+                                <img src="images/calendar.png" alt=""/>
+                                <h2>25 عام</h2>
+                                <img src="images/location.png" alt=""/>
+                                <h2>جدة</h2>
+                            </div>
+                            <button>عرض الملف الشخصي</button>
+                        </a>
+                        <a href="" class="user">
+                            <div class="user-profile">
+                                <div class="img-border">
+                                    <img class="blur" src="images/man.png" alt=""/>
+                                </div>
+                                <div>
+                                    <h1>سعيدة احمد</h1>
+                                    <h2>سعاد حميد</h2>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <img src="images/global.png" alt=""/>
+                                <h2>السعودية</h2>
+                                <img src="images/calendar.png" alt=""/>
+                                <h2>25 عام</h2>
+                                <img src="images/location.png" alt=""/>
+                                <h2>جدة</h2>
+                            </div>
+                            <button>عرض الملف الشخصي</button>
+                        </a>
+                        <a href="" class="user">
+                            <div class="user-profile">
+                                <div class="img-border">
+                                    <img class="blur" src="images/man.png" alt=""/>
+                                </div>
+                                <div>
+                                    <h1>سعيدة احمد</h1>
+                                    <h2>سعاد حميد</h2>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <img src="images/global.png" alt=""/>
+                                <h2>السعودية</h2>
+                                <img src="images/calendar.png" alt=""/>
+                                <h2>25 عام</h2>
+                                <img src="images/location.png" alt=""/>
+                                <h2>جدة</h2>
+                            </div>
+                            <button>عرض الملف الشخصي</button>
+                        </a>
+                        <a href="" class="user">
+                            <div class="user-profile">
+                                <div class="img-border">
+                                    <img class="blur" src="images/man.png" alt=""/>
+                                </div>
+                                <div>
+                                    <h1>سعيدة احمد</h1>
+                                    <h2>سعاد حميد</h2>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <img src="images/global.png" alt=""/>
+                                <h2>السعودية</h2>
+                                <img src="images/calendar.png" alt=""/>
+                                <h2>25 عام</h2>
+                                <img src="images/location.png" alt=""/>
+                                <h2>جدة</h2>
+                            </div>
+                            <button>عرض الملف الشخصي</button>
+                        </a>
+                        <a href="" class="user">
+                            <div class="user-profile">
+                                <div class="img-border">
+                                    <img class="blur" src="images/man.png" alt=""/>
+                                </div>
+                                <div>
+                                    <h1>سعيدة احمد</h1>
+                                    <h2>سعاد حميد</h2>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <img src="images/global.png" alt=""/>
+                                <h2>السعودية</h2>
+                                <img src="images/calendar.png" alt=""/>
+                                <h2>25 عام</h2>
+                                <img src="images/location.png" alt=""/>
+                                <h2>جدة</h2>
+                            </div>
+                            <button>عرض الملف الشخصي</button>
+                        </a>
+                        <a href="" class="user">
+                            <div class="user-profile">
+                                <div class="img-border">
+                                    <img class="blur" src="images/man.png" alt=""/>
+                                </div>
+                                <div>
+                                    <h1>سعيدة احمد</h1>
+                                    <h2>سعاد حميد</h2>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <img src="images/global.png" alt=""/>
+                                <h2>السعودية</h2>
+                                <img src="images/calendar.png" alt=""/>
+                                <h2>25 عام</h2>
+                                <img src="images/location.png" alt=""/>
+                                <h2>جدة</h2>
+                            </div>
+                            <button>عرض الملف الشخصي</button>
+                        </a>
+                        <a href="" class="user">
+                            <div class="user-profile">
+                                <div class="img-border">
+                                    <img class="blur" src="images/man.png" alt=""/>
+                                </div>
+                                <div>
+                                    <h1>سعيدة احمد</h1>
+                                    <h2>سعاد حميد</h2>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <img src="images/global.png" alt=""/>
+                                <h2>السعودية</h2>
+                                <img src="images/calendar.png" alt=""/>
+                                <h2>25 عام</h2>
+                                <img src="images/location.png" alt=""/>
+                                <h2>جدة</h2>
+                            </div>
+                            <button>عرض الملف الشخصي</button>
+                        </a>
+                        <a href="" class="user">
+                            <div class="user-profile">
+                                <div class="img-border">
+                                    <img class="blur" src="images/man.png" alt=""/>
+                                </div>
+                                <div>
+                                    <h1>سعيدة احمد</h1>
+                                    <h2>سعاد حميد</h2>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <img src="images/global.png" alt=""/>
+                                <h2>السعودية</h2>
+                                <img src="images/calendar.png" alt=""/>
+                                <h2>25 عام</h2>
+                                <img src="images/location.png" alt=""/>
+                                <h2>جدة</h2>
+                            </div>
+                            <button>عرض الملف الشخصي</button>
+                        </a>
+                    </div>
+                </div><!-- end users -->
+                <div class="pages">
+                    <div>
+                        <a href="">
+                            <img src="images/vector-right.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="numbers">
+                        <a href="">1</a>
+                        <a href="" class="active-page">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a>...</a>
+                        <a href="">37</a>
+                        <a href="">38</a>
+                        <a href="">39</a>
+                        <a href="">40</a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="images/vector-left.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--end body -->
+    <div class="bottom">
+        <div>
+            <div class="bottom-logo">
+                <div>
+                    <img src="images/logo-light.png" alt=""/>
+                    <div>
+                        <h2>الأسرة السعيدة</h2>
+                        <br/>
+                        <h4>للتوفيق بين الأزواج</h4>
+                    </div>
+                </div>
+                <h1>
+                    منصة الأسرة السعيدة منصة للتوفيق
+                    <br/>
+                    بين الأزواج 
+                </h1>
+            </div>
+            <div class="bottom-links">
+                <div>
+                    <h2>الأسرة السعيدة</h2> 
+                    <a href="#">طريقه عمل الموقع</a>
+                    <a href="#">تعرف على المنصة</a>
+                    <a href="#">قصص نجاح</a>
+                    <a href="#">المميزات</a>
+                </div>
+                <div>
+                    <a href="#">الأسئلة الشائعة</a>
+                    <a href="#">باقات الاشتراك</a>
+                    <a href="#">اتصل بنا</a>
+                </div>
+                <div>
+                   <h2>روابط سريعة</h2> 
+                   <a href="#">سياسة الخصوصية</a>
+                   <a href="#">سياسة الإسترجاع</a>
+                   <a href="#">الأحكام و الشروط</a>
+                   <a href="#">سياسة الدفع</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="social">
+        <div>
+            <div class="social-icons">
+                <a href="">
+                    <img src="images/facebook.png" alt="" />
+                </a>
+                <a href="">
+                    <img src="images/twitter.png" alt="" />
+                </a>
+                <a href="">
+                    <img src="images/instagram.png" alt="" />
+                </a>
+            </div>
+            <h4>جميع الحقوق محفوظة 2022 ©</h4>
+        </div>
+    </div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>	

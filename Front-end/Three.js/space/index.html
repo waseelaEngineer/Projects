@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+html,
+body
+{
+    height: 100vh;
+    background-color: rgb(4, 1, 26);
+    
+}
+    
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+h1{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+}
+#turn{
+    background-color: rgba(255, 255, 0, 0);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 99;
+}
+		</style>
+	</head>
+	<body>
+		<script src="https://threejs.org/build/three.js"></script>
+        <div id="turn"></div>
+        <h1 id="name">  Waseela 3D Effects ( Click on screen to change direction )</h1>
+		<script>
+			const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+			const renderer = new THREE.WebGLRenderer({alpha: true});
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+			// Canvas
+const canvas = document.querySelector('canvas.webgl')
+
+// Scene add random stars
+
+for (let i = 0 ; i<1000 ; i++ ){
+
+    // Objects 
+    const geometry = new THREE.SphereGeometry(  .005 , 10 , 10 );
+
+    // Materials
+    const material = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+
+    // Mesh
+    const sphere = new THREE.Mesh( geometry, material );
+    sphere.position.x = (Math.random() < 0.5 ? -1 : 1)*(Math.random()*3.7); 
+    sphere.position.y = (Math.random() < 0.5 ? -1 : 1)*(Math.random()*1.7); 
+    sphere.position.z = (Math.random() < 0.5 ? -1 : 1)*(Math.random()*2.7); 
+
+    scene.add( sphere );
+} 
+
+const geometry1 = new THREE.SphereGeometry(  0.3 , 80 , 80 );
+
+const material1 = new THREE.MeshStandardMaterial( { color: 0xff88ff } );
+
+const sphere1 = new THREE.Mesh( geometry1, material1 );
+
+sphere1.position.x = 0; 
+sphere1.position.y = 0; 
+sphere1.position.z = 0; 
+
+scene.add( sphere1 );
+
+// Lights
+const pointLight2 = new THREE.PointLight(0xfff0f0, 0.5)
+
+pointLight2.position.set( -8 , 2 , 1 );
+
+scene.add(pointLight2)
+
+
+// Sizes
+const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight
+}
+
+window.addEventListener('resize', () =>
+{
+    // Update sizes
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+
+    // Update camera
+    camera.aspect = sizes.width / sizes.height
+    camera.updateProjectionMatrix()
+
+    // Update renderer
+    renderer.setSize(sizes.width, sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+})
+
+// camera
+
+camera.position.x = 0
+camera.position.y = 0
+camera.position.z = 1
+camera.rotation.y = 0
+
+scene.add(camera)
+
+
+// Renderer
+
+renderer.setSize(sizes.width, sizes.height)
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+//Animate
+const clock = new THREE.Clock()
+
+let x = -0.001;
+let z = 0.001;
+let y = -0.00155;
+
+const turn = document.getElementById("turn");
+turn.addEventListener("click", ()=>{
+    if ( camera.position.z > 0 ){
+        x*=-1;
+    }
+    camera.position.x = 0
+    camera.position.y = 0
+    camera.position.z = 1
+    camera.rotation.y = 0
+    y*=-1; 
+})
+
+const tick = () =>
+{
+
+    const elapsedTime = clock.getElapsedTime()
+
+    // Update objects
+    if ( camera.position.x > 1 ){
+        x *= -1;
+    }
+    if ( camera.position.x < -1 ){
+        x *= -1;
+    }
+
+    if ( camera.position.z > 1 ){
+        z *= -1;
+    }
+    if ( camera.position.z < -1 ){
+        z *= -1;
+    }
+    camera.position.z += z;
+    camera.position.x += x;
+    camera.rotation.y += y;
+
+
+    // Render
+    renderer.render(scene, camera)
+
+    // Call tick again on the next frame
+    window.requestAnimationFrame(tick)
+}
+
+tick()
+		</script>
+	</body>
+</html>

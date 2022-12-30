@@ -1,0 +1,82 @@
+.signupContainer{
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 80%;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer {
+    width: min(500px,100%);
+    text-align: right;
+    margin: 20px 0px;
+}
+
+.formContainerEN{
+    text-align: left;
+}
+
+.buttonDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.Button {
+    height: 45px;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+}
+
+.termsConditionsDiv {
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+    margin-top: 15px;
+}
+
+.termsConditionsDivEN{
+    justify-content: left;
+    direction: rtl;
+}
+
+.signupButton {
+    width: 100%;
+    height: 55px;
+    font-size: 20px;
+    background-color: rgb(46, 49, 146);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.warning {
+    color: red;
+    font-size: 13px;
+    direction: rtl;
+    margin-top: 2px;
+    font-weight: 100;
+}
+
+.activeButton {
+    border: 1px solid blue;
+    color: blue;
+    background-color: #F0F1F9;
+}
+
+@media (max-width: 600px){
+    .buttonDiv {
+        margin-left: 0px;
+    }
+}

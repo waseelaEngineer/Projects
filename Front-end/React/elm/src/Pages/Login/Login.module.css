@@ -1,0 +1,51 @@
+.loginContainer{
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-template-columns: 80%;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  width: min(500px,100%);
+  text-align: right;
+  position: relative;
+}
+
+.formContainerEN{
+  text-align: left;
+}
+
+.titleDiv {
+  padding-bottom: 10px;
+}
+
+.forgetPassword{
+  padding-top: 5px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 900;
+  color: gray;
+  cursor: pointer;
+}
+
+.forgetPasswordEN{
+  text-align: right;
+}
+
+.signinButton {
+  width: 100%;
+  height: 55px;
+  font-size: 20px;
+  margin-top: 30px;
+  background-color: rgb(46, 49, 146);
+  color: white;
+  border: none;
+  cursor: pointer;
+}

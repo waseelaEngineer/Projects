@@ -1,0 +1,132 @@
+.info{
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.balance{
+    display: flex;
+    flex-direction: column;
+    background-color: #fef8fa;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.price{
+    display: flex;
+    color: #5f68bf;
+    align-items: flex-end;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.balance button{
+    color: white;
+    background-color: #5f68bf;
+    border: none;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.teacher img{
+    width: 50px;
+}
+
+.teacher{
+    display: flex;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.teacher div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.date{
+    display: flex;
+    flex-direction: column;
+    background-color: #fef8fa;
+    margin-top: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.time{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.time div{
+    background-color: white;
+    padding: 5px;
+}
+
+.date button{
+    background-color:#5f68bf;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.links{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    color:#5f68bf;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.links div{
+    background-color: #fef8fa;
+    padding: 10px 0px;
+}
+
+.links h4{
+    font-size: 15px;
+    padding-right: 5px;
+}
+
+.linksEN h4{
+    font-size: 12px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+.tag{
+    background-color: rgb(255, 208, 0);
+    padding: 1px 3px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .info h1{
+        font-size: 25px;
+    }
+
+    .info h2{
+        font-size: 20px;
+    }
+    .balance button{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 950px){
+    .info{
+        padding: 30px 20px;
+    }
+}

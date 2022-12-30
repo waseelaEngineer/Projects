@@ -1,0 +1,108 @@
+.title{
+    padding-bottom: 11px;
+}
+
+.typesContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.typesContainer h3{
+    padding-bottom: 9px;
+}
+
+.teachingType{
+    border: 1px solid lightgray;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding-inline: 10px;
+}
+
+.teachingType input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid lightgray;
+    outline: none;
+    font-size: 18px;
+    padding-inline: 10px;
+    border-radius: 0px;
+}
+
+.teachingType ::placeholder{
+    font-size: 12px;
+}
+
+.teachingType button{
+    height: 42px;
+    width: 40px;
+    background-color: white;
+    border: 1px solid lightgray;
+    color: gray;
+}
+
+.type{
+    padding: 18px 0px;
+}
+
+.type p{
+    font-size: 12px;
+}
+
+.price{
+    display: none;
+    justify-content: left;
+    padding: 18px 0;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+.show{
+    display: flex;
+}
+
+.button{
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 14px;
+    padding: 16px   20px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    margin-top: 13px;
+    margin-left: 10px;
+    color: black;
+}
+
+.buttonEN{
+    margin-left: 0px;
+    margin-right: 10px;
+    padding: 16px   15px;
+    font-size: 14px;
+}
+
+.active{
+    background-color: #fef8fa;
+    color: #2e3192;
+    border-color: blue;
+}
+
+@media (max-width: 1280px){
+    .typesContainer{
+        grid-template-columns: 1fr;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 440px){
+    .buttonEN{
+        font-size: 12px;
+        padding: 16px   10px;
+    }
+    .typesContainer h3{
+        font-size: 15px;
+    }
+}

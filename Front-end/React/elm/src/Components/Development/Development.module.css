@@ -1,0 +1,338 @@
+.main {
+    margin-top: 5px;
+}
+
+.title {
+    margin-top: 10px;
+}
+
+.inputs {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.inputs input {
+    width: 90%;
+    height: 45px;
+    font-size: 20px;
+    padding: 0px 5%;
+    color: gray;
+    border: 1px solid lightgray;
+    outline-color: blue;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+}
+
+.button {
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+    height: 45px;
+}
+
+.active {
+    background-color: #fef8fa;
+    border: 1px solid #5f68bf;
+    font-size: 20px;
+    color: #5f68bf;
+    cursor: pointer;
+    height: 45px;
+}
+
+.places {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    padding: 14px 20px;
+    cursor: pointer;
+}
+
+.add {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2%;
+    padding: 8px 20px;
+    font-size: 17px;
+    background-color: #5f68bf;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.addEN{
+    left: auto;
+    right: 2%;
+}
+
+.topics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 60px
+}
+
+.element {
+    display: flex;
+    gap: 10px;
+    align-items: end;
+}
+
+.number {
+    background-color: #fef8fa;
+    color: #5f68bf;
+    padding: 3px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.share {
+    width: 100%;
+    background-color: #5f68bf;
+    color: white;
+    border: none;
+    padding: 13px 0px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.placeContainer {
+    display: none;
+    position: fixed;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(620px, 80%);
+    border: 1px solid black;
+    padding: 20px;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.placeDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.placeDiv2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+
+.exit {
+    background-color: #fef8fa;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.placeSearch {
+    width: 100%;
+    height: 45px;
+    font-size: 20px;
+    padding-inline: 20px;
+    color: gray;
+    border: 1px solid lightgray;
+    outline-color: blue;
+    box-sizing: border-box;
+}
+
+.imgDiv{
+    display: flex;
+    gap: 20px;
+}
+
+.cityDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cityDiv button {
+    background-color: #fef8fa;
+    color: #5f68bf;
+    border: 1px solid #5f68bf;
+    padding: 5px;
+}
+
+.check {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.img {
+    width: 100px;
+    height: 60px;
+}
+
+.edit {
+    text-decoration: underline;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.delete {
+    color: red;
+    cursor: pointer;
+}
+
+.addCourse {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 80vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.addCourse p {
+    max-width: 50%;
+}
+
+.addCourse button {
+    background-color: #5f68bf;
+    color: white;
+    border: none;
+    padding: 20px 0px;
+    width: min(60%, 250px);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.coursesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.coursesHeader button {
+    background-color: #5f68bf;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.courseDiv {
+    background-color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.priceHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    display: flex;
+    align-items: end;
+    gap: 5px;
+}
+
+.priceDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    margin-top: 20px;
+    grid-column-gap: 10px;
+}
+
+.priceDetails p {
+    color: gray;
+}
+
+.coursesContainer {
+    height: 75vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 20px;
+}
+
+.show{
+    display: flex;
+}
+
+@media (max-width: 500px) {
+    .add {
+        padding: 4px 10px;
+        font-size: 13px;
+    }
+
+    .inputs input,
+    .inputs h3,
+    .button,
+    .active {
+        font-size: 16px;
+    }
+    .coursesHeader h1 {
+        font-size: 20px;
+    }
+
+    .places h3 {
+        font-size: 14px;
+    }
+
+    .addCourse button {
+        padding: 10px 0px;
+    }
+
+    .imgDiv {
+        gap: 5px;
+    }
+
+    .cityDiv h3,
+    p {
+        font-size: 14px;
+    }
+
+    .cityDiv button {
+        padding: 2px 2px;
+        font-size: 10px;
+    }
+
+    .edit {
+        font-size: 10px;
+        padding: 0;
+    }
+
+    .check {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .placeDiv h1 {
+        font-size: 15px;
+    }
+
+    .placeContainer {
+        position: absolute;
+    }
+}

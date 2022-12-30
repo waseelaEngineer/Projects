@@ -1,0 +1,108 @@
+/* .bottom{
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+}
+
+.previos{
+    background-color: white;
+    color: rgba(0, 0, 255, 0.479);
+    border: 1px solid rgba(0, 0, 255, 0.479);
+    font-size: 20px;
+    height: 60px;
+    width: 140px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.next{
+    background-color: #2e3192;
+    color: white;
+    border: 1px solid #2e3192;
+    font-size: 20px;
+    height: 60px;
+    width: 140px;
+    cursor: pointer;
+}
+
+.skip{
+    background-color: white;
+    color: gray;
+    border: 1px solid lightgray;
+    font-size: 20px;
+    height: 60px;
+    width: 140px;
+    cursor: pointer;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.previos{
+    background-color: white;
+    color: rgba(0, 0, 255, 0.479);
+    border: 1px solid rgba(0, 0, 255, 0.479);
+    font-size: 20px;
+    height: 50px;
+    width: 30%;
+    cursor: pointer;
+}
+
+.next{
+    background-color: #2e3192;
+    color: white;
+    border: 1px solid #2e3192;
+    font-size: 20px;
+    height: 50px;
+    width: 30%;
+    cursor: pointer;
+}
+
+.skip{
+    background-color: white;
+    color: gray;
+    border: 1px solid lightgray;
+    font-size: 20px;
+    height: 50px;
+    width: 35%;
+    cursor: pointer;
+} */
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.previos{
+    background-color: white;
+    color: rgba(0, 0, 255, 0.479);
+    border: 1px solid rgba(0, 0, 255, 0.479);
+    font-size: 20px;
+    height: 50px;
+    width: 30%;
+    cursor: pointer;
+}
+
+.next{
+    background-color: #2e3192;
+    color: white;
+    border: 1px solid #2e3192;
+    font-size: 20px;
+    height: 50px;
+    width: 30%;
+    cursor: pointer;
+}
+
+.skip{
+    background-color: white;
+    color: gray;
+    border: 1px solid lightgray;
+    font-size: 20px;
+    height: 50px;
+    width: 35%;
+    cursor: pointer;
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="desceiption" content="English level test"/>
+    <title>English level test</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!--header-->
+    <h1 id="name">Waseela</h1>
+    <div id="header"> <button onclick="toggle()" id="menu" value="no">More</button>  </div>
+
+    <!--more button-->
+    <div class="content" id="sidebar">
+        <button class="button" data-for-tab="2" id="btn">Home</button>
+        <button class="button" data-for-tab="3" id="btn">English Levels</button>
+        <button class="button" data-for-tab="4" id="btn" onclick="list()">Top scores</button>
+        <button class="button" data-for-tab="5" id="btn">Learn English</button>
+        <button class="button" data-for-tab="6" id="btn">Contact</button>
+    </div>
+
+    <!--home page-->
+    <div class="content content--active" data-tab="2" id="startpage">
+        <br><br><br><div id="generaldiv"> <h1 id="general">General English</h1>  </div>
+        <img src="rotate.gif" id="rotate">
+        <p id="belive">"BELIVE YOU CAN AND YOU ARE HALFWAY THERE"</p>
+        <br><br><br><br><br><br>
+        <div id="pic1">Support for learners</div>
+        <div id="pic2">Support for teachers</div>
+        <div id="pic3">Support for organisations</div>
+
+        <img src="learners.jpg" id="photo1">
+        <img src="teachers.jpg" id="photo2">
+        <img src="orgnization.jpg" id="photo3">
+
+        <p id="p1">Free activities and advice if you're preparing for one of our exams or want to improve your English.</p>
+        <p id="p2">Resources to help you teach English online and support you and your learners during Covid.</p>
+        <p id="p3">Effective English language testing for your organisation, featuring test-from-home software and learning solutions.</p>
+        
+        <img src="first.jpg" id="first">
+        <p id="together"><strong>TOGETHER WE INSPIRE LEARNERS TO GO FURTHER </strong><br><br> Our range of free teaching resources, lesson plans and
+             activities is designed to help you prepare your students for our exams and tests. We also have a range of teaching qualifications, 
+             courses and support to help you develop as a teacher.<br>
+        </p>
+
+        <p id="path"><strong>YOUR PATH TO LEARNING ENGLISH, STEP BY STEP</strong><br><br> Our English Qualifications are in-depth exams that make 
+            learning English enjoyable, effective and rewarding. Our unique approach encourages continuous progression with a clear path to 
+            improve language skills. We have qualifications for schools, general and higher education, and business.<br>
+        </p>
+        <img src="second.jpg" id="second">
+
+        <img src="third.jpg" id="third">
+        <p id="accurate"><STRONG>THE ACCURATE ENGLISH TEST WITH FAST RESULTS</STRONG><br><br>Linguaskill is a quick and convenient online test to
+             help higher education institutions and employers check the English levels of individuals and groups of candidates. It combines the 
+             latest AI technology with the reliability and quality you expect from Cambridge.
+        </p><br>
+
+        <button onclick="start()" id="start">Click here to start your English level test   </button><br><br><br>
+    </div>
+
+    <!--levels page-->
+    <div class="content" data-tab="3">
+        <p id="levels">
+            <br><br><br><br>
+            <strong>A1 English (Beginner/Elementary):</strong><br><br><br>
+            * Understand and use very frequently-used everyday expressions as well as simple phrases to meet immediate needs.<br><br>
+            * Introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, things 
+            he/she has and people he/she knows.<br><br>
+            * Interact in a simple way provided the other person talks slowly and clearly and is prepared to cooperate.<br><br>
+            <br><br><br><br>
+            <strong>A2 English (Pre Intermediate):</strong><br><br><br>
+            * Understand sentences and frequently-used expressions related to the areas of experience 
+            most immediately relevant to him/her (e.g. 
+            very basic personal and family information, shopping, places of interest, employment, etc.).<br><br>
+            * Communicate in simple, everyday tasks requiring no more than a simple and direct exchange of 
+            information on familiar and routine matters.<br><br>
+            * Describe in simple terms aspects of his/her past, environment and matters related to his/her immediate needs.<br><br>
+            <br><br><br><br>
+            <strong>B1 English (Intermediate):</strong><br><br><br>
+            * Understand the main points of clear texts in standard language if they are about topics with which they are familiar, whether in work, 
+            study or leisure contexts.<br><br>
+            * Cope with most of the situations that might arise on a trip to areas where the language is used.<br><br>
+            * Produce simple, coherent texts about topics with which they are familiar or in which they have a personal interest.<br><br>
+            * Describe experiences, events, wishes and aspirations, as well as briefly justifying opinions or explaining plans.<br><br>
+            <br><br><br><br>
+            <strong>B2 English (Upper Intermediate):</strong><br><br><br>            
+            * Understand the main ideas of complex text on both concrete and abstract topics, including technical 
+            discussions in their field of specialisation.<br><br>
+            * Interact with a degree of fluency and spontaneity that makes regular interaction with native speakers possible 
+            without strain for either party.<br><br>
+            * Produce clear, detailed text on a wide range of subjects and explain a viewpoint on a topical issue giving the 
+            advantages and disadvantages of various options.<br><br>
+            <br><br><br><br>
+            <strong>C1 English (Advanced):</strong><br><br><br>
+            * Understand a wide range of more demanding, longer texts, and recognise implicit meaning in them.<br><br>
+            * Express him/herself fluently and spontaneously without much obvious searching for the right expression.<br><br>
+            * Use language flexibly and effectively for social, academic and professional purposes. He/she can produce clear, well-structured, 
+            detailed text on complex subjects, showing correct use of organisational patterns, connectors and cohesive devices.<br><br>
+            <br><br><br><br>
+            <strong>C2 English (Proficient):</strong><br><br><br>
+            * Understand with ease practically everything he/she hears or reads.<br><br>
+            * Summarise information and arguments from different spoken and written sources,and present them coherently and concisely.<br><br>
+            * Express himself/herself spontaneously, very fluently and precisely, differentiating finer 
+            shades of meaning even in more complex situations.<br><br>    
+        </p>
+        <button onclick="returnhome()" id="returnhome">Return</button>
+    </div>
+
+    <!--score page--> 
+    <div class="content" data-tab="4">
+        <br><br><br><div id="showlist"></div>
+        <br><br><button onclick="returnhome()" id="returnhome">Return</button>
+    </div>
+
+    <!--learn page-->
+    <div class="content" data-tab="5">
+        <P id="learn">
+            <br><br><br><br>
+            <strong><a href="https://www.amigosingleses.com/"> 1. Amigos Ingleses</a><br></strong><br>
+            Aimed at Spanish speakers, this website has resources for practicing listening skills and conversational English, 
+            including a Youtube channel with lots of fun videos to help you master the trickier aspects of English pronunciation.
+            <br><br><br><br>
+            <strong><a href="https://www.bbc.co.uk/learningenglish">2. BBC Learning English<br></a></strong><br>
+            The BBC website for learning English has lots of free resources, including courses at different levels, an online 
+            drama to follow, vocabulary, grammar and listening practice, words in the news and graded articles on all sorts of 
+            interesting topics. There are sections for kids, teens and adults.
+            <br><br><br><br>
+            <strong><a href="https://learnenglish.britishcouncil.org/">3. British Council Learn English</a><br></strong><br>
+            Here you can find free video and audio resources for learners of all ages and at all levels, including games, English 
+            skills through football, a mini soap opera, podcasts, articles and a discussion forum to ask questions, find advice about 
+            learning English and make friends from all over the world.
+            <br><br><br><br>
+            <strong><a href="https://www.duolingo.com/">4. Duolingo<br></a></strong><br>
+            A great website for learning vocabulary and grammar through interactive games and quizzes. There is an emphasis on 
+            pronunciation as you have to repeat back words and complete each lesson correctly before moving on to the next. It 
+            also lets you set your own goals and monitor your progress.
+            <br><br><br><br>
+            <strong><a href="https://www.flo-joe.co.uk/">5. Flo-joe<br></a></strong><br>
+            If you’re planning to take the Cambridge First, Advanced or Proficiency exam or the IELTS exam and you’re looking for 
+            some extra practice, this site has lots of exam-task practice for each of the papers. Make sure you time yourself in 
+            order to get used to exam conditions and keep notes of what you learn.
+            <br><br><br><br>
+            <strong><a href="https://www.rosettastone.com">6. Live Mocha<br></a></strong><br>
+            This website pairs you up with someone trying to learn your language so that you can have an online exchange with a 
+            real native speaker and become part of a global community of language learners. Everyone helps out with comments, 
+            corrections, tips and encouragement. You also have access to English lessons and various 
+            resources for listening and reading practice.
+            <br><br><br><br>
+            <strong><a href="https://lyricstraining.com/">7. Lyrics training<br></a></strong><br>
+            Songs are a great way to practice both listening and – if you sing along – pronunciation. This fun website lets 
+            you test your skills by typing in missing words as the song of your choice plays section by 
+            section. You can challenge yourself from easy to hard.
+            <br><br><br><br>
+            <strong><a href="https://www.newsinlevels.com/">8. News in Levels<br></a></strong><br>
+            If you follow the news, why not follow it in English? This site has loads of current news stories, plus an 
+            extensive archive, all divided into three levels so that you can catch up on what’s 
+            happening in the world no matter what your level of English is.
+            <br><br><br><br>
+            <strong><a href="https://www.talkenglish.com/">9. Talk English<br></a></strong><br>
+            This is a great site for learning English, with lots of free listening practice with accompanying exercises 
+            as well as lessons in general English, business English, English for interviews and English for travel.
+            <br><br><br><br>
+            <strong><a href="https://www.ted.com/">10. TED<br></a></strong><br>
+            Here you can find hundreds of fascinating short lectures by experts in everything from design to psychology. 
+            Although not strictly a website for learning English, it is very accessible to non-native speakers. Subtitles 
+            are available in English for every talk; unlike subtitles for movies and TV shows, which are abbreviated 
+            versions of the actual dialogue, TED subtitles are complete, meaning they’re great for 
+            listening practice. A transcript is also available.
+        </P>
+        <button onclick="returnhome()" id="returnhome">Return</button>
+    </div>
+
+    <!--contact page-->
+    <div class="content" data-tab="6"> 
+        <img src="me.PNG" id="me">
+        <p id="contact">
+            <br><br><br>
+            E-Mail: D2105944@hotmail.com
+            <br><br><br><br>
+            Facebook: <a href="https://www.facebook.com/profile.php?id=100004315320291">Mohamed Alwaseela</a>
+            <br><br><br><br>
+            Instagram: <a href="https://www.instagram.com/waseela2k/">@waseela2k</a>
+            <br><br><br><br>
+            Twitter: <a href="https://twitter.com/waseela2k">@Waseela2k</a>
+            <br><br><br><br>
+            Linked in: <a href="https://www.linkedin.com/in/mohamed-alemam-474b9522a">Mohamed Alemam</a>
+            <br><br><br><br>
+            Phone call + Whats app + Telegram: <br><br>00966576344747
+            <br><br><br><br>
+        </p>
+        <button onclick="returnhome()" id="returnhome">Return</button>
+    </div> 
+
+    <!--MCQ1 page-->
+    <div class="content" id="mcq1">
+         
+        <h2><br><br>Test your English</h2>
+        <h3 id="intro"><br>For the questions below, please choose the best option to complete the sentence or conversation.</h3>
+        <h4 id="progress"><br><br>Page 1 of 4</h4>
+        <div id="line1"><div id="line11"></div></div>
+        <p id="qb">1- Can I park here?</p>
+        <p id="a111" class="ansb b11"> <input type="radio" name="quation11" id="b111" value="Sorry, I did that."> Sorry, I did that.</p>
+        <p id="a112" class="ansb b11"> <input type="radio" name="quation11" id="b112" value="It's the same place."> It's the same place. </p>
+        <p id="a113" class="ansb b11"> <input type="radio" name="quation11" id="b113" value="Only for half an hour."> Only for half an hour. </p>
+        <div id="split">----------------------------------------------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">2- What colour will you paint the children's bedroom?</p>
+        <p id="a121" class="ansb b12"> <input type="radio" name="quation12" id="b121" value="I hope it was right."> I hope it was right. </p>
+        <p id="a122" class="ansb b12"> <input type="radio" name="quation12" id="b122" value="We cant decide."> We can't decide. </p>
+        <p id="a123" class="ansb b12"> <input type="radio" name="quation12" id="b123" value="It wasn't very difficult."> It wasn't very difficult. </p>
+        <div id="split">------------------------------------------------------------------------------------------------------------------------
+            -----------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">3- I can't understand this email.</p>
+        <p id="a131" class="ansb b13"> <input type="radio" name="quation13" id="b131" value="Would you like some help?"> Would you like some help? </p>
+        <p id="a132" class="ansb b13"> <input type="radio" name="quation13" id="b132" value="Don't you know?"> Don't you know? </p>
+        <p id="a133" class="ansb b13"> <input type="radio" name="quation13" id="b133" value="I suppose you can."> I suppose you can. </p>
+        <div id="split">-------------------------------------------------------------------------------------------------------------------------
+            ----------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">4- I'd like two tickets for tomorrow night.</p>
+        <p id="a141" class="ansb b14"> <input type="radio" name="quation14" id="b141" value="How much did you pay?"> How much did you pay? </p>
+        <p id="a142" class="ansb b14"> <input type="radio" name="quation14" id="b142" value="Afternoon and evening."> Afternoon and evening. </p>
+        <p id="a143" class="ansb b14"> <input type="radio" name="quation14" id="b143" value="Ill just check for you."> I'll just check for you. </p>
+        <div id="split">----------------------------------------------------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">5- Shall we go to the gym now?</p>
+        <p id="a151" class="ansb b15"> <input type="radio" name="quation15" id="b151" value="Im too tired."> I'm too tired. </p>
+        <p id="a152" class="ansb b15"> <input type="radio" name="quation15" id="b152" value="It's very good."> It's very good. </p>
+        <p id="a153" class="ansb b15"> <input type="radio" name="quation15" id="b153" value="Not at all."> Not at all. </p>
+
+        <p id="mcq1e"></p>
+        <button onclick="mcq1()" id="mcq1btn">NEXT</button>
+    </div>
+
+    <!--MCQ2 page-->
+    <div class="content" id="mcq2">
+
+        <h2><br><br>Test your English</h2>
+        <h3 id="intro"><br>For the questions below, please choose the best option to complete the sentence or conversation.</h3>
+        <h4 id="progress"><br><br>Page 2 of 4</h4>
+        <div id="line1"><div id="line12"></div></div>
+
+        <p id="qb">6- Don't put your cup on the ...... of the table – someone will knock it off.</p>
+        <p id="a211" class="ansb b21"> <input type="radio" name="quation21" id="b211" value="outside"> outside</p>
+        <p id="a212" class="ansb b21"> <input type="radio" name="quation21" id="b212" value="edge"> edge </p>
+        <p id="a213" class="ansb b21"> <input type="radio" name="quation21" id="b213" value="boundary"> boundary </p>
+        <div id="split">----------------------------------------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">7- I'm sorry - I didn't ...... to disturb you.</p>
+        <p id="a221" class="ansb b22"> <input type="radio" name="quation22" id="b221" value="hope"> hope </p>
+        <p id="a222" class="ansb b22"> <input type="radio" name="quation22" id="b222" value="think"> think </p>
+        <p id="a223" class="ansb b22"> <input type="radio" name="quation22" id="b223" value="mean"> mean </p>
+        <div id="split">-----------------------------------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">8- The singer ended the concert ...... her most popular song.</p>
+        <p id="a231" class="ansb b23"> <input type="radio" name="quation23" id="b231" value="by"> by </p>
+        <p id="a232" class="ansb b23"> <input type="radio" name="quation23" id="b232" value="with"> with </p>
+        <p id="a233" class="ansb b23"> <input type="radio" name="quation23" id="b233" value="in"> in </p>
+        <div id="split">------------------------------------------------------------------------------------------------------------------
+            -----------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">9- Would you mind ...... these plates a wipe before putting them in the cupboard?</p>
+        <p id="a241" class="ansb b24"> <input type="radio" name="quation24" id="b241" value="making"> making </p>
+        <p id="a242" class="ansb b24"> <input type="radio" name="quation24" id="b242" value="getting"> getting </p>
+        <p id="a243" class="ansb b24"> <input type="radio" name="quation24" id="b243" value="giving"> giving </p>
+        <div id="split">-------------------------------------------------------------------------------------------------------------------
+            ----------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">10- I was looking forward ...... at the new restaurant, but it was closed.</p>
+        <p id="a251" class="ansb b25"> <input type="radio" name="quation25" id="b251" value="to eating"> to eating </p>
+        <p id="a252" class="ansb b25"> <input type="radio" name="quation25" id="b252" value="to eat"> to eat </p>
+        <p id="a253" class="ansb b25"> <input type="radio" name="quation25" id="b253" value="to have eaten"> to have eaten </p>
+
+        <p id="mcq2e"></p>
+        <button onclick="mcq2()" id="mcq2btn">NEXT</button>
+    </div>
+
+    <!--MCQ3 page-->
+    <div class="content" id="mcq3">
+
+        <h2><br><br>Test your English</h2>
+        <h3 id="intro"><br>For the questions below, please choose the best option to complete the sentence or conversation.</h3>
+        <h4 id="progress"><br><br>Page 3 of 4</h4>
+        <div id="line1"><div id="line13"></div></div>
+
+        <p id="qb">11- It was only ten days ago ...... she started her new job.</p>
+        <p id="a311" class="ansb b31"> <input type="radio" name="quation31" id="b311" value="then"> then</p>
+        <p id="a312" class="ansb b31"> <input type="radio" name="quation31" id="b312" value="since"> since </p>
+        <p id="a313" class="ansb b31"> <input type="radio" name="quation31" id="b313" value="that"> that </p>
+        <div id="split">--------------------------------------------------------------------------------------------------------------
+            ---------------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">12- The shop didn't have the shoes I wanted, but they've ...... a pair specially for me.</p>
+        <p id="a321" class="ansb b32"> <input type="radio" name="quation32" id="b321" value="booked"> booked </p>
+        <p id="a322" class="ansb b32"> <input type="radio" name="quation32" id="b322" value="ordered"> ordered </p>
+        <p id="a323" class="ansb b32"> <input type="radio" name="quation32" id="b323" value="commanded"> commanded </p>
+        <div id="split">----------------------------------------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">13- Have you got time to discuss your work now or are you ...... to leave?</p>
+        <p id="a331" class="ansb b33"> <input type="radio" name="quation33" id="b331" value="thinking"> thinking </p>
+        <p id="a332" class="ansb b33"> <input type="radio" name="quation33" id="b332" value="planned"> planned </p>
+        <p id="a333" class="ansb b33"> <input type="radio" name="quation33" id="b333" value="about"> about </p>
+        <div id="split">------------------------------------------------------------------------------------------------------------------
+            -----------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">14- She came to live here ...... a month ago.</p>
+        <p id="a341" class="ansb b34"> <input type="radio" name="quation34" id="b341" value="quite"> quite </p>
+        <p id="a342" class="ansb b34"> <input type="radio" name="quation34" id="b342" value="already"> already </p>
+        <p id="a343" class="ansb b34"> <input type="radio" name="quation34" id="b343" value="almost"> almost </p>
+        <div id="split">------------------------------------------------------------------------------------------------------------------
+            -----------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">15- Once the plane is in the air, you can ...... your seat belts if you wish.</p>
+        <p id="a351" class="ansb b35"> <input type="radio" name="quation35" id="b351" value="unfasten"> unfasten </p>
+        <p id="a352" class="ansb b35"> <input type="radio" name="quation35" id="b352" value="unlock"> unlock </p>
+        <p id="a353" class="ansb b35"> <input type="radio" name="quation35" id="b353" value="untie"> untie </p>
+
+        <p id="mcq3e"></p>
+        <button onclick="mcq3()" id="mcq3btn">NEXT</button>
+    </div>
+
+    <!--MCQ4 page-->
+    <div class="content" id="mcq4">
+
+        <h2><br><br>Test your English</h2>
+        <h3 id="intro"><br>For the questions below, please choose the best option to complete the sentence or conversation.</h3>
+        <h4 id="progress"><br><br>Page 4 of 4</h4>
+        <div id="line1"><div id="line14"></div></div>
+
+        <p id="qb">16- I left my last job because I had no ...... to travel.</p>
+        <p id="a411" class="ansb b41"> <input type="radio" name="quation41" id="b411" value="place"> place</p>
+        <p id="a412" class="ansb b41"> <input type="radio" name="quation41" id="b412" value="opportunity"> opportunity </p>
+        <p id="a413" class="ansb b41"> <input type="radio" name="quation41" id="b413" value="possibility"> possibility </p>
+        <div id="split">------------------------------------------------------------------------------------------------------------------
+            -----------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">17- It wasn't a bad crash and ...... damage was done to my car.</p>
+        <p id="a421" class="ansb b42"> <input type="radio" name="quation42" id="b421" value="little"> little </p>
+        <p id="a422" class="ansb b42"> <input type="radio" name="quation42" id="b422" value="small"> small </p>
+        <p id="a423" class="ansb b42"> <input type="radio" name="quation42" id="b423" value="light"> light </p>
+        <div id="split">------------------------------------------------------------------------------------------------------------------
+            -----------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">18- I'd rather you ...... to her why we can't go.</p>
+        <p id="a431" class="ansb b43"> <input type="radio" name="quation43" id="b431" value="would explain"> would explain </p>
+        <p id="a432" class="ansb b43"> <input type="radio" name="quation43" id="b432" value="explained"> explained </p>
+        <p id="a433" class="ansb b43"> <input type="radio" name="quation43" id="b433" value="to explain"> to explain </p>
+        <div id="split">------------------------------------------------------------------------------------------------------------------
+            -----------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">19- Before making a decision, the leader considered all ...... of the argument.</p>
+        <p id="a441" class="ansb b44"> <input type="radio" name="quation44" id="b441" value="sides"> sides </p>
+        <p id="a442" class="ansb b44"> <input type="radio" name="quation44" id="b442" value="features"> features </p>
+        <p id="a443" class="ansb b44"> <input type="radio" name="quation44" id="b443" value="perspectives"> perspectives </p>
+        <div id="split">-------------------------------------------------------------------------------------------------------------------
+            ----------------------------------------------------------------------------------------------------------------------</div>
+        <p id="qb">20- This new printer is recommended as being ...... reliable.</p>
+        <p id="a451" class="ansb b45"> <input type="radio" name="quation45" id="b451" value="greatly"> greatly </p>
+        <p id="a452" class="ansb b45"> <input type="radio" name="quation45" id="b452" value="highly"> highly </p>
+        <p id="a453" class="ansb b45"> <input type="radio" name="quation45" id="b453" value="strongly"> strongly </p>
+
+        <p id="mcq4e"></p>
+        <button onclick="mcq4()" id="mcq4btn">NEXT</button>
+    </div>
+
+    <!--Result page-->
+    <div class="content" id="result">
+        <br><br><br>
+        <div id="final">RESULT</div>
+        <p id="" class="enter show">Enter your name in English to see your result</p>
+        <input type="text" id="input" class="input show"><p></p>
+        <p class="namemust">You must enter your name</p>
+        <button id="" onclick ="button()" class="nameinput show">Enter</button>
+        <div class="Result"> <p id="Result"></p> </div> 
+    </div>
+
+    <div id="bottom">
+        <p id="owner">© Was Created by Mohamed Alwaseela Ali Alemam, 2022, SA.</p>
+        
+    </div>
+
+    <script src="index.js" ></script>
+</body>
+
+</html>

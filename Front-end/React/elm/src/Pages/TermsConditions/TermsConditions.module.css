@@ -1,0 +1,20 @@
+.termsConditionsContainer{
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 70px;
+}
+.termsConditionsContent{
+    text-align: right;
+    padding-top: 70px;
+}
+.termsConditionsButton{
+    width: 20%;
+    height: 50px;
+    margin-top: 70px;
+    font-size: 20px;
+    background-color: rgb(46, 49, 146);
+    color: white;
+    border: none;
+    cursor: pointer;
+}

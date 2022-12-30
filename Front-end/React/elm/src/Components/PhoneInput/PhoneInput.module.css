@@ -1,0 +1,74 @@
+.phoneDiv{
+    position: relative;
+    border: 1px solid transparent;
+    margin-top: 10px;
+}
+.phoneInput{
+    width: 100%;
+    text-align: right;
+    padding-right: 15px;
+    height: 40px;
+    font-size: 20px;
+    outline-color: blue;
+    margin-top: 8px;
+    border: 1px solid lightgray;
+    direction: rtl;
+    box-sizing: border-box;
+    border-radius: 0px;
+}
+.phoneInputEN{
+    text-align: left;
+    padding-left: 15px;
+}
+.phoneInput:focus::placeholder{
+    color: transparent;
+}
+.phoneLabel{
+    display: none;
+    position: absolute;
+    top: 0px;
+    font-size: 15px;
+    background-color: white;
+    padding: 0px 5px;
+    right: 5%;
+}   
+.phoneLabelEN{
+    left: 5%;
+    right:auto;
+}
+.phoneInput:focus ~ .phoneLabel{
+    display: block;
+    color: blue;
+}
+.phoneSelect{
+    position: absolute;
+    top: 20px;
+    border: none;
+    left: 5%;
+    border-right: 2px solid lightgray;
+    font-size: 15px;
+    outline: none;
+    -webkit-appearance: none;
+    padding-inline: 5px;
+    cursor: pointer;
+    color: gray;
+}
+.phoneSelectEN{
+    left: auto;
+    right: 5%;
+    border: none;
+    border-left: 2px solid lightgray;
+}
+.warning{
+    color: white;
+    font-size: 13px;
+    direction: rtl;
+    margin-top: 2px;
+    font-weight: 100;
+}
+
+@media (max-width: 500px){
+    .phoneLabel{
+        font-size: 12px;
+    }
+}
