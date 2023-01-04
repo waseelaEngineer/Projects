@@ -158,7 +158,7 @@ export default function AssociationRegister() {
       formData.append('transferImg', TransferImg);
       formData.append('nationalAddressImg', NationalAddressImg);
 
-      fetch("http://127.0.0.1:8000/api/individual-register", {
+      fetch("https://vahpa.org.sa/server/api/individual-register", {
         method: 'POST',
         body: formData
       })
@@ -289,7 +289,7 @@ export default function AssociationRegister() {
       formData.append('registerImg', facilityRegisterImg);
       formData.append('nationalAddressImg', facilityNationalAddressImg);
 
-      fetch("http://127.0.0.1:8000/api/facility-register", {
+      fetch("https://vahpa.org.sa/server/api/facility-register", {
         method: 'POST',
         body: formData
       })

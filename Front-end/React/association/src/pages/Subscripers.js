@@ -12,11 +12,11 @@ export default function Subscripers() {
 
     async function send() {
         if (password == '3VwWKzATJ45M'){
-            let individualResult = await fetch("http://127.0.0.1:8000/api/individual-view");
+            let individualResult = await fetch("https://vahpa.org.sa/server/api/individual-view");
             individualResult = await individualResult.json();
             setIndividualData(individualResult)
 
-            let facilityResult = await fetch("http://127.0.0.1:8000/api/facility-view");
+            let facilityResult = await fetch("https://vahpa.org.sa/server/api/facility-view");
             facilityResult = await facilityResult.json();
             setFacilityData(facilityResult)
         }
@@ -35,7 +35,7 @@ export default function Subscripers() {
 
                 <div className='row justify-content-center text-end'>
                     <div className='col-md-6'>
-                        {facilityData.length == 0 ? (
+                        {facilityData.length == 0 && individualData.length == 0 ? (
                             <div className='card shadow-sm'>
                                 <div className='card-header'>
                                     <h4 className='text-black'>ادخل كلمة السر لعرض المشتركين</h4>
@@ -100,25 +100,25 @@ export default function Subscripers() {
                                                                 <p>وذلك لكوني:</p>
                                                                 <p className='text-center'>{data.reason}</p>
 
-                                                                <a href={`http://127.0.0.1:8000/${data.endorsement}`} className='decoration-none' download target='_blank'>
+                                                                <a href={`https://vahpa.org.sa/server/${data.endorsement}`} className='decoration-none' download target='_blank'>
                                                                     <div className='download-approval mt-5'>
                                                                         <li className="fa-sharp fa-solid fa-download"></li>
                                                                         <label>تحميل إقرار الجمعية</label>
                                                                     </div>
                                                                 </a>
-                                                                <a href={`http://127.0.0.1:8000/${data.identityImg}`} className='decoration-none' download target='_blank'>
+                                                                <a href={`https://vahpa.org.sa/server/${data.identityImg}`} className='decoration-none' download target='_blank'>
                                                                     <div className='download-approval'>
                                                                         <li className="fa-sharp fa-solid fa-download"></li>
                                                                         <label>تحميل صورة الهوية</label>
                                                                     </div>
                                                                 </a>
-                                                                <a href={`http://127.0.0.1:8000/${data.nationalAddressImg}`} className='decoration-none' download target='_blank'>
+                                                                <a href={`https://vahpa.org.sa/server/${data.nationalAddressImg}`} className='decoration-none' download target='_blank'>
                                                                     <div className='download-approval'>
                                                                         <li className="fa-sharp fa-solid fa-download"></li>
                                                                         <label>تحميل صورة العنوان الوطني</label>
                                                                     </div>
                                                                 </a>
-                                                                <a href={`http://127.0.0.1:8000/${data.transferImg}`} className='decoration-none' download target='_blank'>
+                                                                <a href={`https://vahpa.org.sa/server/${data.transferImg}`} className='decoration-none' download target='_blank'>
                                                                     <div className='download-approval'>
                                                                         <li className="fa-sharp fa-solid fa-download"></li>
                                                                         <label>تحميل صورة حوالة سداد الرسوم</label>
@@ -234,31 +234,31 @@ export default function Subscripers() {
                                                             <p>وذلك لكوني:</p>
                                                             <p className='text-center'>{data.reason}</p>
 
-                                                            <a href={`http://127.0.0.1:8000/${data.endorsement}`} className='decoration-none' download target='_blank'>
+                                                            <a href={`https://vahpa.org.sa/server/${data.endorsement}`} className='decoration-none' download target='_blank'>
                                                                 <div className='download-approval mt-5'>
                                                                     <li className="fa-sharp fa-solid fa-download"></li>
                                                                     <label>تحميل إقرار الجمعية</label>
                                                                 </div>
                                                             </a>
-                                                            <a href={`http://127.0.0.1:8000/${data.identityImg}`} className='decoration-none' download target='_blank'>
+                                                            <a href={`https://vahpa.org.sa/server/${data.identityImg}`} className='decoration-none' download target='_blank'>
                                                                 <div className='download-approval'>
                                                                     <li className="fa-sharp fa-solid fa-download"></li>
                                                                     <label>تحميل صورة الهوية</label>
                                                                 </div>
                                                             </a>
-                                                            <a href={`http://127.0.0.1:8000/${data.registerImg}`} className='decoration-none' download target='_blank'>
+                                                            <a href={`https://vahpa.org.sa/server/${data.registerImg}`} className='decoration-none' download target='_blank'>
                                                                 <div className='download-approval'>
                                                                     <li className="fa-sharp fa-solid fa-download"></li>
                                                                     <label>تحميل صورة السجل</label>
                                                                 </div>
                                                             </a>
-                                                            <a href={`http://127.0.0.1:8000/${data.nationalAddressImg}`} className='decoration-none' download target='_blank'>
+                                                            <a href={`https://vahpa.org.sa/server/${data.nationalAddressImg}`} className='decoration-none' download target='_blank'>
                                                                 <div className='download-approval'>
                                                                     <li className="fa-sharp fa-solid fa-download"></li>
                                                                     <label>تحميل صورة العنوان الوطني</label>
                                                                 </div>
                                                             </a>
-                                                            <a href={`http://127.0.0.1:8000/${data.transferImg}`} className='decoration-none' download target='_blank'>
+                                                            <a href={`https://vahpa.org.sa/server/${data.transferImg}`} className='decoration-none' download target='_blank'>
                                                                 <div className='download-approval'>
                                                                     <li className="fa-sharp fa-solid fa-download"></li>
                                                                     <label>تحميل صورة حوالة سداد الرسوم</label>
