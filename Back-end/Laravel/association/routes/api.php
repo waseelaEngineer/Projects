@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\IndividualsController;
+use App\Http\Controllers\MessagesController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,6 +21,10 @@ Route::get('individual-view',[IndividualsController::class, 'view']);
 
 Route::post('facility-register',[FacilityController::class, 'register']);
 Route::get('facility-view',[FacilityController::class, 'view']);
+
+
+Route::post('messages-add',[MessagesController::class, 'add']);
+Route::get('messages-view',[MessagesController::class, 'view']);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

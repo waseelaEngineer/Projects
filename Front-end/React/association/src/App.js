@@ -35,6 +35,7 @@ function App() {
       <Route path='/call-us' element={ <Guest page='call-us'/>}/>
       <Route path='/donate' element={ <Guest page='donate'/>}/>
       <Route path='/subscribers' element={ <Guest page='subscribers'/>}/>
+      <Route path='/messages' element={ <Guest page='messages'/>}/>
     </Routes>
   );
 }

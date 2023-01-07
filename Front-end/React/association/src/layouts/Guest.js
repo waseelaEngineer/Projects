@@ -31,6 +31,7 @@ import SystemsRegulations from '../pages/SystemsRegulations'
 import CallUs from '../pages/CallUs'
 import Donate from '../pages/Donate'
 import Subscripers from '../pages/Subscripers';
+import Messages from '../pages/Messages';
 
 export default function Guest(props) {
 
@@ -74,6 +75,7 @@ export default function Guest(props) {
             {page == 'call-us' && <CallUs />}
             {page == 'donate' && <Donate />}
             {page == 'subscribers' && <Subscripers />}
+            {page == 'messages' && <Messages />}
             <Footer />
         </div>
     )

@@ -41,8 +41,8 @@ export default function Subscripers() {
                                     <h4 className='text-black'>ادخل كلمة السر لعرض المشتركين</h4>
                                 </div>
                                 <div className='card-body'>
-                                    <input className='form-control my-4' placeholder='كلمة المرور' onChange={e => setPassword(e.target.value)} />
-                                    <button className='btn btn bg-dark text-white float-start' onClick={send} defaultValue={password} >إرسال</button>
+                                    <input className='form-control my-4' placeholder='كلمة المرور' defaultValue={password} onChange={e => setPassword(e.target.value)} />
+                                    <button className='btn btn bg-dark text-white float-start' onClick={send}>إرسال</button>
                                 </div>
                             </div>
                         )

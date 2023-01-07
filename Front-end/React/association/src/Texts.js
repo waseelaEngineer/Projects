@@ -63,6 +63,7 @@ const texts = {
         antiTerroristFinancingPolicy: 'سياسة مكافحة تمويل الإرهاب',
         volunteerManagementMechanism: 'آلية ادارة المتطوعين',
         mechanismToVerifyTheBeneficiaries: 'آلية التحقق من استحقاق المستفيد',
+        messages: 'الرسائل',
     },
     en: {
         about: 'About the Association',
@@ -128,6 +129,7 @@ const texts = {
         antiTerroristFinancingPolicy: 'Anti-Terrorist Financing Policy',
         volunteerManagementMechanism: 'Volunteer Management Mechanism',
         mechanismToVerifyTheBeneficiaries: 'Mechanism To Verify The Beneficiaries',
+        messages: 'Messages',
     },
 }
 export default texts;
