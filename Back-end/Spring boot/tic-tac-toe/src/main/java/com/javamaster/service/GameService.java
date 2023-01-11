@@ -5,6 +5,7 @@ import com.javamaster.exception.NotFoundException;
 import com.javamaster.model.Game;
 import com.javamaster.model.GamePlay;
 import com.javamaster.model.Player;
+import com.javamaster.model.TicToe;
 import com.javamaster.storage.GameStorage;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -60,6 +61,42 @@ public class GameService {
         if (game.getStatus().equals(FINISHED)){
             throw new InvalidGameException("Game is already finished");
         }
+
+        int[][] board = game.getBoard();
+        board[gamePlay.getCoordinateX()][gamePlay.getCoordinateY()] = gamePlay.getType().getValue();
+
+        checkWinner(game.getBoard(), TicToe.O);
+        checkWinner(game.getBoard(), TicToe.X);
+
+        GameStorage.getInstance().setGame(game);
         return game;
+    }
+
+    private boolean checkWinner(int[][] board, TicToe ticToe){
+        int[] boardArray = new int[9];
+        int counterIndex = 0;
+        for (int i = 0; i < board.length; i++){
+            for (int j = 0; j < board[i].length; j++){
+                boardArray[counterIndex] = board[i][j];
+                counterIndex++;
+            }
+        }
+
+        int[][] winCombination = {
+                {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {0, 3, 6},
+                {1, 4, 7}, {2, 5, 8}, {0, 4, 8}, {2, 4, 6}
+        };
+        for(int i = 0; i < winCombination.length; i++){
+            int counter = 0;
+            for (int j = 0; j < winCombination[i].length; j++){
+                if (boardArray[winCombination[i][j]] == ticToe.getValue()){
+                    counter++;
+                    if (counter == 3){
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 }
