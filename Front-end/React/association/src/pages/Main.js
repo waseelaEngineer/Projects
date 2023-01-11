@@ -74,6 +74,54 @@ export default function Main() {
           <img src={panner2} className='slide-img' />
         </div>
         
+
+        <div className='d-flex p-5 mt-5'>
+          <div>
+            <h4 className='text-center py-5'>الأهداف</h4>
+            <p className='px-5'>
+              <ul style={{paddingInline: '30px'}}>
+                <li>تعزيز الوقاية من العنف والايذاء والتشرد على المستوى المحلي والاقليمي والدولي.</li>
+                <li>مناقشة ومعالجة قضايا العنف والأسباب المؤدية لانتشاره. </li>
+                <li>التوعية من مخاطر التشرد.</li>
+                <li>تأمين مأوى لحالات التشرد.</li>
+              </ul>
+            </p>
+          </div>
+          <div>
+            <h4 className='text-center py-5'>الرسالة</h4>
+            <p className='px-5'>أن تكون الجمعية قدوة وواجهة مشرفة في القطاع الخيري وممارسة النشاط الخيري والإنساني في أوسع أطره.</p>
+            <br/>
+          </div>
+          <div>
+            <h4 className='text-center py-5'>الرؤية</h4>
+            <p className='px-5'>أن نكون رائدين في العمل الخيري المستدام على المستوى المحلي والعالمي.</p>
+            <br/>
+          </div>
+        </div>
+
+
+      </div>
+      <div className='dot-container'>
+        <span className={`dot ${activeImg == "img1" && 'activeDot'}`} onClick={() => { setActiveImg('img1') }}></span>
+        <span className={`dot ${activeImg == "img2" && 'activeDot'}`} onClick={() => { setActiveImg('img2') }}></span>
+      </div>
+      <div className='news-container'>
+        <h2>{texts.latestNews}</h2>
+        <div className='post-container'>
+          {/* <div className='post'>
+            <img src={logoWhite} alt='img' />
+            <div>
+              <h1>23</h1>
+              <p>2022 Oct</p>
+            </div>
+            <section></section>
+            <p>{texts.post}</p>
+          </div> */}
+        </div>
+      </div>
+      <div className='bg-white'>
+        
+        <h1 className='text-center pt-5'>شركاؤنا</h1>
         <div className='slider-container'>
           <Slider {...settings}>
             <div className="slide"><img src={logo1} alt="logo"/></div>
@@ -87,72 +135,9 @@ export default function Main() {
           </Slider>
         </div>
 
-      </div>
-      <div className='dot-container'>
-        <span className={`dot ${activeImg == "img1" && 'activeDot'}`} onClick={() => { setActiveImg('img1') }}></span>
-        <span className={`dot ${activeImg == "img2" && 'activeDot'}`} onClick={() => { setActiveImg('img2') }}></span>
-      </div>
-      <div className='news-container'>
-        <h2>{texts.latestNews}</h2>
-        <div className='post-container'>
-          <div className='post'>
-            <img src={logoWhite} alt='img' />
-            <div>
-              <h1>23</h1>
-              <p>2022 Oct</p>
-            </div>
-            <section></section>
-            <p>{texts.post}</p>
-          </div>
-          <div className='post'>
-            <img src={logoWhite} alt='img' />
-            <div>
-              <h1>23</h1>
-              <p>2022 Oct</p>
-            </div>
-            <section></section>
-            <p>{texts.post}</p>
-          </div>
-          <div className='post'>
-            <img src={logoWhite} alt='img' />
-            <div>
-              <h1>23</h1>
-              <p>2022 Oct</p>
-            </div>
-            <section></section>
-            <p>{texts.post}</p>
-          </div>
-          <div className='post'>
-            <img src={logoWhite} alt='img' />
-            <div>
-              <h1>23</h1>
-              <p>2022 Oct</p>
-            </div>
-            <section></section>
-            <p>{texts.post}</p>
-          </div>
-          <div className='post'>
-            <img src={logoWhite} alt='img' />
-            <div>
-              <h1>23</h1>
-              <p>2022 Oct</p>
-            </div>
-            <section></section>
-            <p>{texts.post}</p>
-          </div>
-          <div className='post'>
-            <img src={logoWhite} alt='img' />
-            <div>
-              <h1>23</h1>
-              <p>2022 Oct</p>
-            </div>
-            <section></section>
-            <p>{texts.post}</p>
-          </div>
+        <div className="twitter-container">
+          <a className="twitter-timeline" data-width="530" data-height="400" href="https://twitter.com/VAHPA_SA?ref_src=twsrc%5Etfw">Tweets by VAHPA_SA</a>
         </div>
-      </div>
-      <div className="twitter-container">
-        <a className="twitter-timeline" data-width="530" data-height="400" href="https://twitter.com/VAHPA_SA?ref_src=twsrc%5Etfw">Tweets by VAHPA_SA</a>
       </div>
     </div>
   )

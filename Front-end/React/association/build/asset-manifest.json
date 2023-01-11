@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.99ec7ab5.css",
-    "main.js": "/static/js/main.e52cb185.js",
+    "main.css": "/static/css/main.574f8230.css",
+    "main.js": "/static/js/main.deb07dcf.js",
     "static/media/MechanismToVerifyTheBeneficiarysEligibility.pdf": "/static/media/MechanismToVerifyTheBeneficiarysEligibility.4b45ea8583e45f124e34.pdf",
     "static/media/VolunteerManagementMechanism.pdf": "/static/media/VolunteerManagementMechanism.af2545947ab3ccd60393.pdf",
     "static/media/AntiTerroristFinancingPolicy.pdf": "/static/media/AntiTerroristFinancingPolicy.71d152936089206f2709.pdf",
@@ -22,20 +22,12 @@
     "static/media/IndividualMembershipApproval.pdf": "/static/media/IndividualMembershipApproval.478fc883b2a5b007f483.pdf",
     "static/media/title.png": "/static/media/title.3f73b91ee55d0b448009.png",
     "static/media/ArbFONTS-Hanimation_Arabic_Regular.otf": "/static/media/ArbFONTS-Hanimation_Arabic_Regular.bde83688ec4978c1e766.otf",
-    "static/media/google.png": "/static/media/google.ceb9676ca573f8e920c7.png",
-    "static/media/instagram.png": "/static/media/instagram.fbdd5bf83d75378fb2c8.png",
-    "static/media/twitter.png": "/static/media/twitter.e5adc6da49d811d6851a.png",
-    "static/media/facebook.png": "/static/media/facebook.8edeb12fdeaac73f2770.png",
-    "static/media/youtube.png": "/static/media/youtube.392f91350b8e527a90c0.png",
-    "static/media/nike.png": "/static/media/nike.6fb7fbe1ce7063cc319b.png",
-    "static/media/uber.png": "/static/media/uber.2a5c056b431d68b3f690.png",
-    "static/media/adidas.png": "/static/media/adidas.87bedba9e6602a92f1f7.png",
     "index.html": "/index.html",
-    "main.99ec7ab5.css.map": "/static/css/main.99ec7ab5.css.map",
-    "main.e52cb185.js.map": "/static/js/main.e52cb185.js.map"
+    "main.574f8230.css.map": "/static/css/main.574f8230.css.map",
+    "main.deb07dcf.js.map": "/static/js/main.deb07dcf.js.map"
   },
   "entrypoints": [
-    "static/css/main.99ec7ab5.css",
-    "static/js/main.e52cb185.js"
+    "static/css/main.574f8230.css",
+    "static/js/main.deb07dcf.js"
   ]
 }

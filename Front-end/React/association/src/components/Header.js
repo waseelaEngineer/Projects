@@ -55,7 +55,7 @@ export default function Header(changeLang) {
               <li>{texts.voluntare}</li>
             </a>
             <li onClick={()=>{links('/awareness-corner-request')}}>{texts.awarenessCornerRequest}</li>
-            <li onClick={()=>{links('/awareness-lecture-request')}}>{texts.awarenessLectureRequest}</li>
+            {/* <li onClick={()=>{links('/awareness-lecture-request')}}>{texts.awarenessLectureRequest}</li> */}
           </ul>
         </div>
         <div>
