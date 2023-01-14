@@ -35,8 +35,9 @@ export default function Messages() {
                         {data.length == 0
                             ? (
                                 <div className='card shadow-sm'>
-                                    <div className='card-header'>
+                                    <div className='card-header d-flex justify-content-between'>
                                         <h4 className='text-black'>ادخل كلمة السر لعرض الرسائل</h4>
+                                        <button onClick={() => navigate('/call-us')} className='btn btn-sm bg-dark text-white'>رجوع</button>
                                     </div>
                                     <div className='card-body'>
                                         <input className='form-control my-4' placeholder='كلمة المرور' defaultValue={password} onChange={e => setPassword(e.target.value)} />
@@ -109,7 +110,6 @@ export default function Messages() {
                             )
                         }
 
-                    <button onClick={() => navigate('/call-us')} className='btn btn bg-dark text-white my-5'>رجوع</button>
                     </div>
                 </div>
             </div>

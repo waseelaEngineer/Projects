@@ -14,7 +14,6 @@ export default function OrganizationalStructure() {
         <h1>{texts.organizationalStructure}</h1>
       </div>
       <div className='content'>
-        {/* {texts.organizationalStructureContent} */}
         <img src={image} alt='image' style={{width: '100%'}}/>
       </div>
     </>

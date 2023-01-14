@@ -64,6 +64,7 @@ const texts = {
         volunteerManagementMechanism: 'آلية ادارة المتطوعين',
         mechanismToVerifyTheBeneficiaries: 'آلية التحقق من استحقاق المستفيد',
         messages: 'الرسائل',
+        suggestions: 'الإقتراحات و الشكاوى',
     },
     en: {
         about: 'About the Association',
@@ -130,6 +131,7 @@ const texts = {
         volunteerManagementMechanism: 'Volunteer Management Mechanism',
         mechanismToVerifyTheBeneficiaries: 'Mechanism To Verify The Beneficiaries',
         messages: 'Messages',
+        suggestions: 'Suggestions and Complaints',
     },
 }
 export default texts;

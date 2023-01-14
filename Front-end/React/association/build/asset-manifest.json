@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.574f8230.css",
-    "main.js": "/static/js/main.deb07dcf.js",
+    "main.js": "/static/js/main.f1efd094.js",
     "static/media/MechanismToVerifyTheBeneficiarysEligibility.pdf": "/static/media/MechanismToVerifyTheBeneficiarysEligibility.4b45ea8583e45f124e34.pdf",
     "static/media/VolunteerManagementMechanism.pdf": "/static/media/VolunteerManagementMechanism.af2545947ab3ccd60393.pdf",
+    "static/media/chairmanword.png": "/static/media/chairmanword.723036806c73294afca4.png",
     "static/media/AntiTerroristFinancingPolicy.pdf": "/static/media/AntiTerroristFinancingPolicy.71d152936089206f2709.pdf",
     "static/media/ConflictOfInterestPolicy.pdf": "/static/media/ConflictOfInterestPolicy.dbc278cbe33ed88cc5f3.pdf",
     "static/media/DocumentRetentionPolicy.pdf": "/static/media/DocumentRetentionPolicy.ad6153da4b977f9c9b1f.pdf",
@@ -24,10 +25,10 @@
     "static/media/ArbFONTS-Hanimation_Arabic_Regular.otf": "/static/media/ArbFONTS-Hanimation_Arabic_Regular.bde83688ec4978c1e766.otf",
     "index.html": "/index.html",
     "main.574f8230.css.map": "/static/css/main.574f8230.css.map",
-    "main.deb07dcf.js.map": "/static/js/main.deb07dcf.js.map"
+    "main.f1efd094.js.map": "/static/js/main.f1efd094.js.map"
   },
   "entrypoints": [
     "static/css/main.574f8230.css",
-    "static/js/main.deb07dcf.js"
+    "static/js/main.f1efd094.js"
   ]
 }

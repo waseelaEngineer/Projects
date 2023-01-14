@@ -21,7 +21,7 @@ export default function Footer() {
             <a href='https://www.linkedin.com/in/%D8%AC%D9%85%D8%B9%D9%8A%D8%A9-%D8%A7%D9%84%D9%88%D9%82%D8%A7%D9%8A%D8%A9-%D9%85%D9%86-%D8%A7%D9%84%D8%B9%D9%86%D9%81-%D9%88%D8%A7%D9%84%D8%A5%D9%8A%D8%B0%D8%A7%D8%A1-%D9%88%D8%A7%D9%84%D8%AA%D8%B4%D8%B1%D8%AF-b04072255/' target='_blank'>
                 <i className="fa-brands fa-linkedin"></i>
             </a>
-            <a href='https://wa.me/+966576344747?text=Hi' target='_blank'>
+            <a href='https://wa.me/+966?text=Hi' target='_blank'>
                 <i className="fa-brands fa-whatsapp"></i>
             </a>
             <a href='https://www.instagram.com/vahpa_sa/ ' target='_blank'>
@@ -30,7 +30,7 @@ export default function Footer() {
             <a href='https://t.me' target='_blank'>
                 <i className="fa-brands fa-telegram"></i>
             </a>
-            <a href='tel: +966576344747'>
+            <a href='tel: +966'>
                 <i className="fa-solid fa-phone"></i>
             </a>
         </div>
