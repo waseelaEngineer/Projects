@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import logo from '../images/logo.png';
 import title from '../images/title.png';
 import Texts from '../Texts';
@@ -10,6 +10,7 @@ export default function Header(changeLang) {
   const { lang, setLang } = useContext(Context);
   const texts = Texts[lang];
   const navigate = useNavigate();
+  const [showMenu, setShowMenu] = useState(false);
 
   function changeLang() {
     lang == 'ar'
@@ -28,7 +29,10 @@ export default function Header(changeLang) {
         <img src={logo} className='logo-img' alt='logo' />
         <img src={title} className='title-img' alt='title' />
       </div>
-      <div className='Navbar'>
+
+      <i className='fa-solid fa-bars hamburger' onClick={()=>setShowMenu(!showMenu)}></i>
+
+      <div className={`Navbar ${showMenu ? 'showMenu' : ''}`}>
         <div>
           <button onClick={()=>{links('/')}}>{texts.mainPage}</button>
         </div>

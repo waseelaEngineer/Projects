@@ -13,7 +13,7 @@ export default function News() {
         <h1>{texts.news}</h1>
       </div>
       <div className='content'>
-        {texts.news}
+        {/* {texts.news} */}
       </div>
     </>
   )

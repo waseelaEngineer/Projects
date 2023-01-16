@@ -28,6 +28,11 @@
     z-index: 99;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
+.hamburger{
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+}
 .banner{
     background-color: white;
     display: flex;
@@ -42,6 +47,9 @@
     width: 250px;
 }
 .Navbar{
+    display: flex;
+}
+.showMenu{
     display: flex;
 }
 .donate-div{
@@ -96,6 +104,11 @@
 .Navbar button:hover ~ ul{
     transition: 500ms;
     display: block;
+}
+.main-content{
+    display: flex;
+    padding: 50px;
+    padding-top: 100px;
 }
 .body{
     width: 100%;
@@ -200,6 +213,9 @@
     padding: 100px;
     font-size: 20px;
     color: rgb(62,35,48);
+}
+.content-padding{
+    padding-inline: 300px;
 }
 .content h4{
     color: #EB6677;
@@ -358,4 +374,74 @@ h2{
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+@media (max-width: 750px){
+    .Header{
+        padding-inline: 20px;
+    }
+    .Header i {
+        display: block;
+        margin-block: auto;
+    }
+    .logo-img{
+        width: 30px;
+    }
+    .title-img{
+        width: 150px;
+    }
+    .Navbar{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: rgb(248, 248, 248);
+        height: 100vh;
+        right: 0px;
+        padding: 30px;
+        padding-top: 60px;
+        gap: 20px;
+    }
+    .showMenu{
+        display: flex;
+    }
+    .Navbar button{
+        background-color: rgb(248, 248, 248);
+        display: flex;
+    }
+    .donate-div button{
+        background-color: rgb(62,35,48);
+    }
+    .Slideshow-container{
+        padding-top: 40px;
+    }
+    .dot {
+        display: none;
+    }
+    .content{
+        padding:70px 30px;
+    }
+    .content-padding{
+        padding-inline: 30px;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        padding-top: 100px;
+    }
+    .content-cards{
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+        gap: 50px;
+    }
+    .twitter-container{
+        padding: 50px 20px;
+    }
+    .Footer{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .Footer > div > p {
+        display: none;
+    }
 }

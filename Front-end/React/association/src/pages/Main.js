@@ -75,7 +75,7 @@ export default function Main() {
         </div>
         
 
-        <div className='d-flex p-5 mt-5'>
+        <div className='main-content'>
           <div>
             <h4 className='text-center py-5'>الأهداف</h4>
             <p className='px-5'>

@@ -12,7 +12,7 @@ export default function AwarenessCornerRequest() {
       <div className='page-title'>
         <h1>{texts.awarenessCornerRequest}</h1>
       </div>
-      <div className='content' style={{paddingInline: '300px'}}>
+      <div className='content content-padding'>
         <h4>وصف الخدمة:</h4>
         <p>تتيح هذه الخدمة طلب تنفيذ شراكة مجتمعية للتثقيف والتوعية في مجال العنف والايذاء والتشرد.</p>
         <br/>

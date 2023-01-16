@@ -12,7 +12,7 @@ export default function GeneralAssociation() {
       <div className='page-title'>
         <h1>{texts.generalAssociation}</h1>
       </div>
-      <div className='content' style={{paddingInline: '300px'}}>
+      <div className='content content-padding'>
         <h4>أعضاء الجمعية العمومية:</h4>
         <p>
           {/* <ul style={{padding: '40px'}}>

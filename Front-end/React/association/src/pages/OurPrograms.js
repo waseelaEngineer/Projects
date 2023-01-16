@@ -13,7 +13,7 @@ export default function OurPrograms() {
         <h1>{texts.ourPrograms}</h1>
       </div>
       <div className='content'>
-        {texts.ourPrograms}
+        {/* {texts.ourPrograms} */}
       </div>
     </>
   )

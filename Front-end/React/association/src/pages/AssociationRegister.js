@@ -398,7 +398,7 @@ export default function AssociationRegister() {
 
               <div className='card shadow-sm mb-5'>
                 <div className='card-header'>
-                  <h4 className='text-black'>بيانات االجهة</h4>
+                  <h4 className='text-black'>بيانات الجهة</h4>
                 </div>
                 <div className='card-body'>
                   <input name='name' className='form-control my-4' placeholder='اسم الجهة' defaultValue={facility.facilityName} onChange={e => setFacility({ ...facility, facilityName: e.target.value })} />

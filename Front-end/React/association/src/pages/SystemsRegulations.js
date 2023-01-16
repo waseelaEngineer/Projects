@@ -21,7 +21,7 @@ export default function SystemsRegulations() {
       <div className='page-title'>
         <h1>{texts.systemsRegulations}</h1>
       </div>
-      <div className='content d-flex flex-column gap-4' style={{paddingInline: '300px'}}>
+      <div className='content d-flex flex-column gap-4 content-padding'>
         {texts.systemsRegulationsContent}
         <a href={ConflictOfInterestPolicyPDF} className='decoration-none' download>
           <div className='download'>
