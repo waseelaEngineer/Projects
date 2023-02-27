@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .intro-container{
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 100px;
+            background-color: #F7F7F7;
+        }
+        .intro-container > div{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .intro-container :last-child{
+            gap: 10px;
+        }
+        .intro-container a{
+            color: black;
+            text-decoration: none;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 100px;
+            border-bottom: #F7F7F7 2px solid;
+        }
+        .header > div{
+            display: flex;
+            gap: 40px;
+        }
+        .header a{
+            text-decoration: none;
+            color: black;
+        }
+        .landing{
+            display: grid;
+            padding-inline: 100px;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 60px;
+        }
+        .action{
+            display: grid;
+            gap: 100px;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 50px;
+            height: 50px;
+        }
+        .get-started{
+            background:linear-gradient(45deg, #423F9D,#1D1A4F);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            padding-left: 50px;
+        }
+        .get-started > div{
+            border-top: 65px solid white;
+            border-left: 30px solid transparent;
+            height: 0px;
+            width: 0px;
+        }
+        .watch-video{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            color: #65657C;
+        }
+        .watch-video div{
+            position: relative;
+        }
+        .watch-video div :last-child{
+            position: absolute;
+            top: 23px;
+            left: 23px;
+            transform: translate(-50%, -50%);
+        }
+        .landing-shapes{
+            position: relative;
+        }
+        .landing-shap-light{
+            position: absolute;
+            right: -100px;
+            bottom: -50px;
+            height: 400px;
+        }
+    </style>    
+</head>
+<body>
+    <div class="intro-container">
+        <div>
+            <p>Follow Us</p>
+            <img src="/images/facebook.png"/>
+            <img src="/images/instagram.png"/>
+            <img src="/images/twitter.png"/>
+            <img src="/images/gmail.png"/>
+            <img src="/images/linkedin.png"/>
+        </div>
+        <div>
+            <p>Fahad Alsharhan:</p>
+            <a href='tel: +966576344747'>+966 55 477 8000</a>
+        </div>
+    </div>
+    <div class="header">
+        <img src="/images/logo.png"/>
+        <div>
+            <a href="" style="color: #3f39a9;">Home</a>
+            <a href="">About Us</a>
+            <a href="">Online Marketing</a>
+            <a href="">Contact Us</a>
+            <a href="">Free Quote</a>
+        </div>
+        <h4>العربية</h4>
+    </div>
+    <div class="landing">
+        <div>
+            <img src="/images/wide.png" style="padding-bottom: 20px;"/>
+            <h1 style="font-weight: 50;">Marketing Agency <br>in Riyadh, KSA</h1>
+            <p>We are a full-service digital marketing agency in Riyadh focused on results, strategy, technology, quality design, and content.</p>
+            <div class="action">
+                <div class="get-started">
+                    <h4>Get Started</h4>
+                    <img src="/images/left-arrow.png"/>
+                    <div></div>
+                </div>
+                <div class="watch-video">
+                    <div>
+                        <img src="/images/play.png"/>
+                        <img src="/images/play-shadow.png"/>
+                    </div>
+                    <h4>Watch Our Video</h4>
+                </div>
+            </div>
+        </div>
+        <div class="landing-shapes">
+            <img class="landing-shap-light" src="/images/landing-shap-light.png"/>
+        </div>
+    </div>
+</body> 
+</html>
