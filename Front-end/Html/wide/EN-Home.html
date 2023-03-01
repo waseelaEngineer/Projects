@@ -15,10 +15,15 @@
             margin: 0px;
         }
         .intro-container{
+            position: fixed;
+            right: 0px;
+            left: 0px;
+            height: 50px;
             display: flex;
             justify-content: space-between;
             padding: 0px 100px;
             background-color: #F7F7F7;
+            z-index: 99;
         }
         .intro-container > div{
             display: flex;
@@ -33,11 +38,18 @@
             text-decoration: none;
         }
         .header{
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top: 50px;
+            height: 100px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 100px;
+            padding: 0px 100px;
             border-bottom: #F7F7F7 2px solid;
+            background-color: white;
+            z-index: 98;
         }
         .header > div{
             display: flex;
@@ -47,17 +59,22 @@
             text-decoration: none;
             color: black;
         }
+        .header > a{
+            font-weight: 600;
+        }
         .landing{
             display: grid;
             padding-inline: 100px;
             grid-template-columns: 1fr 1fr;
-            padding-top: 60px;
+            height: 100vh;
+        }
+        .landing > div{
+            padding-top: 150px;
         }
         .action{
             display: grid;
             gap: 100px;
             grid-template-columns: 1fr 1fr;
-            padding-top: 50px;
             height: 50px;
         }
         .get-started{
@@ -92,11 +109,117 @@
         .landing-shapes{
             position: relative;
         }
-        .landing-shap-light{
+        .landing-shap-light-img{
             position: absolute;
             right: -100px;
-            bottom: -50px;
-            height: 400px;
+            bottom:0px;
+            height: 440px;
+        }
+        .landing-path-img{
+            position: absolute;
+            height: 100%;
+            right: 0px;
+            bottom: 0px;
+        }
+        .landing-report-img{
+            width: 100px;
+            position: absolute;
+            right: 360px;
+            bottom: 390px;
+        }
+        .landing-shap-dark-img{
+            position: absolute;
+            right: 20px;
+            bottom: 110px;
+            width: 200px;
+        }
+        .landing-plan-img{
+            width: 90px;
+            position: absolute;
+            bottom: 90px;
+            right: 190px;
+        }
+        .landing-marketing-img{
+            width: 150px;
+            position: absolute;
+            bottom: 100px;
+            right: -40px;
+        }
+        .landing-rocket-img{
+            width: 250px;
+            position: absolute;
+            bottom: 220px;
+            right: 80px;
+        }
+        .who-we-are{
+            position: relative;
+            height: 500px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+        .who-we-are-top{
+            padding: 30px 400px 0px 100px;
+        }
+        .who-we-are-bottom{
+            background:linear-gradient(45deg, #423F9D,#1D1A4F);     
+            margin-right: 300px;
+            display: flex;
+            justify-content: end;
+        }
+        .who-we-are-icons{
+            color: white;
+            display: flex;
+            padding-left: 100px;
+        }
+        .who-we-are-icons div{
+            margin-block: auto;
+        }
+        .who-we-are-icons p{
+            font-size: 12px;
+        }
+        .who-we-are-bottom-shap{
+            border-top: 250px solid white;
+            border-left: 200px solid transparent;
+            height: 0px;
+            width: 0px;
+        }
+        .who-we-are-plan-img{
+            position: absolute;
+            top: 80px;
+            left: 1100px;
+        }
+        .who-we-are-rocket-img{
+            position: absolute;
+            top: 320px;
+            left: 880px;
+            width: 200px;
+        }
+        .who-we-are-path-img{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+        .who-we-are-more{
+            padding: 20px 100px;
+        }
+        .our-services{
+            color: white;
+            background:linear-gradient(45deg, #423F9D,#1D1A4F);  
+            text-align: center;
+            padding: 100px;
+        }
+        .services-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 50px;
+            padding-top: 50px;
+        }
+        .services-container > div{
+            padding: 70px;
+            cursor: pointer;
+        }
+        .services-container div:hover{
+            background-color: #00000024;
         }
     </style>    
 </head>
@@ -124,11 +247,11 @@
             <a href="">Contact Us</a>
             <a href="">Free Quote</a>
         </div>
-        <h4>العربية</h4>
+        <a href="">العربية</a>
     </div>
     <div class="landing">
         <div>
-            <img src="/images/wide.png" style="padding-bottom: 20px;"/>
+            <img src="/images/wide.png" style="padding-bottom: 20px; padding-top: 60px;"/>
             <h1 style="font-weight: 50;">Marketing Agency <br>in Riyadh, KSA</h1>
             <p>We are a full-service digital marketing agency in Riyadh focused on results, strategy, technology, quality design, and content.</p>
             <div class="action">
@@ -147,8 +270,110 @@
             </div>
         </div>
         <div class="landing-shapes">
-            <img class="landing-shap-light" src="/images/landing-shap-light.png"/>
+            <img class="landing-shap-light-img" src="/images/landing-shap-light.png"/>
+            <img class="landing-path-img" src="/images/landing-path.png"/>
+            <img class="landing-report-img" src="/images/report.png"/>
+            <img class="landing-shap-dark-img" src="/images/landing-shap-dark.png"/>
+            <img class="landing-plan-img" src="/images/plan.png"/>
+            <img class="landing-marketing-img" src="/images/marketing.png"/>
+            <img class="landing-rocket-img" src="/images/rocket.png"/>
         </div>
+    </div>
+    <div class="who-we-are">
+        <div class="who-we-are-top">
+            <img src="/images/who-we-are.png"/>
+            <h1>Leading Digital Marketing Agency</h1>
+            <p>We are a digital marketing and advertising agency providing all services and integrated solutions. Our primary goal is not only to excel in your business and brand, but to provide valuable services to obtain and build a special relationship with your customers. Double your investment rate with record results, aimed at moving to the next stage of your business. Innovation and direct targeting of your customers is the key to our success.</p>
+        </div>
+        <div class="who-we-are-bottom">
+            <div class="who-we-are-icons">
+                <div>
+                    <img src="/images/crown.png"/>
+                    <h4>Online marketing experts</h4>
+                    <p>We have every skill to create and execute successful online marketing campaigns.</p>
+                </div>
+                <div style="padding-inline: 50px;">
+                    <img src="/images/time.png"/>
+                    <h4>Up to date with creative ideas</h4>
+                    <p>Never-ending creativity of our professionals combined with the latest marketing tactics.</p>
+                </div>
+                <div>
+                    <img src="/images/scale.png" style="padding-top: 10px;"/>
+                    <h4>Deliver amazing services</h4>
+                    <p>Online marketing services tailored to your business & delivered on time</p>
+                </div>
+            </div>
+            <div class="who-we-are-bottom-shap"></div>
+        </div>
+        <img src="/images/who-we-are-path.png" class="who-we-are-path-img"/>
+        <img src="/images/plan.png" class="who-we-are-plan-img"/>
+        <img src="/images/rocket.png" class="who-we-are-rocket-img"/>
+    </div>
+    <a href="">
+        <img src="/images/learn-more-dark.png" class="who-we-are-more"/>
+    </a>
+    <div class="our-services">
+        <h1>OUR SERVICES</h1>
+        <p style="font-size: 25px;">What We Offer To Our Costumers</p>
+        <div class="services-container">
+            <div>
+                <img src="/images/brand.png"/>
+                <h3>Brand Development</h3>
+                <p>We help you define the organization’s products, services, and personality.</p>
+                <img src="/images/read-more-light.png"/>
+            </div>
+            <div>
+                <img src="/images/email.png"/>
+                <h3>Email Marketing</h3>
+                <p>We give you everything you need to run successful email marketing campaigns.</p>
+                <img src="/images/read-more-light.png"/>
+            </div>
+            <div>
+                <img src="/images/graphics.png" style="padding-top: 10px; padding-bottom: 10px;">
+                <h3>Graphic Design</h3>
+                <p>We know how to take your advantages and turn the into efficient messages.</p>
+                <img src="/images/read-more-light.png"/>
+            </div>
+            <div>
+                <img src="/images/online-marketing.png" style=" padding-bottom: 10px;"/>
+                <h3>Online Marketing</h3>
+                <p>We offer professional and effective internet marketing services that build your online presence and brand viability.</p>
+                <img src="/images/read-more-light.png"/>
+            </div>
+            <div>
+                <img src="/images/pay-per-click.png"/>
+                <h3>Pay-Per-Click Ads</h3>
+                <p>Our agency handles all the strategy management, design, copywriting, bid management, and optimization of your ads.</p>
+                <img src="/images/read-more-light.png"/>
+            </div>
+            <div>
+                <img src="/images/search-engine.png"/>
+                <h3>Search Engine Optimization</h3>
+                <p>We will help your website climb the organic search rankings on search engines.</p>
+                <img src="/images/read-more-light.png"/>
+            </div>
+            <div>
+                <img src="/images/social-media.png"/>
+                <h3>Social Media Marketing</h3>
+                <p>An experienced social media marketing agency offers SMM services to engage with your audience.</p>
+                <img src="/images/read-more-light.png"/>
+            </div>
+            <div>
+                <img src="/images/video-production.png"/>
+                <h3>Video Production</h3>
+                <p>We are a full-fledged creative video content production agency operating in Saudi Arabia.</p>
+                <img src="/images/read-more-light.png"/>
+            </div>
+            <div>
+                <img src="/images/web-design.png"/>
+                <h3>Web Design</h3>
+                <p>Work with one of the top-rated web development companies in KSA.</p>
+                <img src="/images/read-more-light.png"/>
+            </div>
+        </div>
+    </div>
+    <div class="choose">
+        
     </div>
 </body> 
 </html>
