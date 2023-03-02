@@ -14,6 +14,23 @@
             padding: 0px;
             margin: 0px;
         }
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #1A225A; 
+            border-radius: 10px;
+        }
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1A225A; 
+        }
         .intro-container{
             position: fixed;
             right: 0px;
@@ -206,20 +223,148 @@
             color: white;
             background:linear-gradient(45deg, #423F9D,#1D1A4F);  
             text-align: center;
-            padding: 100px;
+            padding-block: 100px;
         }
         .services-container{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 50px;
-            padding-top: 50px;
+            display: flex;
+            overflow-x: scroll;
+            padding-bottom: 20px;
+        }
+        .services-container p{
+            width: 300px;
         }
         .services-container > div{
-            padding: 70px;
+            padding-inline: 30px;
             cursor: pointer;
         }
         .services-container div:hover{
             background-color: #00000024;
+        }
+        .choose{
+            height: 500px;
+            padding-top: 50px;
+            text-align: center;
+            position: relative;
+            color: #15133F;
+        }
+        .choose > img{
+            position: absolute;
+            top: -100px;
+            left: 200px;
+            width: 1100px;
+        }
+        .choose-content{
+            display: flex;
+            padding-inline: 100px;
+            padding-top: 50px;
+            gap: 80px;
+        }
+        .questions{
+            height: 500px;
+            padding-inline: 100px;
+            overflow: hidden;
+            position: relative;
+        }
+        .questions-faq-img{
+            position: absolute;
+            top: 130px;
+            right: 100px;
+        }
+        .questions-shape-img{
+            position: absolute;
+            top: -150px;
+            right: -350px;
+            width: 700px;
+        }
+        .questions-container{
+            width: 60%;
+        }
+        .questions-area{
+            border-bottom: 1px solid #707070;
+            padding-block: 20px;
+            cursor: pointer;
+        }
+        .questions-container p{
+            display: none;
+            margin-top: 20px;
+        }
+        .active-question p{
+            display: block;
+            animation: slide-down 500ms forwards;
+        }
+        .questions-area > div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .free-quote{
+            height: 300px;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .footer-container{
+            background: linear-gradient(45deg, #423F9D,#1D1A4F);  
+        }
+        .footer{
+            color: white;
+            padding: 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            position: relative;
+        }
+        .footer-content{
+            padding-right: 50px;
+        }
+        .footer-details{
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-links{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .footer-links img{
+            padding-bottom: 4px;
+        }
+        .footer-links a{
+            padding-inline: 20px;
+        }
+        .footer-contact img{
+            padding-inline: 15px;
+            padding-bottom: 40px;
+        }
+        .footer-contact img:first-child{
+            padding-left: 0px;
+        }
+        .footer-contact p{
+            display: inline;
+        }
+        .footer-contact a{
+            color: white;
+            text-decoration: none;
+        }
+        .rights{
+            margin: 0px;
+            color: white;
+            text-align: center;
+            border-top: 2px solid #f7f7f768;
+            padding-block: 25px;
+        }
+
+
+
+
+        @keyframes slide-down {
+            0%{
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
         }
     </style>    
 </head>
@@ -314,7 +459,7 @@
     </a>
     <div class="our-services">
         <h1>OUR SERVICES</h1>
-        <p style="font-size: 25px;">What We Offer To Our Costumers</p>
+        <p style="font-size: 25px; padding-bottom: 20px;">What We Offer To Our Costumers</p>
         <div class="services-container">
             <div>
                 <img src="/images/brand.png"/>
@@ -373,7 +518,137 @@
         </div>
     </div>
     <div class="choose">
-        
+        <h1>Why Choose Wide</h1>
+        <img src="/images/choose-shape-light.png"/>
+        <div class="choose-content">
+            <div>
+                <img src="/images/choose-marketing.png"/>
+                <h3>Full-service digital marketing</h3>
+                <p>We are a professional marketing agency providing everything you </p>
+            </div>
+            <div>
+                <img src="/images/choose-artist.png"/>
+                <h3>Experienced professionals</h3>
+                <p>professional designers, and talented developers who work</p>
+            </div>
+            <div>
+                <img src="/images/choose-report.png"/>
+                <h3>Transparent and clear reports</h3>
+                <p>We will send you reports on a regular basis with a clear</p>
+            </div>
+            <div>
+                <img src="/images/choose-box.png"/>
+                <h3>Full-service digital marketing</h3>
+                <p>increase brand awareness, generate leads, and grow your</p>
+            </div>
+        </div>
     </div>
+    <div class="questions">
+        <h1 style="padding-top: 70px;">Frequently Asked Questions</h1>
+        <img src="/images/questions-faq.png" class="questions-faq-img"/>
+        <img src="/images/questions-shape-light.png" class="questions-shape-img"/>
+        <div class="questions-container">
+            <div class="questions-area">
+                <div>
+                    <a>What Kind of businesses do you work with?</a>
+                    <img src="/images/question-arrow-left.png" alt=""/>
+                </div>
+                <p>We work with any organization, whether it’s a small or medium business or a large enterprise. Feel free to contact us or leave a quote despite the scale of your business.</p>
+            </div>
+            <div class="questions-area">
+                <div>
+                    <a>Is email marketing effective?</a>
+                    <img src="/images/question-arrow-left.png" alt=""/>
+                </div>
+                <p>We work with any organization, whether it’s a small or medium business or a large enterprise. Feel free to contact us or leave a quote despite the scale of your business.</p>
+            </div>
+            <div class="questions-area">
+                <div>
+                    <a>What social media channels should l choose for SMM ?</a>
+                    <img src="/images/question-arrow-left.png" alt=""/>
+                </div>
+                <p>We work with any organization, whether it’s a small or medium business or a large enterprise. Feel free to contact us or leave a quote despite the scale of your business.</p>
+            </div>
+            <div class="questions-area">
+                <div>
+                    <a>Should l provide you with any content for  my website, Social media or SEO?</a>
+                    <img src="/images/question-arrow-left.png" alt=""/>
+                </div>
+                <p>We work with any organization, whether it’s a small or medium business or a large enterprise. Feel free to contact us or leave a quote despite the scale of your business.</p>
+            </div>
+        </div>
+    </div>
+    <div class="free-quote">
+        <h1>Let’s get started!</h1>
+        <p style="padding-block: 50px;">Get your free consultation and customized offer today, to make your brand seen by millions of people!</p>
+        <img src="/images/free-quote.png"/>
+    </div>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-content">
+                <img src="/images/logo-light.png"/>
+                <h3 style="padding-block: 20px;">Marketing Agency in Riyadh, KSA</h3>
+                <p>We are a full-service digital marketing agency in Riyadh focused on results, strategy, technology, quality design, and content.</p>
+            </div>
+            <div class="footer-details">
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <div>
+                        <img src="/images/space-light.png"/>
+                        <a>About us</a>
+                    </div>
+                    <div>
+                        <img src="/images/space-light.png"/>
+                        <a>Our Services</a>
+                    </div>
+                    <div>
+                        <img src="/images/space-light.png"/>
+                        <a>Contact Us</a>
+                    </div>
+                    <div>
+                        <img src="/images/space-light.png"/>
+                        <a>Free Quote</a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h3>Connect with Us</h3>
+                    <div>
+                        <img src="/images/facebook-light.png"/>
+                        <img src="/images/twitter-light.png"/>
+                        <img src="/images/linkedin-light.png"/>
+                        <img src="/images/instagram-light.png"/>
+                    </div>
+                    <p>Contact Us:</p>
+                    <a href='tel: +966576344747'>+966 55 477 8000</a>
+                </div>
+            </div>
+        </div>
+        <h4 class="rights">© 2023 WIDE. All Rights Reserved.</h4>
+    </div>
+    <script>
+        document.onclick = function(e){
+            if (e.target.classList.contains('questions-area') || e.target.closest('.questions-area') !== null){
+                if (e.target.classList.contains('active-question') || e.target.closest('.questions-area').classList.contains('active-question')){
+                    const data = document.querySelectorAll('.questions-area');
+                    data.forEach( item => {
+                        item.classList.remove("active-question");
+                    });
+                }
+                else{
+                    const data = document.querySelectorAll('.questions-area');
+                    data.forEach( item => {
+                        item.classList.remove("active-question");
+                    });
+                    
+                    if (e.target.classList.contains('questions-area')){
+                        e.target.classList.add("active-question")
+                    }
+                    else {
+                        e.target.closest('.questions-area').classList.add("active-question")
+                    }
+                }
+            }
+        }
+    </script>
 </body> 
 </html>
