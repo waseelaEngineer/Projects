@@ -1,0 +1,24 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1A225A; 
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1A225A; 
+}
