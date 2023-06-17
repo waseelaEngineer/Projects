@@ -1,0 +1,285 @@
+.landing{
+    display: grid;
+    padding-inline: 100px;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+.landing > div{
+    padding-top: 150px;
+}
+.action{
+    display: grid;
+    gap: 100px;
+    grid-template-columns: 1fr 1fr;
+    height: 50px;
+    padding-top: 50px;
+}
+.getStarted{
+    background:linear-gradient(45deg, #423F9D,#1D1A4F);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding-left: 50px;
+    cursor: pointer;
+}
+.getStarted > div{
+    border-top: 65px solid white;
+    border-left: 30px solid transparent;
+    height: 0px;
+    width: 0px;
+}
+.watchVideo{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #65657C;
+}
+.watchVideo div{
+    position: relative;
+    cursor: pointer;
+}
+.watchVideo div :last-child{
+    position: absolute;
+    top: 23px;
+    left: 23px;
+    transform: translate(-50%, -50%);
+}
+.landingShapes{
+    position: relative;
+}
+.landingShapLightImg{
+    position: absolute;
+    right: -100px;
+    bottom:0px;
+    height: 440px;
+}
+.landingPathImg{
+    position: absolute;
+    height: 100%;
+    right: 0px;
+    bottom: 0px;
+}
+.landingReportImg{
+    width: 100px;
+    position: absolute;
+    right: 360px;
+    bottom: 390px;
+}
+.landingShapDarkImg{
+    position: absolute;
+    right: 20px;
+    bottom: 110px;
+    width: 200px;
+}
+.landingPlanImg{
+    width: 90px;
+    position: absolute;
+    bottom: 90px;
+    right: 190px;
+}
+.landingMarketingImg{
+    width: 150px;
+    position: absolute;
+    bottom: 100px;
+    right: -40px;
+}
+.landingRocketImg{
+    width: 250px;
+    position: absolute;
+    bottom: 220px;
+    right: 80px;
+}
+.whoWeAre{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.whoWeAre h1{
+    padding-block: 20px;
+}
+.whoWeAreTop{
+    padding: 80px 400px 50px 100px;
+}
+.whoWeAreBottom{
+    background:linear-gradient(45deg, #423F9D,#1D1A4F);     
+    margin-right: 200px;
+    display: flex;
+    justify-content: end;
+    height: 300px;
+}
+.whoWeAreIcons{
+    color: white;
+    display: flex;
+    padding-left: 100px;
+}
+.whoWeAreIcons div{
+    margin-block: auto;
+}
+.whoWeAreIcons p{
+    font-size: 12px;
+}
+.whoWeAreBottomShap{
+    border-top: 370px solid white;
+    border-left: 200px solid transparent;
+    height: 0px;
+    width: 0px;
+}
+.whoWeArePlanImg{
+    position: absolute;
+    top: 230px;
+    left: 1100px;
+}
+.whoWeAreRocketImg{
+    position: absolute;
+    top: 450px;
+    left: 970px;
+    width: 200px;
+}
+.whoWeArePathImg{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.whoWeAreMore{
+    padding: 20px 100px;
+}
+.ourServices{
+    color: white;
+    background:linear-gradient(45deg, #423F9D,#1D1A4F);  
+    text-align: center;
+    padding-block: 100px;
+}
+.ourServices p{
+    color: rgb(192, 192, 192);
+}
+.servicesContainer{
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+}
+.servicesContainer p{
+    width: 300px;
+}
+.servicesContainer > div{
+    padding-inline: 30px;
+    cursor: pointer;
+}
+.servicesContainer div:hover{
+    background-color: #00000024;
+}
+.choose{
+    height: 700px;
+    padding-top: 50px;
+    text-align: center;
+    position: relative;
+    color: #15133F;
+}
+.choose h1{
+    padding-block: 60px;
+}
+.choose > img{
+    position: absolute;
+    top: 130px;
+    left: 50px;
+    width: 1100px;
+}
+.chooseContent{
+    display: flex;
+    padding-inline: 100px;
+    padding-top: 50px;
+    gap: 80px;
+}
+.freeQuote{
+    height: 300px;
+    text-align: center;
+    padding-top: 100px;
+}
+.freeQuote img{
+    cursor: pointer;
+}
+@media (max-width: 750px) {
+    .questionsFaqImg,
+    .questions > img,
+    .choose > img,
+    .whoWeArePathImg,
+    .whoWeArePlanImg,
+    .whoWeAreRocketImg,
+    .whoWeAreBottomShap,
+    .landingShapes{
+        display: none;
+    }
+    .landing{
+        padding-inline: 20px;
+        grid-template-columns: 1fr;
+        height: fit-content;
+        margin-bottom: 150px;
+    }
+    .landing > div{
+        padding-top: 100px;
+    }
+    .action{
+        gap: 30px;
+        grid-template-columns: 1fr;
+    }
+    .getStarted{
+        margin-right: 100px;
+        padding-left: 20px;
+    }
+    .watchVideo div :last-child{
+        top: 0px;
+        left: 0px;
+    }
+    .watchVideo{
+        gap: 10px;
+    }
+    .whoWeAreTop{
+        padding: 80px 20px 150px 30px;
+    }
+    .whoWeAreBottom{
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+    }
+    .whoWeAreIcons{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+        padding-block: 150px;
+        padding-left: 0px;
+    }
+    .whoWeAreIcons div{
+        margin-inline: auto;
+        text-align: center;
+        margin-block: 0px;
+    }
+    .whoWeAreIcons p{
+        font-size: 12px;
+    }
+    .whoWeAreMore{
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    .ourServices{
+        padding-block: 150px;
+    }
+    .servicesContainer{
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    .choose{
+        height: fit-content;
+        padding-block: 100px;
+    }
+    .chooseContent{
+        flex-direction: column;
+        padding-inline: 20px;
+        gap: 130px;
+    }
+    .freeQuote{
+        height: fit-content;
+        padding-bottom: 100px;
+    }
+}

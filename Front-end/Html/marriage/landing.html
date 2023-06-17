@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Waseela</title>
+	<link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- signup steps  -->
+    <form>
+        <div id="signup-1" class="dark-background hidden">
+            <div class="signup-container">
+                <div>
+                    <div class="signup-close">
+                        <img src="images/close.png" alt="" onclick="hideAlert('signup-1')"/>
+                    </div>
+                    <div class="signup-steps">
+                        <h2 style="color: #631E73;">تحديد نوع الحساب</h2>
+                        <h2>معلومات أساسيه</h2>
+                        <h2>بيانات شخصيه</h2>
+                        <h2>التعهد</h2>
+                    </div>
+                    <div class="signup-progress">
+                        <div class="active-progress">1</div>
+                        <section class="progress-one"></section>            
+                        <div>2</div>
+                        <section class="progress-two"></section>            
+                        <div>3</div>
+                        <section class="progress-three"></section>            
+                        <div>4</div>
+                    </div>
+                </div>
+                <div class="signup-content">
+                    <div>
+                        <h2>أختر نوع الحساب</h2>
+                        <ul>
+                            <li id="account" value="1" class="signup-active-answer">فرد</li>
+                            <li id="account" value="2">وسيط</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>الجنس</h2>
+                        <ul>
+                            <li id="gender" value="1" class="signup-active-answer">ذكر</li>
+                            <li id="gender" value="2">أنثى</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="signup-navigate">
+                    <a onclick="showSignupOneAnswer(), showAlert('signup-2'), hideAlert('signup-1')" class="signup-next-button">التالي</a>
+                </div>
+            </div>
+        </div>
+        <div id="signup-2" class="dark-background hidden">
+            <div class="signup-container">
+                <div>
+                    <div class="signup-close">
+                        <img src="images/close.png" alt="" onclick="hideAlert('signup-2')"/>
+                    </div>
+                    <div class="signup-steps">
+                        <h2 style="color: #631E73;">تحديد نوع الحساب</h2>
+                        <h2 style="color: #631E73;">معلومات أساسيه</h2>
+                        <h2>بيانات شخصيه</h2>
+                        <h2>التعهد</h2>
+                    </div>
+                    <div class="signup-progress">
+                        <div class="active-progress">1</div>
+                        <section class="progress-one active-progress"></section>            
+                        <div class="active-progress">2</div>
+                        <section class="progress-two"></section>            
+                        <div>3</div>
+                        <section class="progress-three"></section>            
+                        <div>4</div>
+                    </div>
+                </div>
+                <div class="signup-content">
+                    <input placeholder="الاسم الاول"/>
+                    <input placeholder="العائله"/>
+                    <input placeholder="البريد الإلكتروني"/>
+                    <input placeholder="رقم الموبايل"/>
+                    <input placeholder="الاسم الرمزي"/>
+                    <input type="date"/>
+                </div>
+                <div class="signup-navigate">
+                    <a onclick="hideAlert('signup-2'), showAlert('signup-1')" class="signup-back-button">السابق</a>
+                    <a onclick="hideAlert('signup-2'), showAlert('signup-3')" class="signup-next-button">التالي</a>
+                </div>
+            </div>
+        </div>
+        <div id="signup-3" class="dark-background hidden">
+            <div class="signup-container">
+                <div>
+                    <div class="signup-close">
+                        <img src="images/close.png" alt="" onclick="hideAlert('signup-3')"/>
+                    </div>
+                    <div class="signup-steps">
+                        <h2 style="color: #631E73;">تحديد نوع الحساب</h2>
+                        <h2 style="color: #631E73;">معلومات أساسيه</h2>
+                        <h2 style="color: #631E73;">بيانات شخصيه</h2>
+                        <h2>التعهد</h2>
+                    </div>
+                    <div class="signup-progress">
+                        <div class="active-progress">1</div>
+                        <section class="progress-one active-progress"></section>            
+                        <div class="active-progress">2</div>
+                        <section class="progress-two active-progress"></section>            
+                        <div class="active-progress">3</div>
+                        <section class="progress-three"></section>            
+                        <div>4</div>
+                    </div>
+                </div>
+                <div class="signup-content">
+                    <select name="test">
+                        <option value="null" hidden>الجنسيه</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>
+                    <select name="test">
+                        <option value="null" hidden>دولة الإقامه</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>
+                    <select name="test">
+                        <option value="null" hidden>المدينه</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>
+                    <select name="test">
+                        <option value="null" hidden>المنطقه</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>
+                    <input placeholder="الطول"/>
+                    <input placeholder="الوزن"/>
+                </div>
+                <div class="signup-navigate">
+                    <a onclick="hideAlert('signup-3'), showAlert('signup-2')" class="signup-back-button">السابق</a>
+                    <a onclick="hideAlert('signup-3'), showAlert('signup-4')" class="signup-next-button">التالي</a>
+                </div>
+            </div>
+        </div>
+        <div id="signup-4" class="dark-background hidden">
+            <div class="signup-container">
+                <div>
+                    <div class="signup-close">
+                        <img src="images/close.png" alt="" onclick="hideAlert('signup-4')"/>
+                    </div>
+                    <div class="signup-steps">
+                        <h2 style="color: #631E73;">تحديد نوع الحساب</h2>
+                        <h2 style="color: #631E73;">معلومات أساسيه</h2>
+                        <h2 style="color: #631E73;">بيانات شخصيه</h2>
+                        <h2 style="color: #631E73;">التعهد</h2>
+                    </div>
+                    <div class="signup-progress">
+                        <div class="active-progress">1</div>
+                        <section class="progress-one active-progress"></section>            
+                        <div class="active-progress">2</div>
+                        <section class="progress-two active-progress"></section>            
+                        <div class="active-progress">3</div>
+                        <section class="progress-three active-progress"></section>            
+                        <div class="active-progress">4</div>
+                    </div>
+                </div>
+                <div class="signup-promise">
+                    <h2>أقسم بالله  العظيم أن غرضي هو الزواج الشرعي فقط </h2>
+                    <h2>أوافق على الشروط و الأحكام</h2>
+                    <button type="submit">أقسم بالله </button>
+                </div>
+                <div class="signup-navigate">
+                    <a onclick="hideAlert('signup-4'), showAlert('signup-3')" class="signup-back-button">السابق</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- login  -->
+    <div id="login" class="dark-background hidden">
+        <div class="login-container">
+            <div class="login-profile">
+                <h1>اعثر على شريك حياتك </h1>
+                <h2>
+                    يثق بنا أكثر من 3،0 مليون مسلم ومسلمة من حول العالم <br/>
+                    اختر شريك حياتك بناء على المواصفات التي تتطلبها
+                </h2>
+                <img class="cubble-img" src="images/cubble.png" alt=""/>
+                <img class="like-img" src="images/like.png" alt=""/>
+                <img class="love-img" src="images/love.png" alt=""/>
+            </div>
+            <form>
+                <div class="signup-close">
+                    <img src="images/close.png" alt="" onclick="hideAlert('login')"/>
+                </div>
+                <h1>تسجيل دخول</h1>
+                <h2>البريد الإلكتروني او رقم الموبايل</h2>
+                <input placeholder="أدخل البريد الإلكتروني أو رقم الموبايل"/>
+                <h2>كلمة المرور</h2>
+                <input placeholder="أدخل كلمة المرور"/>
+                <h3> هل نسيت كلمة المرور</h3>
+                <button type="submit">تسجيل دخول</button>
+                <div>
+                    <a onclick="hideAlert('login'), showAlert('signup-1')">
+                        ليس لديك حساب ؟ 
+                        <spane style="color: #631E73;">انشاء حساب</spane>
+                    </a>
+                    <a href="">
+                        الدخول كزائر
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- mobile menu  -->
+    <div class="mobile-menu">
+        <a href="">عن المنصة</a>
+        <a href="">قصص نجاح</a>
+        <a href="">مميزاتنا</a>
+        <a href="">الاشتراك</a>
+        <a href="">طريقه عمل الموقع</a>
+        <a href="">الأسئلة الشائعة</a>
+        <a href="">اتصل بنا</a>
+        <a href="">
+            تسجيل الخروج
+            <img style="width: 20px; height: 20px; margin-right: 30px;" src="images/exit.png" alt=""/>
+        </a>
+    </div>
+    <!-- start landing page  -->
+    <div class="landing-dark">
+        <img class="cubble" src="images/cubble.png" alt=""/>
+        <img class="like" src="images/like.png" alt=""/>
+        <img class="love" src="images/love.png" alt=""/>
+        <div class="landing-main">
+            <div class="main-header">
+                <div class="main-header-logo">
+                    <img src="images/logo-light.png" alt=""/>
+                    <div>
+                        <h3>الأسرة السعيدة</h2>
+                        <h4>للتــــوفيـــــق بـــــيـــن الأزواج</h3>
+                    </div>
+                </div>
+                <div class="main-header-links">
+                    <a href="">عن المنصة</a>
+                    <a href="">قصص نجاح</a>
+                    <a href="">مميزاتنا</a>
+                    <a href="">الاشتراك</a>
+                    <a href="">طريقه عمل الموقع</a>
+                    <a href="">الأسئلة الشائعة</a>
+                    <a href="">اتصل بنا</a>
+                </div>
+                <div class="main-header-login">
+                    <a onclick="showAlert('login')">تسجيل دخول</a>
+                    <a onclick="showAlert('signup-1')">سجل مجاناً</a>
+                    <i onclick="mobileMenu()" class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="main-content">
+                <h1>اعثر على شريك حياتك </h1>
+                <div class="main-content-headlines">
+                    <div></div>
+                    <h2>يثق بنا أكثر من 3،0 مليون مسلم ومسلمة من حول العالم</h2>
+                </div>
+                <div class="main-content-inputs">
+                    <div class="main-content-user">
+                        <a href="">اعثر على شريك حياتك </a>
+                        <a href="">وفق بين مسلم و مسلمة</a>
+                    </div>
+                    <form>
+                        <div class="main-search-blur"></div>
+                        <div class="main-content-search">
+                            <select name="nationality">
+                                <option value="null" hidden>السعودية</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                            </select>
+                            <select name="nationality">
+                                <option value="null" hidden>جدة</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                            </select>
+                            <select name="nationality">
+                                <option value="null" hidden>ذكر</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                            </select>
+                            <div>
+                                <h3>من</h3>
+                                <input type="number" value="18"/>
+                                <h3>الى</h3>
+                                <input type="number" value="18"/>
+                            </div>
+                            <button type="submit">
+                                <img src="images/search-gold.png" alt=""/>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="main-content-numbers">
+                    <div>
+                        <h2>وجدوا شريكهم</h2>
+                        <h1>100k+</h1>
+                    </div>
+                    <div>
+                        <h2>مسلم و مسلمه يثقونا بنا</h2>
+                        <h1>300k+</h1>
+                    </div>
+                    <div>
+                        <h2>وسيط</h2>
+                        <h1>40k+</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="landing-light">
+        <img class="husband" src="images/husband.png" alt=""/>
+        <img class="world" src="images/world.png" alt=""/>
+        <div class="landing-blur">
+            <img class="ring" src="images/ring.png" alt=""/>
+        </div>
+        <div class="landing-about">
+            <h1>
+                زيجات إسلامية دولية - حائز على ثقة
+                أكثر من 3 مليون مسلم ومسلمة
+            </h1>
+            <div>
+                <h2>
+                    موقعنا مخصص بالكامل لمن يبحث عن عزاب أو عازبات مسلمين
+                    للزواج بطريقة تلتزم بالقواعد الإسلامية للتعارف
+                </h2>
+                <h3>تتكون قاعدة عضويتنا من 3،٥ مليون عازب وعازبة من الولايات المتحدة</h3>
+            </div>
+            <a href="">تعرف علينا اكثر ؟</a>
+        </div>
+    </div>
+    <div class="landing-dark">
+        <div id="1" class="landing-success active-slid">
+            <div class="landing-success-content">
+                <h1>نجاحات العلاقات !</h1>
+                <img src="images/quote.png" alt=""/>
+                <h2>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص 
+                    من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو 
+                    العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى 
+                </h2>
+                <h3 style="color: #F1BD19;">سعيد محمود حمدي</h3>
+                <h3>يعيش قصه نجاح  بعد زواجه عن طريق الموقع</h3>
+            </div>
+            <div class="landing-succesfull-image">
+                <img src="images/filter-blue.png" alt=""/>
+                <img src="images/successfull.png" alt=""/>
+                <img src="images/filter-burble.png" alt=""/>
+            </div>
+        </div>
+        <div id="2" class="landing-success">
+            <div class="landing-success-content">
+                <h1>نجاحات العلاقات ! 2</h1>
+                <img src="images/quote.png" alt=""/>
+                <h2>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص 
+                    من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو 
+                    العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى 
+                </h2>
+                <h3 style="color: #F1BD19;">سعيد محمود حمدي</h3>
+                <h3>يعيش قصه نجاح  بعد زواجه عن طريق الموقع</h3>
+            </div>
+            <div class="landing-succesfull-image">
+                <img src="images/filter-blue.png" alt=""/>
+                <img src="images/man.png" alt=""/>
+                <img src="images/filter-burble.png" alt=""/>
+            </div>
+        </div>
+        <div id="3" class="landing-success">
+            <div class="landing-success-content">
+                <h1>نجاحات العلاقات ! 3</h1>
+                <img src="images/quote.png" alt=""/>
+                <h2>
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص 
+                    من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو 
+                    العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى 
+                </h2>
+                <h3 style="color: #F1BD19;">سعيد محمود حمدي</h3>
+                <h3>يعيش قصه نجاح  بعد زواجه عن طريق الموقع</h3>
+            </div>
+            <div class="landing-succesfull-image">
+                <img src="images/filter-blue.png" alt=""/>
+                <img src="images/successfull.png" alt=""/>
+                <img src="images/filter-burble.png" alt=""/>
+            </div>
+        </div>
+        <div class="success-storys">
+            <img onclick="slidRight()" src="images/arrow-right-white.png" alt=""/>
+            <div id="story-1" class="story active-story"></div>
+            <div id="story-2" class="story"></div>
+            <div id="story-3" class="story"></div>
+            <img onclick="slidLeft()" src="images/arrow-left-white.png" alt=""/>
+        </div>
+    </div>
+    <div class="landing-light">
+        <div class="landing-special">
+            <h1>أهم ما يميزنا ؟؟</h1>
+            <div class="landing-special-cards">
+                <div>
+                    <div class="landing-special-image">
+                        <img src="images/background-yellow.png" alt=""/>
+                        <img src="images/complete.png" alt=""/>
+                    </div>
+                    <h2>نتحقق  </h2>
+                    <h3>
+                        يتم تأكد من هوية جميع المستخدمين
+                        من قبل موظفينا للتأكد أنهم حقيقين
+                    </h3>
+                </div>
+                <div>
+                    <div class="landing-special-image">
+                        <img src="images/background-burble.png" alt=""/>
+                        <img src="images/secure.png" alt=""/>
+                    </div>
+                    <h2>نحمي</h2>
+                    <h3>
+                        يتم توفير الحماية للمعلومات الخاصة
+                        بالمستخدمين من خلال نظام رائد
+                    </h3>
+                </div>
+                <div>
+                    <div class="landing-special-image">
+                        <img src="images/background-blue.png" alt=""/>
+                        <img src="images/verify.png" alt=""/>
+                    </div>
+                    <h2>نتحقق  </h2>
+                    <h3>
+                        نسهل عليكم عمليات التواصل 
+                        وارسال الرسائل في ما بينكم
+                        بأننا نوفر امكانيه التواصل عبر المنصه
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="landing-dark">
+        <img class="wife-img" src="images/wife.png" alt=""/>
+        <img class="heart-img" src="images/heart.png" alt=""/>
+        <div class="landing-register">
+            <h1>اشترك معنا و إختار شريك حياتك</h1>
+            <h3>
+                هذا النص هو مثال لنص يمكن أن يستبدل 
+                في نفس المساحة، لقد تم توليد هذا النص من مولد
+                النص العربى، حيث يمكنك أن تولد مثل هذا النص و العديد من النصوص
+                الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق
+            </h3>
+            <div class="d-flex flex-column gap-2">
+                <h2>مميزات الاشتراك</h2>
+                <ul>
+                    <li>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة</li>
+                    <li>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة</li>
+                </ul>
+                <h2>سعر الإشتراك  150 دولار</h2>
+            </div>
+            <a href="">اشترك الان</a>
+        </div>
+    </div>
+    <div class="landing-light">
+        <div class="landing-special">
+            <h1>كيف تختار  ؟؟</h1>
+            <div class="landing-special-cards">
+                <div>
+                    <div class="landing-special-image">
+                        <img src="images/background-yellow.png" alt=""/>
+                        <img src="images/add.png" alt=""/>
+                    </div>
+                    <h2>انشئ حساب شخصي</h2>
+                    <h3>
+                        قم بإنشاء حسابك الشخصي في
+                        ثواني معدودة مع خيار التسجيل 
+                       السريع لدينا. لا تنسَ إضافة صورة
+                    </h3>
+                </div>
+                <div>
+                    <div class="landing-special-image">
+                        <img src="images/background-burble.png" alt=""/>
+                        <img src="images/connect.png" alt=""/>
+                    </div>
+                    <h2>أبحث عن  شريك حياتك</h2>
+                    <h3>
+                        قم بالبحث في قاعدة الأعضاء 
+                        الكبيرة لدينا بسهولة باستخدام مجموعة 
+                        من  الإعدادات والتفضيلات
+                    </h3>
+                </div>
+                <div>
+                    <div class="landing-special-image">
+                        <img src="images/background-blue.png" alt=""/>
+                        <img src="images/verify.png" alt=""/>
+                    </div>
+                    <h2>ابدأ في التواصل</h2>
+                    <h3>
+                        ارسل رسالة أو رغبة تعارف 
+                        لتبدأ في التواصل مع الأعضاء 
+                        حان الوقت لك أن تجد الشريك المناسب
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="landing-dark">
+        <img class="question-img" src="images/question.png" alt=""/>
+        <div class="questions-container my-5">
+            <h1 class="text-white">الإستفسارات المقترحة </h1>
+            <div>
+                <div class="questions-area" style="border-color: white;">
+                    <div>
+                        <h2 class="text-white">كيف يساعدني الأسرة السعيدة في تحقيق الخطوبة والزواج الناجح؟</h2>
+                        <img src="images/arrow-left-white.png" alt=""/>
+                    </div>
+                    <h3 class="text-white">
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من 
+                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
+                        الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من 
+                        الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو 
+                        مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي 
+                        المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة
+                        حقيقية لتصميم الموقع
+                    </h3>
+                </div>
+                <div class="questions-area" style="border-color: white;">
+                    <div>
+                        <h2 class="text-white">كيف يساعدني الأسرة السعيدة في تحقيق الخطوبة والزواج الناجح؟</h2>
+                        <img src="images/arrow-left-white.png" alt=""/>
+                    </div>
+                    <h3 class="text-white">
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من 
+                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
+                        الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من 
+                        الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو 
+                        مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي 
+                        المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة
+                        حقيقية لتصميم الموقع
+                    </h3>
+                </div>
+                <div class="questions-area" style="border-color: white;">
+                    <div>
+                        <h2 class="text-white">كيف يساعدني الأسرة السعيدة في تحقيق الخطوبة والزواج الناجح؟</h2>
+                        <img src="images/arrow-left-white.png" alt=""/>
+                    </div>
+                    <h3 class="text-white">
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من 
+                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
+                        الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من 
+                        الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو 
+                        مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي 
+                        المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة
+                        حقيقية لتصميم الموقع
+                    </h3>
+                </div>
+                <div class="questions-area" style="border-color: white;">
+                    <div>
+                        <h2 class="text-white">كيف يساعدني الأسرة السعيدة في تحقيق الخطوبة والزواج الناجح؟</h2>
+                        <img src="images/arrow-left-white.png" alt=""/>
+                    </div>
+                    <h3 class="text-white">
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من 
+                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
+                        الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من 
+                        الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو 
+                        مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي 
+                        المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة
+                        حقيقية لتصميم الموقع
+                    </h3>
+                </div>
+                <div class="questions-area" style="border-color: white;">
+                    <div>
+                        <h2 class="text-white">كيف يساعدني الأسرة السعيدة في تحقيق الخطوبة والزواج الناجح؟</h2>
+                        <img src="images/arrow-left-white.png" alt=""/>
+                    </div>
+                    <h3 class="text-white">
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من 
+                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
+                        الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من 
+                        الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو 
+                        مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي 
+                        المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة
+                        حقيقية لتصميم الموقع
+                    </h3>
+                </div>
+                <div class="questions-area" style="border-color: white;">
+                    <div>
+                        <h2 class="text-white">كيف يساعدني الأسرة السعيدة في تحقيق الخطوبة والزواج الناجح؟</h2>
+                        <img src="images/arrow-left-white.png" alt=""/>
+                    </div>
+                    <h3 class="text-white">
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من 
+                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
+                        الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من 
+                        الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو 
+                        مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي 
+                        المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة
+                        حقيقية لتصميم الموقع
+                    </h3>
+                </div>
+                <div class="questions-area" style="border-color: white;">
+                    <div>
+                        <h2 class="text-white">كيف يساعدني الأسرة السعيدة في تحقيق الخطوبة والزواج الناجح؟</h2>
+                        <img src="images/arrow-left-white.png" alt=""/>
+                    </div>
+                    <h3 class="text-white">
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من 
+                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
+                        الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من 
+                        الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو 
+                        مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي 
+                        المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة
+                        حقيقية لتصميم الموقع
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form>
+        <div class="contact-container w-100 my-0" style="border-radius: 0px;">
+            <h1>تواصل معنا </h1>
+            <div class="contact-area">
+                <div>
+                    <input placeholder="البريد الإلكتروني"/>
+                    <input placeholder="عنوان الرسالة"/>
+                </div>
+                <div>
+                    <div class="contact-details">
+                        <div>
+                            <img src="images/point.png" alt=""/>
+                            <a href="">
+                                العنوان هذا النص هو مثال لنص يمكن
+                                أن يستبدل في نفس المساحة، لقد تم
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/call.png" alt=""/>
+                            <a href="">+971 585948369</a>
+                        </div>
+                        <div>
+                            <img src="images/mail.png" alt=""/>
+                            <a href="">info@al'asrahalsaeiduh.ae</a>
+                        </div>
+                        <div>
+                            <img src="images/mail.png" alt=""/>
+                            <a href="">site-domain.com</a>
+                        </div>
+                    </div>
+                    <textarea placeholder="أكتب الرسالة"></textarea>
+                </div>
+                <div dir="ltr">
+                    <button type="submit">أرسل</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="bottom mt-0">
+        <div>
+            <div class="bottom-logo">
+                <div>
+                    <img src="images/logo-light.png" alt=""/>
+                    <div>
+                        <h2>الأسرة السعيدة</h2>
+                        <br/>
+                        <h4>للتوفيق بين الأزواج</h4>
+                    </div>
+                </div>
+                <h1>
+                    منصة الأسرة السعيدة منصة للتوفيق
+                    <br/>
+                    بين الأزواج 
+                </h1>
+            </div>
+            <div class="bottom-links">
+                <div>
+                    <h2>الأسرة السعيدة</h2> 
+                    <a href="#">طريقه عمل الموقع</a>
+                    <a href="#">تعرف على المنصة</a>
+                    <a href="#">قصص نجاح</a>
+                    <a href="#">المميزات</a>
+                </div>
+                <div>
+                    <a href="#">الأسئلة الشائعة</a>
+                    <a href="#">باقات الاشتراك</a>
+                    <a href="#">اتصل بنا</a>
+                </div>
+                <div>
+                   <h2>روابط سريعة</h2> 
+                   <a href="#">سياسة الخصوصية</a>
+                   <a href="#">سياسة الإسترجاع</a>
+                   <a href="#">الأحكام و الشروط</a>
+                   <a href="#">سياسة الدفع</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="social">
+        <div>
+            <div class="social-icons">
+                <a href="">
+                    <img src="images/facebook.png" alt="" />
+                </a>
+                <a href="">
+                    <img src="images/twitter.png" alt="" />
+                </a>
+                <a href="">
+                    <img src="images/instagram.png" alt="" />
+                </a>
+            </div>
+            <h4>جميع الحقوق محفوظة 2022 ©</h4>
+        </div>
+    </div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>	

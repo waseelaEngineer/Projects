@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Hanimation_Arabic_Regular';
+  src: url('./fonts/ArbFONTS-Hanimation_Arabic_Regular.otf')  format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+  margin: 0px;
+  padding: 0px;   
+  font-family: Hanimation_Arabic_Regular;
+}
+#root{
+  direction: rtl;
+}
+.header{
+  background-color: rgb(4,82,105);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(234,185,31);
+}
+.header h2{
+  cursor: pointer;
+}
+.header button{
+  background-color: transparent;
+  color: rgb(234,185,31);
+  border: none;
+  padding-inline: 20px;
+  cursor: pointer;
+}
+.navigation-bar{
+  background-color: rgb(234,185,31);
+  padding-inline: 20px;
+  display: flex;
+  gap: 30px;
+}
+.navigation-bar > button{
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding-block: 10px;
+  border-bottom: 2px solid transparent;
+}
+.navigation-bar > button:hover{
+  border-bottom: 2px solid black;
+}
+.navigation-bar .active-nav{
+  border-bottom: 2px solid black;
+}
+.logo{
+  width: 200px;
+}

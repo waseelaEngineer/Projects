@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #1A225A; 
+            border-radius: 10px;
+        }
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1A225A; 
+        }
+        .intro-container{
+            position: fixed;
+            right: 0px;
+            left: 0px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 100px;
+            background-color: #F7F7F7;
+            z-index: 99;
+        }
+        .intro-container > div{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .intro-container :last-child{
+            gap: 10px;
+        }
+        .intro-container a{
+            color: black;
+            text-decoration: none;
+        }
+        .header{
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top: 50px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 100px;
+            border-bottom: #F7F7F7 2px solid;
+            background-color: white;
+            z-index: 98;
+        }
+        .header > div{
+            display: flex;
+            gap: 40px;
+        }
+        .header a{
+            text-decoration: none;
+            color: black;
+        }
+        .header > a{
+            font-weight: 600;
+        }
+        .landing{
+            display: grid;
+            padding-left: 100px;
+            grid-template-columns: 1fr 1fr;
+            height: 100vh;
+            background:linear-gradient(45deg, #423F9D,#1D1A4F);
+            color: white;
+        }
+        .landing > div{
+            padding-top: 150px;
+        }
+        .landing div:first-child{
+            display: flex;
+            flex-direction: column;
+            padding-top: 230px;
+            gap: 40px;
+            padding-right: 50px;
+        }
+        .landing div:last-child{
+            overflow: hidden;
+        }
+        .landing-free-quote{
+            color: white;
+            background-color: transparent;
+            text-decoration: none;
+            border: 1px solid white;    
+            width: fit-content;
+            padding: 20px 50px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .landing-free-quote:hover{
+            background-color: white;
+            color: #1D1A4F;
+            transition: 400ms;
+        }
+        .landing-shapes{
+            position: relative;
+        }
+        .landing-shape-img{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+        .landing-web-img{
+            position: absolute;
+            width: 350px;
+            right: 200px;
+            bottom: 100px;
+        }
+        .feature-complete-img{
+            position: absolute;
+            width: 350px;
+            right: 200px;
+            bottom: 170px;
+        }
+        .offer-service{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-left: 100px;
+            height: 700px;
+            gap: 200px;
+        }
+        .offer-service h2{
+            font-weight: 100;
+            font-size: 30px;
+        }
+        .offer-service-content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+            gap: 20px;
+        }
+        .offer-service-content img{
+            width: 50px;
+        }
+        .offer-service-content h5{
+            font-size: 14px;
+        }
+        .offer-service-content p{
+            font-size: 14px;
+        }
+        .offer-service-content div{
+            border: 1px solid #cccccc41;
+            padding: 10px 20px;
+            padding-top: 20px;
+        }
+        .offer-service-content div:first-child{
+            background:linear-gradient(45deg, #423F9D,#1D1A4F);
+            color: white;
+        }
+        .offer-service-images{
+            position: relative;
+            overflow: hidden;
+        }
+        .offer-service-path-img{
+            position: absolute;
+            width: 700px;
+            left: -70px;
+            bottom: -10px;
+        }
+        .offer-service-marketing-img{
+            position: absolute;
+            bottom: 250px;
+            right: 200px;
+        }
+        .offer-service-shape-img{
+            position: absolute;
+            right: -700px;
+            bottom: 50px;
+        }
+        .features{
+            display: grid;
+            padding-left: 100px;
+            grid-template-columns: 1fr 1fr;
+            height: 700px;
+            background:linear-gradient(45deg, #423F9D,#1D1A4F);
+            color: white;
+            z-index: -50;
+        }
+        .features h2{
+            font-weight: 100;
+            font-size: 30px;
+        }
+        .service-features-tag-container{
+            padding-right: 100px; 
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            justify-content: right;
+            align-items: right;
+        }
+        .service-features-tag-container div{
+            width: 60%;
+            position: relative;
+        }
+        .service-features-tag-container img{
+            position: absolute;
+            top: -0px;
+            left: -20px;
+        }
+        .service-features-tag-container p{
+            z-index: 90;
+            position: absolute;
+        }
+        .types{
+            padding: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .types h2{
+            padding-bottom: 50px;
+            font-weight: 100;
+            font-size: 30px;
+        }
+        .types-content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 50px;
+        }
+        .types-content div{
+            padding-right: 100px;
+        }
+        .types-left-shape-img{
+            position: absolute;
+            top: -650px;
+            left: -1200px;
+            width: 1500px;
+        }
+        .types-left-path-img{
+            position: absolute;
+            top: -300px;
+            left: -200px;
+        }
+        .types-right-path-img{
+            position: absolute;
+            bottom: -240px;
+            right: -50px;
+        }
+        .types-right-shape-img{
+            position: absolute;
+            bottom: -650px;
+            right: -1200px;
+        }
+        .our-services{
+            color: white;
+            background:linear-gradient(45deg, #423F9D,#1D1A4F);  
+            padding: 100px;
+            position: relative;
+        }
+        .our-services > img{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+        .our-services h2{
+            padding-block: 80px;
+            font-weight: 100;
+            font-size: 30px;
+        }
+        .services-content{
+            display: flex;
+            gap: 20px;
+        }
+        .packages{
+            text-align: center;
+            padding: 100px;
+        }
+        .packages h2{
+            padding-bottom: 80px;
+            font-weight: 100;
+            font-size: 30px;
+        }
+        .packages-content{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .packages-content > div:not(.packages-primary){
+            box-shadow: 0px 6px 12px 1px rgba(0, 0, 0, 0.139);
+            padding: 5px 30px;
+            padding-bottom: 30px;
+            height: 430px;
+        }
+        .packages-content h4{
+            color: #423F9D;
+            font-weight: 600;
+        }
+        .packages-content h1{
+            font-weight: 300;
+            font-size: 30px;
+        }
+        .packages-content p{
+            color: #AFA9A9;
+            border-bottom: 3px solid #afa9a96d;
+            padding-bottom: 20px;
+        }
+        .packages-content h5{
+            text-align: left;
+        }
+        .packages-details > div{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .packages-details h5{
+            margin: 10px;
+        }
+        .packages-get-started{
+            color: white;
+            background-color: #423F9D;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+            margin-inline: 50px;
+            margin-top: 50px;
+        }
+        .packages-get-started h3{
+            font-weight: 100;
+            font-size: 14px;
+        }
+        .packages-primary{
+            background:linear-gradient(45deg, #423F9D,#1D1A4F);  
+            color: white;
+            width: 380px;
+            box-shadow: 0px 6px 12px 1px rgba(0, 0, 0, 0.139);
+            padding: 60px 30px;
+        }
+        .packages-primary h4{
+            color: white;
+        }
+        .packages-get-started-primary{
+            background-color: white;
+            padding: 10px 20px;
+            padding-top: 15px;
+            margin-inline: 50px;
+            margin-top: 50px;
+        }
+        .work{
+            display: grid;
+            padding-left: 100px;
+            grid-template-columns: 70% 30%;
+            height: 650px;
+            background:linear-gradient(45deg, #423F9D,#1D1A4F);
+            color: white;
+            overflow: hidden;
+        }
+        .work h2{
+            font-weight: 100;
+            font-size: 30px;
+        }
+        .work-shapes{
+            position: relative;
+        }
+        .work-shape-img{
+            position: absolute;
+            right: -200px;
+            bottom: 0px;
+        }
+        .work-complete-img{
+            position: absolute;
+            width: 300px;
+            right: 100px;
+            bottom: 170px;
+        }
+        .work-content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-right: 150px;
+            gap: 10px;
+        }
+        .work-left{
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+        .work-left div{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 0px 30px;
+            background-color: #ffffff15;
+            border-right: 3px solid white;
+        }
+        .work-left div p:first-child{
+            background-color: #5F2D8E;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .work-right{
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            padding-top: 75px;
+        }
+        .work-right div{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 0px 30px;
+            background-color: #ffffff15;
+            border-left: 3px solid #959595;
+        }
+        .work-right div p:first-child{
+            background-color: #5F2D8E;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .useful{
+            display: grid;
+            padding-inline: 100px;
+            grid-template-columns: 60% 40%;
+            height: 700px;
+        }
+        .useful h2{
+            font-weight: 100;
+            font-size: 30px;
+            padding-block: 50px;
+        }
+        .useful-shapes{
+            position: relative;
+        }
+        .useful-shap-light-img{
+            position: absolute;
+            right: -100px;
+            bottom:0px;
+            height: 440px;
+        }
+        .useful-path-img{
+            position: absolute;
+            height: 100%;
+            right: 0px;
+            bottom: 0px;
+        }
+        .useful-report-img{
+            width: 100px;
+            position: absolute;
+            right: 360px;
+            bottom: 390px;
+        }
+        .useful-shap-dark-img{
+            position: absolute;
+            right: 20px;
+            bottom: 110px;
+            width: 200px;
+        }
+        .useful-plan-img{
+            width: 90px;
+            position: absolute;
+            bottom: 90px;
+            right: 190px;
+        }
+        .useful-marketing-img{
+            width: 150px;
+            position: absolute;
+            bottom: 100px;
+            right: -40px;
+        }
+        .useful-rocket-img{
+            width: 250px;
+            position: absolute;
+            bottom: 220px;
+            right: 80px;
+        }
+        .useful-content{
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+        }
+        .useful-content h4{
+            margin: 0px;
+        }
+        .useful-content > div{
+            display: flex;
+            width: 55%;
+            gap: 20px;
+            align-items: start;
+        }
+        .footer-container{
+            background: linear-gradient(45deg, #423F9D,#1D1A4F);  
+        }
+        .footer{
+            color: white;
+            padding: 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            position: relative;
+        }
+        .footer-content{
+            padding-right: 50px;
+        }
+        .footer-details{
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-links{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .footer-links img{
+            padding-bottom: 4px;
+        }
+        .footer-links a{
+            padding-inline: 20px;
+        }
+        .footer-contact img{
+            padding-inline: 15px;
+            padding-bottom: 40px;
+        }
+        .footer-contact img:first-child{
+            padding-left: 0px;
+        }
+        .footer-contact p{
+            display: inline;
+        }
+        .footer-contact a{
+            color: white;
+            text-decoration: none;
+        }
+        .rights{
+            margin: 0px;
+            color: white;
+            text-align: center;
+            border-top: 2px solid #f7f7f768;
+            padding-block: 25px;
+        }
+    </style>    
+</head>
+<body>
+    <div class="intro-container">
+        <div>
+            <p>Follow Us</p>
+            <img src="/images/facebook.png"/>
+            <img src="/images/instagram.png"/>
+            <img src="/images/twitter.png"/>
+            <img src="/images/gmail.png"/>
+            <img src="/images/linkedin.png"/>
+        </div>
+        <div>
+            <p>Fahad Alsharhan:</p>
+            <a href='tel: +966576344747'>+966 55 477 8000</a>
+        </div>
+    </div>
+    <div class="header">
+        <img src="/images/logo.png"/>
+        <div>
+            <a href="" style="color: #3f39a9;">Home</a>
+            <a href="">About Us</a>
+            <a href="">Online Marketing</a>
+            <a href="">Contact Us</a>
+            <a href="">Free Quote</a>
+        </div>
+        <a href="">العربية</a>
+    </div>
+    <div class="landing">
+        <div>
+            <h1>Web Design And <br> Development Company KSA</h1>
+            <p>Work with one of the top-rated web development companies in KSA to have the best design, user-friendly website, relevant content, and buzz in social media.</p>
+            <button class="landing-free-quote">Free Quote</button>
+        </div>
+        <div class="landing-shapes">
+            <img class="landing-shape-img" src="/images/feature-landing-light-shape.png"/>
+            <img class="landing-web-img" src="/images/landing-web.png"/>
+        </div>
+    </div>
+    <div class="offer-service">
+        <div>
+            <h2 style="padding-block: 50px;">We offer you this service</h2>
+            <div class="offer-service-content">
+                <div>
+                    <img src="/images/hosting.png"/>
+                    <h5>Hosted for a year</h5>
+                    <p>Lorem ipsum dolor sit amet,  Est quia esse id laboriosam .</p>
+                </div>
+                <div>
+                    <img src="/images/call-center.png"/>
+                    <h5>Free technical support for one year</h5>
+                    <p>Lorem ipsum dolor sit amet,  Est quia esse id laboriosam .</p>
+                </div>
+                <div>
+                    <img src="/images/web-content.png"/>
+                    <h5>Website content</h5>
+                    <p>Lorem ipsum dolor sit amet,  Est quia esse id laboriosam .</p>
+                </div>
+                <div>
+                    <img src="/images/certificate.png"/>
+                    <h5>Security certificate</h5>
+                    <p>Lorem ipsum dolor sit amet,  Est quia esse id laboriosam .</p>
+                </div>
+            </div>
+        </div>
+        <div class="offer-service-images">
+            <img class="offer-service-path-img" src="/images/offer-service-path.png"/>
+            <img class="offer-service-marketing-img" src="/images/offer-service-marketing.png"/>
+            <img class="offer-service-shape-img" src="/images/offer-service-shape-light.png"/>
+        </div>
+    </div>
+    <div class="features">
+        <div>
+            <h2 style="padding-block: 50px;">Service features</h2>
+            <div class="service-features-tag-container">
+                <div style="align-self: end;">
+                    <p>Website design according to search engine archiving standards</p>
+                    <img src="/images/service-features-tag.png"/>
+                </div>
+                <div>
+                    <p>Website design according to search engine archiving standards</p>
+                    <img src="/images/service-features-tag.png"/>
+                </div>
+                <div style="align-self: end;">
+                    <p>Website design according to search engine archiving standards</p>
+                    <img src="/images/service-features-tag.png"/>
+                </div>
+                <div>
+                    <p>Website design according to search engine archiving standards</p>
+                    <img src="/images/service-features-tag.png"/>
+                </div>
+                <div style="align-self: end;">
+                    <p>Website design according to search engine archiving standards</p>
+                    <img src="/images/service-features-tag.png"/>
+                </div>
+                <div>
+                    <p>Website design according to search engine archiving standards</p>
+                    <img src="/images/service-features-tag.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="landing-shapes">
+            <img class="landing-shape-img" src="/images/feature-landing-light-shape.png"/>
+            <img class="feature-complete-img" src="/images/complete.png"/>
+        </div>
+    </div>
+    <div class="types">
+        <h2>Service types</h2>
+        <div class="types-content">
+            <div>
+                <img src="/images/real-state.png" alt="">
+                <h4>Real estate website design</h4>
+                <p>Lorem ipsum dolor sit amet,  Est quia esse id laboriosam .</p>
+            </div>
+            <div>
+                <img src="/images/blog.png" alt="">
+                <h4>Blog design websites</h4>
+                <p>Lorem ipsum dolor sit amet,  Est quia esse id laboriosam .</p>
+            </div>
+            <div>
+                <img src="/images/programming.png" alt="">
+                <h4>Programming corporate websites</h4>
+                <p>Lorem ipsum dolor sit amet,  Est quia esse id laboriosam .</p>
+            </div>
+            <div>
+                <img src="/images/news.png" alt="">
+                <h4>News websites design</h4>
+                <p>Lorem ipsum dolor sit amet,  Est quia esse id laboriosam .</p>
+            </div>
+            <div>
+                <img src="/images/landing-page.png" alt="">
+                <h4>landing page</h4>
+                <p>Lorem ipsum dolor sit amet,  Est quia esse id laboriosam .</p>
+            </div>
+            <div>
+                <img src="/images/personal-website.png" alt="">
+                <h4>Personal website design</h4>
+                <p>Lorem ipsum dolor sit amet,  Est quia esse id laboriosam .</p>
+            </div>
+        </div>
+        <img class="types-left-shape-img" src="/images/types-left-shape.png" alt="">
+        <img class="types-left-path-img" src="/images/types-left-path.png" alt="">
+        <img class="types-right-path-img" src="/images/types-right-path.png" alt="">
+        <img class="types-right-shape-img" src="/images/types-right-shape.png" alt="">
+    </div>
+    <div class="our-services">
+        <h2>Examples of our work</h2>
+        <div class="services-content">
+            <img src="/images/example-1.png"/>
+            <img src="/images/example-2.png"/>
+            <img src="/images/example-1.png"/>
+            <img src="/images/example-2.png"/>
+        </div>
+        <img src="/images/feature-landing-light-shape.png"/>
+    </div>
+    <div class="packages">
+        <h2>Service packages</h2>
+        <div class="packages-content">
+            <div>
+                <h4>The Silver plan</h4>
+                <h1>300 $</h1>
+                <p>Lorem ipsum dolor sit amet, Est quia esse id laboriosam .</p>
+                <h5>What’s Inside</h5>
+                <div class="packages-details">
+                    <div>
+                        <img src="/images/check-dark.png" alt="">
+                        <h5>Lorem ipsum dolor sit amet. </h5>
+                    </div>
+                    <div>
+                        <img src="/images/check-dark.png" alt="">
+                        <h5>Lorem ipsum dolor sit amet. </h5>
+                    </div>
+                    <div>
+                        <img src="/images/check-dark.png" alt="">
+                        <h5>Lorem ipsum dolor sit amet. </h5>
+                    </div>
+                </div>
+                <div class="packages-get-started">
+                    <h3>Get Started</h3>
+                    <img src="/images/left-arrow.png" alt="">
+                </div>
+            </div>
+            <div class="packages-primary">
+                <h4>The Silver plan</h4>
+                <h1>300 $</h1>
+                <p>Lorem ipsum dolor sit amet, Est quia esse id laboriosam .</p>
+                <h5>What’s Inside</h5>
+                <div class="packages-details">
+                    <div>
+                        <img src="/images/check-light.png" alt="">
+                        <h5>Lorem ipsum dolor sit amet. </h5>
+                    </div>
+                    <div>
+                        <img src="/images/check-light.png" alt="">
+                        <h5>Lorem ipsum dolor sit amet. </h5>
+                    </div>
+                    <div>
+                        <img src="/images/check-light.png" alt="">
+                        <h5>Lorem ipsum dolor sit amet. </h5>
+                    </div>
+                </div>
+                <div class="packages-get-started-primary">
+                    <img src="/images/get-started-dark.png" alt="">
+                </div>
+            </div>
+            <div>
+                <h4>The Silver plan</h4>
+                <h1>300 $</h1>
+                <p>Lorem ipsum dolor sit amet, Est quia esse id laboriosam .</p>
+                <h5>What’s Inside</h5>
+                <div class="packages-details">
+                    <div>
+                        <img src="/images/check-dark.png" alt="">
+                        <h5>Lorem ipsum dolor sit amet. </h5>
+                    </div>
+                    <div>
+                        <img src="/images/check-dark.png" alt="">
+                        <h5>Lorem ipsum dolor sit amet. </h5>
+                    </div>
+                    <div>
+                        <img src="/images/check-dark.png" alt="">
+                        <h5>Lorem ipsum dolor sit amet. </h5>
+                    </div>
+                </div>
+                <div class="packages-get-started">
+                    <h3>Get Started</h3>
+                    <img src="/images/left-arrow.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="work">
+        <div>
+            <h2 style="padding-block: 50px;">Work Plan</h2>
+            <div class="work-content">
+                <div class="work-left">
+                    <div>
+                        <p>1</p>
+                        <p>Lorem ipsum dolor sit amet. Et vitae nulla vel vitae sunt</p>
+                    </div>
+                    <div>
+                        <p>3</p>
+                        <p>Lorem ipsum dolor sit amet. Et vitae nulla vel vitae sunt</p>
+                    </div>
+                    <div>
+                        <p>5</p>
+                        <p>Lorem ipsum dolor sit amet. Et vitae nulla vel vitae sunt</p>
+                    </div>
+                </div>
+                <div class="work-right">
+                    <div>
+                        <p>2</p>
+                        <p>Lorem ipsum dolor sit amet. Et vitae nulla vel vitae sunt</p>
+                    </div>
+                    <div>
+                        <p>4</p>
+                        <p>Lorem ipsum dolor sit amet. Et vitae nulla vel vitae sunt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="work-shapes">
+            <img class="work-shape-img" src="/images/feature-landing-light-shape.png"/>
+            <img class="work-complete-img" src="/images/work.png"/>
+        </div>
+    </div>
+    <div class="useful">
+        <div>
+            <h2>What is useful to you</h2>
+            <div class="useful-content">
+                <div>
+                    <img src="/images/comunication.png" alt="">
+                    <div>
+                        <h4>Communication with the world</h4>
+                        <p>Lorem ipsum dolor sit amet, Est quia esse id laboriosam .</p>
+                    </div>
+                </div>
+                <div style="align-self: end;">
+                    <img src="/images/precense.png" alt="">
+                    <div>
+                        <h4>permanent presence</h4>
+                        <p>Lorem ipsum dolor sit amet, Est quia esse id laboriosam .</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="/images/manegment.png" alt="">
+                    <div>
+                        <h4>Management from the middle of the spread world</h4>
+                        <p>Lorem ipsum dolor sit amet, Est quia esse id laboriosam .</p>
+                    </div>
+                </div>
+                <div  style="align-self: end;">
+                    <img src="/images/budget.png" alt="">
+                    <div>
+                        <h4>Low marketing budget</h4>
+                        <p>Lorem ipsum dolor sit amet, Est quia esse id laboriosam .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="useful-shapes">
+            <img class="useful-shap-light-img" src="/images/landing-shap-light.png"/>
+            <img class="useful-path-img" src="/images/landing-path.png"/>
+            <img class="useful-report-img" src="/images/report.png"/>
+            <img class="useful-shap-dark-img" src="/images/landing-shap-dark.png"/>
+            <img class="useful-plan-img" src="/images/plan.png"/>
+            <img class="useful-marketing-img" src="/images/marketing.png"/>
+            <img class="useful-rocket-img" src="/images/rocket.png"/>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-content">
+                <img class="tag-img" src="/images/logo-light.png"/>
+                <h3 style="padding-block: 20px;">Marketing Agency in Riyadh, KSA</h3>
+                <p>We are a full-service digital marketing agency in Riyadh focused on results, strategy, technology, quality design, and content.</p>
+            </div>
+            <div class="footer-details">
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <div>
+                        <img src="/images/space-light.png"/>
+                        <a>About us</a>
+                    </div>
+                    <div>
+                        <img src="/images/space-light.png"/>
+                        <a>Our Services</a>
+                    </div>
+                    <div>
+                        <img src="/images/space-light.png"/>
+                        <a>Contact Us</a>
+                    </div>
+                    <div>
+                        <img src="/images/space-light.png"/>
+                        <a>Free Quote</a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h3>Connect with Us</h3>
+                    <div>
+                        <img src="/images/facebook-light.png"/>
+                        <img src="/images/twitter-light.png"/>
+                        <img src="/images/linkedin-light.png"/>
+                        <img src="/images/instagram-light.png"/>
+                    </div>
+                    <p>Contact Us:</p>
+                    <a href='tel: +966576344747'>+966 55 477 8000</a>
+                </div>
+            </div>
+        </div>
+        <h4 class="rights">© 2023 WIDE. All Rights Reserved.</h4>
+    </div>
+</body> 
+</html>

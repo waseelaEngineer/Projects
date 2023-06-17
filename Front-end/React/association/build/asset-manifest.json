@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.21f9695c.css",
+    "main.js": "/static/js/main.0808e6d8.js",
+    "static/media/MechanismToVerifyTheBeneficiarysEligibility.pdf": "/static/media/MechanismToVerifyTheBeneficiarysEligibility.4b45ea8583e45f124e34.pdf",
+    "static/media/VolunteerManagementMechanism.pdf": "/static/media/VolunteerManagementMechanism.af2545947ab3ccd60393.pdf",
+    "static/media/chairmanword.png": "/static/media/chairmanword.723036806c73294afca4.png",
+    "static/media/AntiTerroristFinancingPolicy.pdf": "/static/media/AntiTerroristFinancingPolicy.71d152936089206f2709.pdf",
+    "static/media/ConflictOfInterestPolicy.pdf": "/static/media/ConflictOfInterestPolicy.dbc278cbe33ed88cc5f3.pdf",
+    "static/media/DocumentRetentionPolicy.pdf": "/static/media/DocumentRetentionPolicy.ad6153da4b977f9c9b1f.pdf",
+    "static/media/FundraisingPolicy.pdf": "/static/media/FundraisingPolicy.dfa1d1b41612100f6ad2.pdf",
+    "static/media/OrganizingRelationshipWithBeneficiaries.pdf": "/static/media/OrganizingRelationshipWithBeneficiaries.b22fed154ecbf4d9f52e.pdf",
+    "static/media/WhistleblowingPolicy.pdf": "/static/media/WhistleblowingPolicy.26fbdc734c1cd12c8ce3.pdf",
+    "static/media/DataPrivacyPolicy.pdf": "/static/media/DataPrivacyPolicy.350bc150835779c1a949.pdf",
+    "static/media/organizationalstructure.PNG": "/static/media/organizationalstructure.de7d1534d4b26d804b56.PNG",
+    "static/media/panner2.jpg": "/static/media/panner2.58205d2dd8f976c70a29.jpg",
+    "static/media/logo.png": "/static/media/logo.85d145563e56d0468ad6.png",
+    "static/media/logoWhite.png": "/static/media/logoWhite.1d5e920ed43581bc9597.png",
+    "static/media/panner1.jpg": "/static/media/panner1.b7ab58d10ab5fcfd9356.jpg",
+    "static/media/EntitiesMembershipApproval.pdf": "/static/media/EntitiesMembershipApproval.ef1bac044d6efdf507ef.pdf",
+    "static/media/account.pdf": "/static/media/account.6225578d3925f1d3daf9.pdf",
+    "static/media/boarddirectors.PNG": "/static/media/boarddirectors.5bd5d4873cd6e26d546c.PNG",
+    "static/media/IndividualMembershipApproval.pdf": "/static/media/IndividualMembershipApproval.478fc883b2a5b007f483.pdf",
+    "static/media/title.png": "/static/media/title.3f73b91ee55d0b448009.png",
+    "static/media/ArbFONTS-Hanimation_Arabic_Regular.otf": "/static/media/ArbFONTS-Hanimation_Arabic_Regular.bde83688ec4978c1e766.otf",
+    "index.html": "/index.html",
+    "main.21f9695c.css.map": "/static/css/main.21f9695c.css.map",
+    "main.0808e6d8.js.map": "/static/js/main.0808e6d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21f9695c.css",
+    "static/js/main.0808e6d8.js"
+  ]
+}

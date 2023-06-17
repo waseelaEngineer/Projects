@@ -1,0 +1,117 @@
+.sidebar{
+    background-color: #5f68bf;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+}
+
+.show{
+    display: flex;
+}
+
+.sidebarEN .button{
+    text-align: left;
+}
+
+.button{
+    background-color: #5f68bf;
+    color: white;
+    border: none;
+    font-size: 20px;
+    text-align: right;
+    padding: 8px 0px;
+    padding-inline: 50px;
+    cursor: pointer;
+}
+
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #5f68bf;
+    display: none;
+    justify-content: space-between;
+}
+
+.header img{
+    width: 50px;
+    height: 20px;
+    margin: 15px;
+}
+
+.sidebar button:hover{
+    color: #5f68bf;
+    background-color: white;
+}
+
+.active{
+    color: #5f68bf;
+    background-color: white;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:  30px;
+}
+
+.profile img{
+    width: 80px;
+    margin-top: 20px;
+}
+
+.name{
+    padding-top: 10px;
+    font-size: 25px;
+}
+
+.sidebar h2{
+    color: black;
+    background-color: rgb(255, 208, 0);
+    text-align: center;
+    margin: 0px 50px;
+    margin-top: 20px;
+    padding: 8px 0px;
+}
+
+#sidebarBtn{
+    background-color: #5f68bf;
+    color: white;
+    padding: 5px 10px;
+    font-size: 30px;
+    margin: 5px;
+}
+
+@media (max-width: 950px){
+    .sidebar{
+        display: none;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 100%;
+        width: min(80%,350px);
+        justify-content: start;
+        z-index: 99;
+    }
+    .show{
+        display: flex;
+    }
+    .sidebarBtn{
+        display: block;
+    }
+    .sidebarBtnEN{
+        left: auto;
+        right: 0PX;
+    }
+    .sidebarEN{
+        left: 0px;
+        right: auto;
+    }
+    .header{
+        display: flex;
+    }
+}

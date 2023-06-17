@@ -1,0 +1,111 @@
+.selects{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap:  15px;
+    margin-bottom: 21px;
+}
+
+.selects div{
+    position: relative;
+    padding-top: 8px;
+}
+
+.selects select{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding-inline: 20px;
+    color: gray;
+    border: 1px solid lightgray;
+    outline-color: blue;
+}
+
+.selects select:focus{
+    border:2px solid blue;
+}
+
+.selects label{
+    display: none;
+    position: absolute;
+    right: 3%;
+    top: 0px;
+    font-size: 17px;
+    background-color: white;
+    padding: 0px 5px;
+    color: blue;
+}
+
+.selectsEN div label{
+    right: auto;
+    left: 3%;
+}
+
+.selects select:focus ~ label{
+    display: block;
+}
+
+.imageContainer{
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    justify-content: start;
+}
+
+.delete{
+    background-color: #fff0f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    padding: 10px;
+}
+
+.delete button{
+    cursor: pointer;
+    color: red;
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+}
+
+.delete div{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.import{
+    background-color: lightblue;
+    border: 1px dashed gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    padding: 37px 0px;
+}
+
+.import input{
+    background-color: #2e3192;
+    color: white;
+    cursor: pointer;
+    width: 70%;
+}
+
+@media (max-width: 500px){
+    .selects label{
+        font-size: 12px;
+    }
+    .imageContainer{
+        flex-direction: column;
+    }
+    .import{
+        padding: 20px 0px;
+    }
+}

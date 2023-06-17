@@ -1,0 +1,222 @@
+.main {
+    margin-top: 5px;
+}
+
+.title {
+    margin-top: 10px;
+}
+
+.note {
+    text-align: center;
+    background-color: #dbe5ff;
+    color: #5f68bf;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.container {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.priceContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 5px;
+    color: #5f68bf;
+}
+
+.center {
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+.totalContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 13px;
+}
+
+.account p {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.account button {
+    background-color: #5f68bf;
+    color: white;
+    border: none;
+    padding: 3px 10px;
+    height: 30px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    margin-top: 12px;
+    padding-left: 10px;
+}
+
+.logo {
+    width: 50px;
+    padding: 8px 0px;
+}
+
+.imgDiv {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.imgDiv p {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.inputs {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.inputs h2 {
+    width: 80%;
+    align-self: center;
+}
+
+.inputs div {
+    position: relative;
+    padding-top: 8px;
+}
+
+.inputs select {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding-inline: 3%;
+    color: gray;
+    border: 1px solid lightgray;
+    outline-color: blue;
+}
+
+.inputs input {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding-inline: 5%;
+    color: gray;
+    border: 1px solid lightgray;
+    outline-color: blue;
+    box-sizing: border-box;
+}
+
+.inputs select:focus {
+    border: 2px solid blue;
+}
+
+.inputs input:focus {
+    border: 2px solid blue;
+}
+
+.inputs label {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 0px;
+    font-size: 17px;
+    background-color: white;
+    padding: 0px 5px;
+    color: blue;
+}
+
+.inputsEN label{
+    right: auto;
+    left: 5%;
+}
+
+.inputs select:focus~label {
+    display: block;
+}
+
+.inputs input:focus~label {
+    display: block;
+}
+
+.inputs input:focus::placeholder {
+    color: transparent;
+}
+
+.save {
+    width: 100%;
+    background-color: #5f68bf;
+    color: white;
+    border: none;
+    padding: 15px 0px;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .title {
+        font-size: 25px;
+    }
+
+    .priceContainer h1 {
+        font-size: 18px;
+    }
+
+    .totalContainer h4 {
+        font-size: 14px;
+    }
+    
+    .transaction h4,
+    .transaction p,
+    .inputs label,
+    .account p,
+    .priceContainer p,
+    .priceContainer h4 {
+        font-size: 12px;
+    }
+    
+    .inputs h2,
+    .transactionTitle,
+    .account h3,
+    .note {
+        font-size: 15px;
+    }
+
+    .account button {
+        font-size: 12px;
+        height: 25px;
+    }
+}

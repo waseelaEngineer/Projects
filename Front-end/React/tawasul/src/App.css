@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'Hanimation_Arabic_Regular';
+  src: url('../fonts/ArbFONTS-Hanimation_Arabic_Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hanimation_Arabic_SemiBold';
+  src: url('../fonts/ArbFONTS-Hanimation_Arabic_SemiBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#root {
+  font-family: Hanimation_Arabic_Regular;
+}
+
+h5{
+  margin-top: 40px;
+  padding-right: 10px;
+  border-right: 3px solid blue;
+}
+
+span{
+  font-family: Hanimation_Arabic_SemiBold;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.title {
+  position: relative;
+  height: 170px;
+}
+
+.title h2 {
+  color: #fff;
+  font-size: 5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+
+.title h2:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}

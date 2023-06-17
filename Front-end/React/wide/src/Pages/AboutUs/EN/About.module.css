@@ -1,0 +1,65 @@
+.landing{
+    display: grid;
+    padding-inline: 100px;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+.landing > div{
+    padding-top: 150px;
+}
+.landingShapes{
+    position: relative;
+}
+.landingShapLightImg{
+    position: absolute;
+    right: -100px;
+    bottom:0px;
+    height: 440px;
+}
+.landingPathImg{
+    position: absolute;
+    height: 100%;
+    right: 0px;
+    bottom: 0px;
+}
+.aboutusMarketingImg{
+    position: absolute;
+    height: 300px;
+    right: 170px;
+    bottom: 180px;
+}
+.aboutusDarkShapImg{
+    position: absolute;
+    height: 400px;
+    right: 0px;
+    bottom: 0px;
+}
+.iconsContainer{
+    display: flex;
+    padding: 200px 100px;
+    gap: 50px;
+    text-align: center;
+}
+.iconsContainer h4{
+    color: #423F9D;
+}
+@media (max-width: 750px) {
+    .landingShapes{
+        display: none;
+    }
+    .landing{
+        padding-inline: 20px;
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+    .landing > div{
+        padding-top: 30px;
+    }
+    .iconsContainer{
+        display: flex;
+        flex-direction: column;
+        padding: 200px 20px;
+        gap: 100px;
+        text-align: center;
+    }
+}

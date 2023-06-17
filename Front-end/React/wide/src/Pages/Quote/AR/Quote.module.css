@@ -1,0 +1,99 @@
+.landing{
+    display: grid;
+    padding-inline: 100px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 150px;
+}
+.landing img{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.landing > div{
+    padding-top: 150px;
+}
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+.contactForm input{
+    border: none;
+    background-color: #F0F0F0;
+    padding: 20px;
+    width: 100%;
+    outline: none;
+}
+.contactForm textarea{
+    width: 100%;
+    border: none;
+    background-color: #F0F0F0;
+    padding: 20px;
+    height: 100px;
+    outline: none;
+}
+.contactForm button{
+    width: 100%;
+    background: linear-gradient(45deg, #423F9D,#1D1A4F);  
+    border: none;
+    color: white;
+    padding-block: 20px;
+    font-size: 16px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.landingShapes{
+    position: relative;
+}
+.landingShapLightImg{
+    position: absolute;
+    left: -100px;
+    bottom:0px;
+    width: 1300px;
+}
+.landingPathImg{
+    position: absolute;
+    height: 60%;
+    left: 0px;
+    top: 0px;
+}
+.landingShapDarkImg{
+    position: absolute;
+    left: 130px;
+    bottom: 410px;
+    width: 200px;
+}
+.landingRocketImg{
+    width: 250px;
+    position: absolute;
+    bottom: 350px;
+    left: 40px;
+}
+.landingStudyImg{
+    width: 250px;
+    position: absolute;
+    bottom: 600px;
+    left:200px;
+}
+@media (max-width: 750px) {
+    .landingShapes{
+        display: none;
+    }
+    .landing{
+        padding-inline: 20px;
+        grid-template-columns: 1fr;
+    }
+    .landing > div{
+        padding-top: 100px;
+    }
+    .contactForm{
+        gap: 40px;
+        padding-top: 50px;
+    }
+    .contactForm input{
+        padding: 10px;
+    }
+    .contactForm textarea{
+        padding: 10px;
+    }
+}

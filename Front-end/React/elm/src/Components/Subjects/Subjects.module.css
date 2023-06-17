@@ -1,0 +1,106 @@
+.buttons{
+    direction: rtl;
+    margin-top: 15px;
+}
+
+.button {
+    background-color: #fef8fa;
+    border: 1px solid blue;
+    font-size: 13px;
+    padding: 15px 15px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    color: #2e3192;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.buttonEN{
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+.subjects {
+    position: relative;
+    margin-bottom: 2px;
+}
+
+.search {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: gray;
+    border: 1px solid lightgray;
+    outline: none;
+    margin-bottom: 4px;
+    padding-inline: 20px;
+    box-sizing: border-box;
+}
+
+.label{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 0px;
+    font-size: 17px;
+    background-color: white;
+    padding: 0px 5px;
+    color: blue;
+}
+
+.labelEN{
+    right: auto;
+    left: 5%;
+}
+
+.selectBox {
+    position: relative;
+    padding-top: 8px;
+}
+
+.checkBoxContainer {
+    display: none;
+    border: 1px solid blue;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding-top: 1px;
+    direction: ltr;
+    box-sizing: border-box;
+}
+
+.checkBoxContainerEN{
+    direction: rtl;
+}
+
+.checkBoxContainer label {
+    padding: 1px 0;
+    font-size: 20px;
+}
+.checkBoxContainer input {
+    margin: 0px 15px;
+}
+
+.extraSpace{
+    height: 86px;
+}
+
+.show{
+    display: flex;
+}
+
+.outline{
+    border: 1px solid blue
+}
+
+@media (min-width: 780px){
+    .checkBoxContainer {
+        position: absolute;
+    }
+}
+
+@media (max-width: 500px){
+    .label{
+        font-size: 12px;
+    }
+}

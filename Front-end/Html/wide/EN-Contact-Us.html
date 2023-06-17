@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #1A225A; 
+            border-radius: 10px;
+        }
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1A225A; 
+        }
+        .intro-container{
+            position: fixed;
+            right: 0px;
+            left: 0px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 100px;
+            background-color: #F7F7F7;
+            z-index: 99;
+        }
+        .intro-container > div{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .intro-container :last-child{
+            gap: 10px;
+        }
+        .intro-container a{
+            color: black;
+            text-decoration: none;
+        }
+        .header{
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top: 50px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 100px;
+            border-bottom: #F7F7F7 2px solid;
+            background-color: white;
+            z-index: 98;
+        }
+        .header > div{
+            display: flex;
+            gap: 40px;
+        }
+        .header a{
+            text-decoration: none;
+            color: black;
+        }
+        .header > a{
+            font-weight: 600;
+        }
+        .landing{
+            display: grid;
+            padding-inline: 100px;
+            grid-template-columns: 1fr 1fr;
+        }
+        .landing > div{
+            padding-top: 150px;
+        }
+        .contact-form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow: hidden;
+        }
+        .contact-form input{
+            border: none;
+            background-color: #F0F0F0;
+            padding: 20px;
+            width: 100%;
+            outline: none;
+        }
+        .contact-form textarea{
+            width: 100%;
+            border: none;
+            background-color: #F0F0F0;
+            padding: 20px;
+            height: 100px;
+            outline: none;
+        }
+        .contact-form button{
+            width: 100%;
+            background: linear-gradient(45deg, #423F9D,#1D1A4F);  
+            border: none;
+            color: white;
+            padding-block: 20px;
+            font-size: 16px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .landing-shapes{
+            position: relative;
+        }
+        .landing-shap-light-img{
+            position: absolute;
+            right: -100px;
+            bottom:0px;
+            height: 500px;
+        }
+        .landing-path-img{
+            position: absolute;
+            height: 100%;
+            right: 0px;
+            bottom: 0px;
+        }
+        .landing-shap-dark-img{
+            position: absolute;
+            right: 130px;
+            bottom: 210px;
+            width: 200px;
+        }
+        .landing-rocket-img{
+            width: 250px;
+            position: absolute;
+            bottom: 150px;
+            right: 40px;
+        }
+        .landing-message-img{
+            width: 230px;
+            position: absolute;
+            bottom: 350px;
+            right:200px;
+        }
+        .footer-container{
+            background: linear-gradient(45deg, #423F9D,#1D1A4F);  
+            margin-top: 150px;
+        }
+        .footer{
+            color: white;
+            padding: 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            position: relative;
+        }
+        .footer-content{
+            padding-right: 50px;
+        }
+        .footer-details{
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-links{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .footer-links img{
+            padding-bottom: 4px;
+        }
+        .footer-links a{
+            padding-inline: 20px;
+        }
+        .footer-contact img{
+            padding-inline: 15px;
+            padding-bottom: 40px;
+        }
+        .footer-contact img:first-child{
+            padding-left: 0px;
+        }
+        .footer-contact p{
+            display: inline;
+        }
+        .footer-contact a{
+            color: white;
+            text-decoration: none;
+        }
+        .rights{
+            margin: 0px;
+            color: white;
+            text-align: center;
+            border-top: 2px solid #f7f7f768;
+            padding-block: 25px;
+        }
+    </style>    
+</head>
+<body>
+    <div class="intro-container">
+        <div>
+            <p>Follow Us</p>
+            <img src="/images/facebook.png"/>
+            <img src="/images/instagram.png"/>
+            <img src="/images/twitter.png"/>
+            <img src="/images/gmail.png"/>
+            <img src="/images/linkedin.png"/>
+        </div>
+        <div>
+            <p>Fahad Alsharhan:</p>
+            <a href='tel: +966576344747'>+966 55 477 8000</a>
+        </div>
+    </div>
+    <div class="header">
+        <img src="/images/logo.png"/>
+        <div>
+            <a href="" style="color: #3f39a9;">Home</a>
+            <a href="">About Us</a>
+            <a href="">Online Marketing</a>
+            <a href="">Contact Us</a>
+            <a href="">Free Quote</a>
+        </div>
+        <a href="">العربية</a>
+    </div>
+    <div class="landing">
+        <div >
+            <h1>Contact Us</h1>
+            <form class="contact-form">
+                <div>
+                    <p>NAME</p>
+                    <input placeholder="Enter Your Name"/>
+                </div>
+                <div>
+                    <p>EMAIL</p>
+                    <input placeholder="Enter Your Email"/>
+                </div>
+                <div>
+                    <p>MESSAGE</p>
+                    <textarea placeholder="Enter Your Message"></textarea>
+                </div>
+                <button>SEND MESSAGE</button>
+            </form>
+        </div>
+        <div class="landing-shapes">
+            <img class="landing-shap-light-img" src="/images/landing-shap-light.png"/>
+            <img class="landing-path-img" src="/images/landing-path.png"/>
+            <img class="landing-shap-dark-img" src="/images/landing-shap-dark.png"/>
+            <img class="landing-rocket-img" src="/images/rocket.png"/>
+            <img class="landing-message-img" src="/images/contactus-message.png"/>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-content">
+                <img src="/images/logo-light.png"/>
+                <h3 style="padding-block: 20px;">Marketing Agency in Riyadh, KSA</h3>
+                <p>We are a full-service digital marketing agency in Riyadh focused on results, strategy, technology, quality design, and content.</p>
+            </div>
+            <div class="footer-details">
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <div>
+                        <img src="/images/space-light.png"/>
+                        <a>About us</a>
+                    </div>
+                    <div>
+                        <img src="/images/space-light.png"/>
+                        <a>Our Services</a>
+                    </div>
+                    <div>
+                        <img src="/images/space-light.png"/>
+                        <a>Contact Us</a>
+                    </div>
+                    <div>
+                        <img src="/images/space-light.png"/>
+                        <a>Free Quote</a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h3>Connect with Us</h3>
+                    <div>
+                        <img src="/images/facebook-light.png"/>
+                        <img src="/images/twitter-light.png"/>
+                        <img src="/images/linkedin-light.png"/>
+                        <img src="/images/instagram-light.png"/>
+                    </div>
+                    <p>Contact Us:</p>
+                    <a href='tel: +966576344747'>+966 55 477 8000</a>
+                </div>
+            </div>
+        </div>
+        <h4 class="rights">© 2023 WIDE. All Rights Reserved.</h4>
+    </div>
+</body> 
+</html>

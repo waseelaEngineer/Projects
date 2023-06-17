@@ -1,0 +1,97 @@
+.main {
+    margin-top: 5px;
+}
+
+.title {
+    margin-top: 10px;
+}
+
+
+.studentDiv {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    align-items: center;
+}
+
+.studentDiv button {
+    background-color: #5f68bf;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    height: 30px;
+}
+
+.student {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.massages {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 320px;
+    margin-top: 20px;
+}
+
+.send{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 50px;
+    margin-top:20px;
+}
+
+.send input{
+    padding-inline: 20px;
+    font-size: 20px;
+    outline: none;
+    border-radius: 0px;
+    border:1px solid gray;
+}
+
+.send button{
+    background-color: #5f68bf;
+    color: white;
+    border: none; 
+    outline: none;
+    cursor: pointer;
+}
+
+.first{
+    display: flex;
+    overflow-x:hidden;
+    margin-bottom: 10px;
+    justify-content: right;
+}
+
+.first p{
+    background-color: #5f68bf;
+    color: white;
+    padding: 10px;
+    max-width: 70%;
+}
+
+.second{
+    display: flex;
+    justify-content: left;
+    overflow-x:hidden;
+    margin-bottom: 10px;
+}
+
+.second p{
+    background-color: white;
+    color: #5f68bf;
+    padding: 10px;  
+    max-width: 70%;
+}
+
+@media (max-width: 720px){
+    .send{
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+}

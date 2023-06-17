@@ -1,0 +1,359 @@
+HTML
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="My Online CV"/>
+    <title>Online CV</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <p> new paragragh
+
+    <u> Under line
+
+    <h1> title
+
+    <s> middle line
+
+    <i> make line bend
+
+    <br> next line
+    
+    <hr> make line split
+
+    <mark> highlight
+
+    <sup> move word up
+
+    <sub> move word down
+
+    <text area> make place to write 
+
+    <font colore="" size="1-7" face="">
+
+    <center> make in the middle
+
+    <body align="right,center,left" dir="ltr,rtl">
+
+    <table border="1" bgcolor=""> make table
+
+    <tr bgcolor=""> make row
+
+    <td> make colmn
+
+    <th> make header
+
+    <td rowspan="" colspan=""> compind 
+
+    <thead> upper table
+
+    <tbody> middle table
+
+    <tfoot> down table 
+
+    <a href="" target="_balnk"> link to website
+
+    <img src="" alt="" width=""> insert photo or gif
+
+    <video src="" width="" controls poster=""> insert video
+
+    <audio src="" controls muted preload="metadata"> insert audio
+
+    <ol type="a,A,i,I,1"><li> make quations list
+
+    <ul type="circle,square"><li> make list 
+
+    <dl><dt>title<dd>  list with title
+
+    <details><summary>title</summary>blah blah, hide list
+
+    <embed src="" height="" width=""> insert gif or pdf or website
+
+    <iframe src="" height="" width=""> insert youtube video,pic,pdf
+
+    <button type="submit,reset,menu">title</button> make button
+
+    <form>
+	<input type="email,password,tel,number" placeholder=""> insert textbox
+
+        <h1>Gender</h1>
+        <label>male</label>
+        <input type="radio" checked value="male" name="1">         mcq
+        <label>female</label>
+        <input type="radio" value="female" name="1">
+        <input type="checkbox">read all
+        <input type="submit">
+        <input type="text">   textbox
+    </form>
+
+</body>
+
+</html>
+
+
+
+CSS
+
+
+    <head><link rel="stylesheet" href="test.css"> link css page
+    
+    <p> p{color:red; size:100px;}    edit all paragraph
+
+    <p class="a"> .a{}   class
+
+    <p id="a">   #a{}     id
+
+    font-family:Arial, Helvetica, sans-serif;     font
+
+    font-size:50px;         font size
+
+    font-weight:100;        font thickness 100 min 900 max
+
+    line-height:px;         space between lines
+
+    letter-spacing:px;       space between letters
+
+    text-align:center,right,left;        text place
+
+    background-color:red;          background color  
+
+    background-image:url("");       insert image 
+
+    background-size:cover,contain,100px 100px;     pic size
+
+    background-repeat:no-repeat;     no repeat
+
+    background-attachment:fixed;     pic scroll  
+
+    background-position:10px 10px;    pic place
+
+    direction: ltr, rtl;            direction 
+
+    padding-top:px;                  move space
+
+    margin-top:px;                  move space
+
+    *{padding:0;margin:0;}          web page full screen
+
+    <a href="">test    a{ text-decoration: none;}       remove link underline
+
+    cursor:;     change cursor shap
+
+    display: inline-block;          make it inline or block or both
+
+    diplay:none;                     hide word and place
+
+    visibility: hidden;               hide word only
+
+    overflow: hidden,scroll,auto;                hide out div
+
+    list-style:url("") inside circle;       edit list points
+
+    float:left;             gather in one line 
+
+    <p class="x"> .x{clear:both;}     to clear the flout
+
+    position:absolute,relative,fixed,sticky;   change position of div
+
+    a:hover{}              custom when cursor above
+
+    a:visited{}             if like visited
+
+    .check:checked{opacity:0,1}         if checkbox is checked hide
+
+    .text:focus{outline:none;border:2px red solid;}    highlite textbox when pressed
+
+    p::first-letter,line{}          custom first letter or line
+
+     ::selection{}               edit when selected with curser
+
+     p::after,before {content:"";height:px;width:px;backgrounD:red;position:absolute;}     add content using css
+
+    <div><p> div p{} || <div class="a"> .a{}     divide
+
+    <input type="text"> input[type="text"]{}      edite
+
+    <div class="x">  .x{height:10px;width:10px;background:yellow;
+				border-width:10px;
+				border-color:red;
+				border-style:solid;
+				    			}  make space
+
+    @media screen and(min-width:401px)and(max-width:400px){.a{didplay}body{background:red;}}        for mobile or computer
+
+
+
+
+
+TEST
+
+
+background: linear-gradient(black,white);        compine 2 colors
+
+height:100vh;                                     make for all page
+ 
+display:flex;                                     make next eachother
+
+justify-content: space-between;                   take to other side
+
+align-items: center;                              in the middle 
+
+font-size:30px;                                   change size
+
+text-transform: uppercase;                        capital
+
+border-radius:20px;                               rounded border
+
+object-fit:cover;                                 fix strech in img
+
+z-index: 100;                                     move on top
+
+mix-blend-mode:screen;                            affect from photoshop
+
+transform: translateY(-px);                       move up y axis
+
+<h1>lorem5                                        write 5 words
+
+.a::after{}                                      make changes after section 
+
+
+
+
+JS
+
+onload=function(){blah}                         run codes after html 
+
+
+document.write('');                             write in html 
+
+
+console.log('');                                write in console
+
+
+window.alert('');                               alert in website
+    
+
+    
+Tabs
+
+
+
+<h1>Mohamed alwaseela ali</h1>
+    <div class="tabs">
+        <div class="tabs__sidebar">
+            <button class="tabs__button tabs__button--active" data-for-tab="1">tap #1</button>
+            <button class="tabs__button" data-for-tab="2">tap #2</button>
+            <button class="tabs__button" data-for-tab="3">tap #3</button>
+        </div>
+
+        <div class="tabs__content tabs__content--active" data-tab="1">
+                <h2>tab #1</h2>
+             </div>
+        <div class="tabs__content" data-tab="2">
+                <h2>tab #2</h2>
+             </div>   
+        <div class="tabs__content" data-tab="3">
+                <h2>tab #3</h2>
+             </div>
+     </div>
+
+
+
+
+in Js
+
+
+
+
+function setupTabs(){
+    document.querySelectorAll(".tabs__button").forEach(button => {
+        button.addEventListener("click", () => {
+            const sideBar = button.parentElement;
+            const tabsContainer = sideBar.parentElement;
+            const tabNumber = button.dataset.forTab;
+            const tabToActivate = tabsContainer.querySelector(`.tabs__content[data-tab="${tabNumber}"]`);
+            
+            sideBar.querySelectorAll(".tabs__button").forEach(button => {
+                button.classList.remove("tabs__button--active");
+             });
+    
+            tabsContainer.querySelectorAll(".tabs__content").forEach(tab => {
+                tab.classList.remove("tabs__content--active");
+            });
+            
+            button.classList.add("tabs__button--active");
+            tabToActivate.classList.add("tabs__content--active");
+         });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    setupTabs();
+});
+
+
+
+
+
+
+in CSS
+
+
+
+
+.tabs{
+    border:1px solid #cccccc;
+    display: flex;
+}
+
+.tabs__sidebar{
+    width:125px;
+    flex-shrink:0;
+    background: #cccccc;
+}
+
+.tabs__button{
+    display:block;
+    padding:10px;
+    background:#eeeeee;
+    border:none;
+    width:100%;
+    outline:none;
+    cursor:pointer;
+}
+
+.tabs__button:active{
+    background:#dddddd;
+}
+
+.tabs__button:not(:last-of-type){
+    border-bottom:1px solid #cccccc;
+}
+
+.tabs__button--active{
+    font-weight:bold;
+    border-right:2px solid #009879;
+    background:#dddddd;
+}
+
+.tabs__content{
+    padding:15px;
+    font-size:0.8rem;
+    display:none;
+}
+
+.tabs__content--active{
+    display:block;
+}
+
+.tabs__content > :first-child{
+    margin-top:0;
+}
+
+

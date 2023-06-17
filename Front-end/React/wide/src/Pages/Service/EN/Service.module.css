@@ -1,0 +1,441 @@
+.landing{
+    display: grid;
+    padding-left: 100px;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    background:linear-gradient(45deg, #423F9D,#1D1A4F);
+    color: white;
+}
+.landing p{
+    padding-block: 10px;
+}
+.landing > div{
+    padding-top: 150px;
+}
+.landing div:first-child{
+    display: flex;
+    flex-direction: column;
+    padding-top: 230px;
+    gap: 40px;
+    padding-right: 50px;
+}
+.landing div:last-child{
+    overflow: hidden;
+}
+.landingFreeQuote{
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    border: 1px solid white;    
+    width: fit-content;
+    padding: 20px 50px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.landingFreeQuote:hover{
+    background-color: white;
+    color: #1D1A4F;
+    transition: 400ms;
+}
+.landingShapes{
+    position: relative;
+}
+.landingShapeImg{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.landingWebImg{
+    position: absolute;
+    width: 350px;
+    right: 200px;
+    bottom: 100px;
+}
+.featureCompleteImg{
+    position: absolute;
+    width: 350px;
+    right: 200px;
+    bottom: 170px;
+}
+.offerService{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 100px;
+    height: 700px;
+    gap: 200px;
+}
+.offerService h2{
+    font-weight: 100;
+    font-size: 30px;
+}
+.offerServiceContent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    gap: 20px;
+}
+.offerServiceContent img{
+    width: 50px;
+}
+.offerServiceContent h5{
+    font-size: 14px;
+}
+.offerServiceContent p{
+    font-size: 14px;
+}
+.offerServiceContent div{
+    border: 1px solid #cccccc41;
+    padding: 10px 20px;
+    padding-top: 20px;
+}
+.offerServiceContent div:first-child{
+    background:linear-gradient(45deg, #423F9D,#1D1A4F);
+    color: white;
+}
+.offerServiceImages{
+    position: relative;
+    overflow: hidden;
+}
+.offerServicePathImg{
+    position: absolute;
+    width: 700px;
+    left: -70px;
+    bottom: -10px;
+}
+.offerServiceMarketingImg{
+    position: absolute;
+    bottom: 250px;
+    right: 200px;
+}
+.offerServiceShapeImg{
+    position: absolute;
+    right: -700px;
+    bottom: 50px;
+}
+.features{
+    display: grid;
+    padding-top: 50px;
+    padding-left: 100px;
+    grid-template-columns: 1fr 1fr;
+    height: 700px;
+    background:linear-gradient(45deg, #423F9D,#1D1A4F);
+    color: white;
+    z-index: -50;
+}
+.features h2{
+    font-weight: 100;
+    font-size: 30px;
+}
+.serviceFeaturesTagContainer{
+    padding-right: 100px; 
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: right;
+    align-items: right;
+}
+.serviceFeaturesTagContainer div{
+    width: 60%;
+    position: relative;
+}
+.serviceFeaturesTagContainer img{
+    position: absolute;
+    top: -0px;
+    left: -20px;
+}
+.serviceFeaturesTagContainer p{
+    z-index: 90;
+    position: absolute;
+}
+.types{
+    padding: 100px;
+    position: relative;
+    overflow: hidden;
+}
+.types h2{
+    padding-bottom: 50px;
+    font-weight: 100;
+    font-size: 30px;
+}
+.typesContent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+.typesContent div{
+    padding-right: 100px;
+}
+.typesLeftShapeImg{
+    position: absolute;
+    top: -650px;
+    left: -1200px;
+    width: 1500px;
+}
+.typesLeftPathImg{
+    position: absolute;
+    top: -300px;
+    left: -200px;
+}
+.typesRightPathImg{
+    position: absolute;
+    bottom: -240px;
+    right: -50px;
+}
+.typesRightShapeImg{
+    position: absolute;
+    bottom: -650px;
+    right: -1200px;
+}
+.ourServices{
+    color: white;
+    background:linear-gradient(45deg, #423F9D,#1D1A4F);  
+    padding: 100px;
+    position: relative;
+}
+.ourServices > img{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.ourServices h2{
+    padding-block: 80px;
+    font-weight: 100;
+    font-size: 30px;
+}
+.servicesContent{
+    display: flex;
+    gap: 20px;
+}
+.packages{
+    text-align: center;
+    padding: 100px;
+}
+.packages h2{
+    padding-bottom: 80px;
+    font-weight: 100;
+    font-size: 30px;
+}
+.packagesContent{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.packagesContent > div:not(.packagesPrimary){
+    box-shadow: 0px 6px 12px 1px rgba(0, 0, 0, 0.139);
+    padding: 25px 30px;
+    padding-bottom: 30px;
+}
+.packagesContent h4{
+    color: #423F9D;
+    font-weight: 600;
+}
+.packagesContent h1{
+    font-weight: 300;
+    font-size: 30px;
+}
+.packagesContent div:not(.packagesPrimary) p{
+    color: #AFA9A9;
+    border-bottom: 3px solid #afa9a96d;
+    font-size: 14px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.packagesPrimary p{
+    color: #d4d4d4;
+    border-bottom: 3px solid #d4d4d4;
+    font-size: 14px;
+    padding-block: 10px;
+    margin-bottom: 30px;
+}
+.packagesContent h5{
+    text-align: left;
+}
+.packagesDetails > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.packagesDetails h5{
+    margin: 10px;
+}
+.packagesGetStarted{
+    color: white;
+    background-color: #423F9D;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-block: 10px;
+    cursor: pointer;
+    justify-content: center;
+    margin-inline: 50px;
+    margin-top: 20px;
+}
+.packagesGetStarted h3{
+    font-weight: 100;
+    font-size: 14px;
+}
+.packagesPrimary{
+    background:linear-gradient(45deg, #423F9D,#1D1A4F);  
+    color: white;
+    width: 380px;
+    box-shadow: 0px 6px 12px 1px rgba(0, 0, 0, 0.139);
+    padding: 60px 30px;
+}
+.packagesPrimary h4{
+    color: white;
+}
+.packagesGetStartedPrimary{
+    background-color: white;
+    color: #423F9D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 1px;
+    padding-top: 20px;
+    margin-inline: 60px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.work{
+    display: grid;
+    padding-left: 100px;
+    grid-template-columns: 70% 30%;
+    padding-top: 50px;
+    height: 680px;
+    background:linear-gradient(45deg, #423F9D,#1D1A4F);
+    color: white;
+    overflow: hidden;
+}
+.work h2{
+    font-weight: 100;
+    font-size: 30px;
+}
+.workShapes{
+    position: relative;
+}
+.workShapeImg{
+    position: absolute;
+    right: -200px;
+    bottom: 0px;
+}
+.workCompleteImg{
+    position: absolute;
+    width: 300px;
+    right: 100px;
+    bottom: 170px;
+}
+.workContent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 150px;
+    gap: 10px;
+}
+.workLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.workLeft div{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 30px;
+    background-color: #ffffff15;
+    border-right: 3px solid white;
+}
+.workLeft div p:first-child{
+    background-color: #5F2D8E;
+    padding: 10px;
+    border-radius: 50%;
+}
+.workRight{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding-top: 95px;
+}
+.workRight div{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 30px;
+    background-color: #ffffff15;
+    border-left: 3px solid #959595;
+}
+.workRight div p:first-child{
+    background-color: #5F2D8E;
+    padding: 10px;
+    border-radius: 50%;
+}
+.useful{
+    display: grid;
+    padding-inline: 100px;
+    grid-template-columns: 60% 40%;
+    height: 700px;
+}
+.useful h2{
+    font-weight: 100;
+    font-size: 30px;
+    padding-block: 50px;
+}
+.usefulShapes{
+    position: relative;
+}
+.usefulShapLightImg{
+    position: absolute;
+    right: -100px;
+    bottom:0px;
+    height: 440px;
+}
+.usefulPathImg{
+    position: absolute;
+    height: 100%;
+    right: 0px;
+    bottom: 0px;
+}
+.usefulReportImg{
+    width: 100px;
+    position: absolute;
+    right: 360px;
+    bottom: 390px;
+}
+.usefulShapDarkImg{
+    position: absolute;
+    right: 20px;
+    bottom: 110px;
+    width: 200px;
+}
+.usefulPlanImg{
+    width: 90px;
+    position: absolute;
+    bottom: 90px;
+    right: 190px;
+}
+.usefulMarketingImg{
+    width: 150px;
+    position: absolute;
+    bottom: 100px;
+    right: -40px;
+}
+.usefulRocketImg{
+    width: 250px;
+    position: absolute;
+    bottom: 220px;
+    right: 80px;
+}
+.usefulContent{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.usefulContent h4{
+    margin: 0px;
+}
+.usefulContent > div{
+    display: flex;
+    width: 55%;
+    gap: 20px;
+    align-items: start;
+}

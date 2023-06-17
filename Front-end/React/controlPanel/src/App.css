@@ -1,0 +1,376 @@
+.home-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 30px;
+    direction: rtl;
+}
+
+.home-header img{
+    animation: slide-up 1000ms forwards;
+}
+
+
+.home-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: min(400px, 100%);  
+    animation: slide-side 1000ms forwards;
+}
+
+
+.home-image-container{
+    min-width: 100%;
+    height: 330px;
+    overflow: hidden;
+}
+
+.home-image-container img{
+    width: 100%;
+    min-height: 100%;
+}
+
+
+.get-started{
+    padding: 15px 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: transparent;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color:black;
+}
+
+
+.get-started:hover{
+    background-color: black;
+    color: white;
+}
+
+.decoration-none, .decoration-none:hover{
+    text-decoration:none;
+    color: black;
+}
+
+.clints{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+}
+
+
+.card-parent{
+    cursor: pointer;
+}
+
+.card-image-container{
+    height: 170px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+.card-image-container img{
+    width: 100%;
+    min-height: 100%;
+}
+
+.card-details{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border: 1px solid lightgray;
+    border-radius: 0 0 10px 10px;
+}
+
+.ar{
+    direction: rtl;
+}
+
+.en{
+    direction: ltr;
+}
+
+.blur{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    pointer-events: none;
+    animation: blur 200ms forwards;
+}
+
+.popup{
+    position: fixed;
+    width: min( 380px, 90%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: popup 300ms forwards;
+}
+
+.cart-img{
+    height: 100px;
+    width: 50%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.cart{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: -10px;
+    bottom: 2%;
+    background-color: red;
+    z-index: 999;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    padding-bottom: 10px;
+    animation: popup 300ms forwards;
+}
+
+.cart-ar{
+    right: auto;
+    left: 48px;
+}
+
+.cart i{
+    font-size: 35px;
+}
+
+
+.pointer{
+    cursor: pointer;
+}
+
+.menu-header-container{
+    min-width: 100%;
+    height: 400px;
+    position: relative;
+    background-color: lightgray;
+}
+
+.header-img{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.logo-img{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.menu-header-container div{
+    position: absolute;
+    width: 15%;
+    right: 10%;
+    top: 100%;
+    transform: translateY(-50%);
+    height: 200px;
+    z-index: 99;
+    border-radius: 10px;
+    border: 5px solid white;
+    overflow: hidden;
+}
+
+.ar .menu-header-container div{
+    right: auto;
+    left: 10%;
+}
+
+.variants-container{
+    display: flex;
+    text-align: center;
+    margin-inline: 1px;
+}
+
+.variant{
+    border: 1px solid #0d6efd;
+    padding: 10px;
+    color: #0d6efd;
+    width: 100%;
+}
+
+.variant-active{
+    color: white;
+    background-color: #0d6efd;
+}
+
+.gif{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+}
+
+.scroll{
+    overflow-y: auto;
+    max-height: 380px;
+}
+
+@keyframes blur {
+    0%{
+        filter: blur(0px);
+    }
+    100%{
+        filter: blur(6px);
+    }
+}
+@keyframes slide-side {
+    0%{
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes slide-up {
+    0%{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes popup {
+    0%{
+    transform: translate(-50%, -0%);
+    opacity: 0;
+    }
+    100%{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    }
+}
+
+@media (max-width: 575px){
+    .category-container{
+        border: 1px solid lightgray;
+        border-radius: 15px;
+        padding: 20px;
+        margin-top: 30px;
+        padding-top: 0px;
+    }
+    
+    .cart{
+        width: 60px;
+        height: 60px;
+        font-size: 17px;
+    }
+
+    .cart i{
+        font-size: 20px;
+    }
+
+    .card-parent{
+        display: flex;
+        border-top: 1px solid lightgray;
+        gap: 15px;
+        padding-top: 20px;
+    }
+    
+    .card-image-container{
+        width: 60%;
+        height: 230px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .header-img{
+        width: 100%;
+        min-height: 100%;
+    }
+    
+    .logo-img{
+        width: 100%;
+        min-height: 100%;
+    }
+    
+    .card-details{
+        flex-direction: column;
+        border: none;
+    }
+}
+
+@media (max-width: 450px){
+    .get-started{
+        font-size: 15px;
+        padding: 10px 40px;
+        border-radius: 30px;
+    }
+}
+@media (max-width: 580px){
+    .home-image-container{
+        height: 400px;
+    }
+}
+@media (max-width: 460px){
+    .home-image-container{
+        height: 300px;
+    }
+}
+@media (max-width: 300px){
+    .home-image-container{
+        height: 200px;
+    }
+}
+@media (max-width: 450px){
+    .home-title h1{
+        font-size: 28px;
+        width: min(250px, 100%);
+    }
+}
+@media (max-width: 995px){
+    .home-header{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px){
+    .card-image-container{
+        height: 130px;
+    }
+}
+
+@media (max-width: 1000px){
+    .menu-header-container div{
+        width: 20%;
+    }
+}
+@media (max-width: 700px){
+    .menu-header-container div{
+        width: 25%;
+        height: 150px;
+    }
+    .menu-header-container{
+        height: 300px;
+    }
+}
+@media (max-width: 450px){
+    .menu-header-container{
+        height: 150px;
+    }
+    .menu-header-container div{
+        height: 100px;
+    }
+}

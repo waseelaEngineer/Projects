@@ -1,0 +1,447 @@
+@font-face {
+    font-family: 'Hanimation_Arabic_Regular';
+    src: url('./fonts/ArbFONTS-Hanimation_Arabic_Regular.otf')  format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0px;
+    padding: 0px;   
+    font-family: Hanimation_Arabic_Regular;
+}
+.Container{
+    direction: rtl;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.Header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    padding-inline: 50px;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.banner{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    padding-block: 5px;    
+}
+.logo-img{
+    width: 50px;
+}
+.title-img{
+    width: 250px;
+}
+.Navbar{
+    display: flex;
+}
+.showMenu{
+    display: flex;
+}
+.donate-div{
+    display: flex;  
+}
+.Navbar button{
+    height: 100%;
+    border: none;
+    padding-inline: 10px;
+    background-color: white;
+    color: rgb(62,35,48);
+    font-size: 16px;    
+    cursor: pointer;
+}
+.donate-div button{
+    color: white;
+    background-color: rgb(62,35,48);
+    height: fit-content;
+    border-radius: 10px;
+    margin-inline: 10px;
+    align-self: center;
+}
+.Navbar i{
+    color: rgb(62,35,48);
+    font-size: 15px;
+    padding-inline: 5px;
+}
+.Navbar button:hover{
+    color: white;
+    background-color: rgb(80, 55, 67);
+    transition: 500ms;
+}
+.Navbar ul{
+    position: absolute;
+    color: white;
+    background-color: rgb(74, 52, 63);
+    background-color: rgb(80, 55, 67);
+    padding-inline: 10px;
+    cursor: pointer;
+    list-style-type: none;
+    display: none;
+}
+.Navbar li{
+    padding-block: 5px;
+}
+.Navbar ul:hover{
+    display: block;
+}
+.Navbar ul li:hover{
+    font-size: 20px;
+}
+.Navbar button:hover ~ ul{
+    transition: 500ms;
+    display: block;
+}
+.main-content{
+    display: flex;
+    padding: 50px;
+    padding-top: 100px;
+}
+.body{
+    width: 100%;
+    /* margin-top: 40px; */
+}
+.body img{
+    width: 100%;
+    height: 100%;
+}
+.background-img{
+    position: fixed;
+    width: 100%;
+    z-index: -1;    
+    filter: brightness(50%);
+}
+.news-container{
+    background-color: transparent;
+    padding: 100px;
+    padding-bottom: 200px;
+}
+.news-container h2{
+    color: white;
+    padding-bottom: 30px;
+}
+.post-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.post{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    background-color: rgba(44, 113, 101, 0.84);
+    color: white;
+    cursor: pointer;
+}
+.post:hover{
+    background-color: rgb(44, 113, 101);
+    transition: 200ms;
+}
+.post div{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    text-align: center;
+    line-height: 150%;
+}
+.post section{
+    width: 2px;
+    background-color: white;
+    height: 100%;   
+}
+.post p{
+    line-height: 150%;
+    padding-inline: 10px;
+}
+.post img{
+    width: 80px;
+    height: 80px;
+}
+.twitter-container{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-block: 50px;
+}
+.Footer{
+    background-color: rgb(44, 25, 34);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 30px;
+    padding-top: 10px;
+    font-size: 15px;
+    color: gray;
+}
+.Footer div{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+.Footer i{
+    color: white;
+}
+.Footer i:hover{
+    font-size: 25px;    
+}
+.page-title{
+    width: 100%;
+    height: 250px;
+    background-color: rgb(62,35,48);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 50px;
+}
+.content{
+    padding: 100px;
+    font-size: 20px;
+    color: rgb(62,35,48);
+}
+.content-padding{
+    padding-inline: 300px;
+}
+.content h4{
+    color: #EB6677;
+}
+.content-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+.content-cards > div{
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    padding: 50px 20px;
+}
+.content-cards ul{
+    text-align: start;
+}
+.content-cards i{
+    font-size: 50px;
+}
+.content-cards h4{
+    font-size: 30px;
+    padding-block: 50px;
+}
+
+/* slide show  */
+.Slideshow-container {
+  width: 100%;
+  height: 200vh;
+  background-color: white;
+  position: relative;
+  padding-top: 50px;
+}
+/* .mySlides img{
+    width: 100%;
+} */
+.mySlides {
+  display: none;
+}
+.ShowSlide{
+  display: block;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activeDot, .dot:hover {
+  background-color: #717171;
+}
+
+.dot-container{
+    text-align: center;
+    position: absolute;
+    background-color: black;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-inline: 10px;
+}
+
+/* Fading animation */
+.Fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.download{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(62,35,48);
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+
+.decoration-none, .decoration-none:hover{
+    text-decoration: none;
+    color: rgb(62,35,48);
+}
+
+.download-approval{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: green;
+    color: white;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    margin-block: 30px;
+}
+.download-approval p{
+    margin: 0;
+}
+
+
+
+/* partners section  */
+.slider-container{
+    padding-top: 50px;
+}
+.container{
+    padding-top: 150px;
+}
+h2{
+    text-align: center;
+    padding: 20px;
+}
+.slick-slide{
+    margin: 0 20px;
+}
+.slick-slide img{
+    width: 100%;
+}
+.slick-slider{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block
+}
+.slick-slide{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.slick-slide img{
+    display: block;
+}
+.slick-initialized .slick-slide{
+    display: block;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media (max-width: 750px){
+    .Header{
+        padding-inline: 20px;
+    }
+    .Header i {
+        display: block;
+        margin-block: auto;
+    }
+    .logo-img{
+        width: 30px;
+    }
+    .title-img{
+        width: 150px;
+    }
+    .Navbar{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: rgb(248, 248, 248);
+        height: 100vh;
+        right: 0px;
+        padding: 30px;
+        padding-top: 60px;
+        gap: 20px;
+    }
+    .showMenu{
+        display: flex;
+    }
+    .Navbar button{
+        background-color: rgb(248, 248, 248);
+        display: flex;
+    }
+    .donate-div button{
+        background-color: rgb(62,35,48);
+    }
+    .Slideshow-container{
+        padding-top: 40px;
+    }
+    .dot {
+        display: none;
+    }
+    .content{
+        padding:70px 30px;
+    }
+    .content-padding{
+        padding-inline: 30px;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        padding-top: 100px;
+    }
+    .content-cards{
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+        gap: 50px;
+    }
+    .twitter-container{
+        padding: 50px 20px;
+    }
+    .Footer{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .Footer > div > p {
+        display: none;
+    }
+}

@@ -1,0 +1,143 @@
+.timeContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 54px;
+}
+
+.time{
+    border: 1px solid lightgray;
+    padding: 10px;
+    color: #2e3192;
+}
+
+.timeActive{
+    background-color: #fef8fa;
+    border-color: #2e3192;
+}
+
+.time p{
+    font-size: 15px;
+}
+
+.time div{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.edit{
+    font-size: 40px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.enterTime{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: min(400px,80%);
+    background-color: white;
+    border: 1px solid black;
+    padding: 30px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    align-items: center;
+}
+
+
+
+.header h2{
+    background-color: #fef8fa;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.input{
+    display: flex;
+    justify-content: space-between;
+    grid-column-gap: 20px;
+}
+
+.input input{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 10px 10px; 
+    outline-color: blue;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.timeSelect{
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: gray;
+    font-size: 15px;
+}
+
+.inputEN .timeSelect{
+    left: auto;
+    right: 10px;
+}
+
+.header button{
+    padding: 0px 40px;
+    height: 50px;
+    color: white;
+    background-color: #2e3192;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.header input{
+    margin-inline: 10px;
+}
+
+.show{
+    display: block;
+}
+
+@media (max-width: 1050px){
+    .timeContainer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px){
+    .timeContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+    .header h1{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 430px){
+    .timeContainer{
+        grid-template-columns: 1fr;
+    }
+    .headerEN h1{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 330px){
+    .input{
+        flex-direction: column;
+        gap: 0px;
+    }
+}
